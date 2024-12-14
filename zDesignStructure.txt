@@ -1,0 +1,12 @@
+9 dec (piyush)- 
+    - created the project
+    - created zDesignStructure, zPageUpdate 
+    - zDesignStructure --> for updating date wise work, whatever you are doing 
+    - zPageUpdate --> different pages will be alloted to each member, whatever you are updating describe there in your page section 
+
+10 dec (piyush)-
+    - created folder strucutre 
+    - updated readme 
+    - install motion for next15 using - "npm install motion@12.0.0-alpha.2"
+    - also installed "npm i clsx tailwind-merge"
+    - added random background image 
