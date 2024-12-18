@@ -34,4 +34,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ## How to join --> 
-- you will be added soon 
+- you will be told soon how you can contribute ....
