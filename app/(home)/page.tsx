@@ -5,6 +5,7 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import Image from "next/image";
 import React from "react";
+import { FooterSocialMediaDock } from "@/components/FooterSocialMediaDock";
 
 const navItems = [
   {
@@ -71,74 +72,130 @@ const HomePage = () => {
 
         <div id="gallery" className=" h-[100vh] flex justify-center items-center gap-[20px] p-0 mx-36">
           {/* <div className="container"> */}
-            <div className="gallery">
-              <div
-                className="box box1 row2MEphailega"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww)",
-                }}
-              >
-                tree
-              </div>
-              <div
-                className="box box2 col2MEphailega"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                }}
-              >
-                mountain
-              </div>
-              <div
-                className="box box3"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                }}
-              >
-                forest
-              </div>
-              <div
-                className="box box4 row2MEphailega"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                }}
-              >
-                sunset
-              </div>
-              <div
-                className="box box5 col2MEphailega"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                }}
-              >
-                nature
-              </div>
-              <div
-                className="box box6"
-                style={{
-                  backgroundImage:
-                    "url(https://plus.unsplash.com/premium_photo-1664547606956-22749d0e0d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww)",
-                }}
-              >
-                river
-              </div>
-              <div
-                className="box box7 col2MEphailega"
-                style={{
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                }}
-              >
-                scenery
-              </div>
+          <div className="gallery">
+            <div
+              className="box box1 row2MEphailega"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww)",
+              }}
+            >
+              tree
+            </div>
+            <div
+              className="box box2 col2MEphailega"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
+              }}
+            >
+              mountain
+            </div>
+            <div
+              className="box box3"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
+              }}
+            >
+              forest
+            </div>
+            <div
+              className="box box4 row2MEphailega"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
+              }}
+            >
+              sunset
+            </div>
+            <div
+              className="box box5 col2MEphailega"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
+              }}
+            >
+              nature
+            </div>
+            <div
+              className="box box6"
+              style={{
+                backgroundImage:
+                  "url(https://plus.unsplash.com/premium_photo-1664547606956-22749d0e0d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww)",
+              }}
+            >
+              river
+            </div>
+            <div
+              className="box box7 col2MEphailega"
+              style={{
+                backgroundImage:
+                  "url(https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
+              }}
+            >
+              scenery
             </div>
           </div>
         </div>
+      </div>
       {/* </div> */}
+
+      <footer className="bg-black text-white py-20 flex flex-col items-center">
+
+
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 ">
+
+          <div>
+            <p className="harry-text-small">EXODIA '25</p>
+          </div>
+
+          {/* Participate Section */}
+          <div>
+            <h3 className="text-gray-400 font-semibold mb-3">Participate</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-pink-500">Events Portal</a></li>
+              <li><a href="#" className="hover:text-pink-500">CA Portal</a></li>
+              <li><a href="#" className="hover:text-pink-500">Join The Community</a></li>
+            </ul>
+          </div>
+
+          {/* Explore More Section */}
+          <div>
+            <h3 className="text-gray-400 font-semibold mb-3">Explore More</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-pink-500">Star Attractions</a></li>
+              <li><a href="#" className="hover:text-pink-500">Hall Of Fame</a></li>
+              <li><a href="#" className="hover:text-pink-500">Brochure</a></li>
+            </ul>
+          </div>
+
+          {/* Reach Out Section */}
+          <div>
+            <h3 className="text-gray-400 font-semibold mb-3">Reach Out To Us</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-pink-500">Have Any Queries?</a></li>
+              <li><a href="#" className="hover:text-pink-500">Contact Us</a></li>
+              <li><a href="#" className="hover:text-pink-500">Associate With Us</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <FooterSocialMediaDock />
+
+
+        {/* Social Icons and Copyright */}
+        <div className="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center px-6 lg:px-12">
+          {/* Social Media Links */}
+
+          {/* Copyright */}
+          <p className="text-gray-400 mt-4 md:mt-0 text-sm">
+            © Exodia '25, IIT Mandi &nbsp; | &nbsp; Made with <span className="text-pink-500">♥</span> by Web Dev Team
+          </p>
+        </div>
+      </footer>
+
     </>
   );
 };

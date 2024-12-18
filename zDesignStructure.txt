@@ -15,3 +15,4 @@
     - created the Harry potter font used
     - created haome page 
     - created About part in home page using a scrollable div with glasomorphic background image
+    - created gallery part in home page
