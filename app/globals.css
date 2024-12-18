@@ -19,3 +19,87 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* HOME PAGE CSS */
+
+.background {
+  background-image: url('/assets/background6.webp');
+  background-size: cover;
+  /* Ensure the background covers the container */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  /* Ensure it takes the full width */
+  height: 100vh;
+  overflow-x: hidden;
+  /* Disable horizontal scrolling */
+}
+
+.background-about {
+  background-image: url('/assets/background6.webp');
+  /* Add your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+.glasomorphic-about {
+  backdrop-filter: blur(5px) saturate(200%);
+    -webkit-backdrop-filter: blur(5px) saturate(200%);
+    background-color: rgba(16, 19, 39, 0.53);
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    height: 100%;
+}
+
+.harry-text {
+  z-index: 1;
+  position: relative;
+}
+
+.glassmorphic {
+  backdrop-filter: blur(5px);
+  /* Reduce blur effect */
+  background: rgba(255, 255, 255, 0.1);
+  /* Adjust transparency */
+  height: 100vh;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FONT  */
+
+@font-face {
+  font-family: 'HarryP';
+  src: url('/fonts/HarryP.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.harry-text {
+  font-family: 'HarryP', sans-serif;
+  font-size: 15rem;
+  color: gold;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+
+}
+
+.harry-text-small {
+  font-family: 'HarryP', sans-serif;
+  font-size: 3rem;
+  /* Smaller font size */
+  color: gold;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}
+
+.harry-text-Medium {
+  font-family: 'HarryP', sans-serif;
+  font-size: 6rem;
+  /* Smaller font size */
+  color: gold;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}

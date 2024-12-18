@@ -1,60 +1,90 @@
 "use client";
 
-import React from "react";
-import { motion } from "motion/react";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import Image from "next/image";
-import { sleep } from "@/lib/utils";
+import React from "react";
+
+const navItems = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "About",
+    link: "#about",
+  },
+  {
+    name: "Events",
+    link: "#events",
+  },
+];
 
 const HomePage = () => {
-  const [Animatehogya, setAnimatehogya] = React.useState(false);
-
   return (
     <>
-      {Animatehogya ? (
-        <div>huhwdwudb</div>
-      ) : (
-        <>
-          <div className="relative flex h-screen w-screen flex-col items-center justify-center gap-12 bg-[#242424]">
-            <Image
-              src="/assets/background.jpg"
-              width={1920}
-              height={1080}
-              alt={"Background"}
-              className="absolute bottom-0 left-0 right-0 top-0 h-screen w-screen rounded-xl border-2 border-[#d6d3d1] opacity-20"
-            />
-            <svg
-              viewBox="0 0 460.84 71.974"
-              xmlns="http://www.w3.org/2000/svg"
-              className="z-10 w-[80vw]"
-            >
-              <motion.g
-                id="svgGroup"
-                strokeLinecap="square"
-                fillRule="evenodd"
-                initial={{ stroke: "#d6d3d1", fill: "#00000000" }}
-                animate={{ fill: "#d6d3d1" }}
-                transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
-                onAnimationComplete={async () => (
-                  await sleep(1500), setAnimatehogya(true)
-                )}
-              >
-                <motion.text
-                  x="50%"
-                  y="50%"
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fontSize="60"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                >
-                  Exodia
-                </motion.text>
-              </motion.g>
-            </svg>
+      <div className="m-0 p-0 overflow-x-hidden">
+
+
+        <FloatingNav navItems={navItems} namex="P"/>
+
+
+        <div className="flex items-center justify-center relative h-[100vh] w-full">
+          {/* <div className="background"></div> */}
+          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0">
+            <p className="harry-text-small absolute top-[16rem] left-[26rem]">
+              Welcome to
+            </p>
+            <p className="harry-text">EXODIA '25</p>
+            <p className="harry-text-small absolute right-[8rem] bottom-[21rem]">
+              - Biggest Cultural Fest in the Himalayas
+            </p>
+            <p className="harry-text-small">By IIT MANDI</p>
           </div>
-        </>
-      )}
+        </div>
+
+
+
+        <div
+          id="about"
+          className="h-[100vh] pt-44 flex justify-center items-center"
+        >
+          <ContainerScroll
+            titleComponent={
+              <>
+              </>
+            }
+          >
+            <BackgroundGradient
+              className="relative rounded-[22px] bg-white dark:bg-zinc-900 w-[80vw] h-[80vh]"
+              backgroundImage="/assets/background6.webp"
+            >
+              <div className="background-about rounded-[22px] h-full">
+                <div className="glasomorphic-about p-32 rounded-[22px] ">  
+                  <p className="harry-text-Medium">About Exodia</p>
+                  <p className="harry-text-small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus et minus impedit facilis. Illo neque libero odio
+                    eveniet optio laborum voluptate culpa temporibus architecto
+                    autem cupiditate eos, facilis, earum natus. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Odio nulla animi, ullam
+                    temporibus voluptatum eos doloremque, laboriosam exercitationem
+                    molestias similique velit corrupti modi alias dolore,
+                  </p>
+                </div>
+              </div>
+            </BackgroundGradient>
+          </ContainerScroll>
+
+
+        </div>
+
+        <div id="events" className="h-[110vh] pt-44 flex justify-center items-center">
+wddwdwb
+        </div>
+        
+      </div>
     </>
   );
 };
