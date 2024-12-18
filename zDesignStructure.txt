@@ -13,6 +13,9 @@
 
 19 dec (piyush)-
     - created the Harry potter font used
-    - created haome page 
+    - created hame page 
     - created About part in home page using a scrollable div with glasomorphic background image
     - created gallery part in home page
+
+20 dec (piyush)-
+    - created footer for home page
