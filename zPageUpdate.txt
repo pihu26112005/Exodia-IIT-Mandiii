@@ -15,21 +15,23 @@ PAGES ASSIGN -
 
 - / --> (piyush,pragyansh)
 
+- /events --> (kartavya)
+
+- /eventdetail/[id] --> (ketan)
+
+- /gallery --> (anshul)
+
+- /schedule --> (dev)
+
+- /sponsors 
+
 - /about
 
-- /gallery
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- /events 
+- /login & /signin --> using clerk , so need to worry now 
 
-- /eventdetail/[id]
-
-- /login & /signin
-
-
-
-- /sponsors (not sure)
-
-- /accomodation (not sure)
+- /accomodation  
 
 - /developer
 
