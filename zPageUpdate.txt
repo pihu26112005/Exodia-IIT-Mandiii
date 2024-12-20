@@ -6,7 +6,7 @@ Rules to contribute -->
     - then enter into you branch by clcking on it, you will make changes in this new branch repo 
     - and after making changes , you have to make a pull request 
     - after then we merge you pull request after reviewing the code 
-    
+
 
 Basic rules To wroite code --> 
     - jo bhi tum kro as summary zDesignStructure me daalte jana sahi format me jaise maine daala hai, date ke sath
@@ -22,14 +22,15 @@ Basic rules To wroite code -->
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PAGES ASSIGN - 
+ ✅ --> base info shared .
 
 - / --> (piyush,pragyansh)
 
-- /events --> (kartavya)
+- /events --> (kartavya) ✅
 
 - /schedule --> (ketan)
 
-- /gallery --> (anshul)
+- /gallery --> (anshul) ✅
 
 - /eventdetail/[id] --> (dev)
 
