@@ -21,3 +21,5 @@
     - created footer for home page
     - Made Homepage components Reusable 
     - Divided Pages among team
+    - Write all steps for volunteers to contribute, how to make pr , and how to link branch 
+    - Final Updated Readme 
