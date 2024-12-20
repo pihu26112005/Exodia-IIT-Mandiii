@@ -1,3 +1,13 @@
+Rules to contribute --> 
+    - Go to code section, above you are seeing "branch"  written 
+    - click on it , you are seeing currently how many branches we have till now 
+    - on upper sied you are seeing - "new branch", click on it 
+    - write name of you branch , and create a branch for you 
+    - then enter into you branch by clcking on it, you will make changes in this new branch repo 
+    - and after making changes , you have to make a pull request 
+    - after then we merge you pull request after reviewing the code 
+    
+
 Basic rules To wroite code --> 
     - jo bhi tum kro as summary zDesignStructure me daalte jana sahi format me jaise maine daala hai, date ke sath
     - try krarna components jyada bnao, taaki maximum chije stryctured + reuseable ho 
@@ -17,15 +27,15 @@ PAGES ASSIGN -
 
 - /events --> (kartavya)
 
-- /eventdetail/[id] --> (ketan)
+- /schedule --> (ketan)
 
 - /gallery --> (anshul)
 
-- /schedule --> (dev)
+- /eventdetail/[id] --> (dev)
 
-- /sponsors 
+- /sponsors --> (kanika)
 
-- /about
+- /about --> (vaishnavi)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

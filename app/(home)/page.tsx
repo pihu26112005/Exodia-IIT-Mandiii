@@ -8,21 +8,9 @@ import React from "react";
 import { FooterSocialMediaDock } from "@/components/Home_FooterSocialMediaDock";
 import Home_AboutSection from "@/components/Home_AboutSection";
 import Home_GallerySection from "@/components/Home_GallerySection";
+import { navItems } from "@/lib/utils";
 
-const navItems = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "About",
-    link: "#about",
-  },
-  {
-    name: "Gallery",
-    link: "#gallery",
-  },
-];
+
 
 const HomePage = () => {
   return (
@@ -54,7 +42,7 @@ const HomePage = () => {
         <div id="gallery" className=" h-[100vh] flex justify-center items-center gap-[20px] p-0 mx-36">
           <Home_GallerySection />
         </div>
-        
+
       </div>
 
       <footer className="bg-black text-white py-20 flex flex-col items-center">
