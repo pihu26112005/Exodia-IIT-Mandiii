@@ -81,6 +81,42 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'H1';
+  src: url('/fonts/GotikaBlack.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'H2';
+  src: url('/fonts/HarryPot.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'C1';
+  src: url('/fonts/Congrats.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'H3';
+  src: url('/fonts/HarryPotter.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'B1';
+  src: url('/fonts/Kp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'B2';
+  src: url('/fonts/tchristmas.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .harry-text {
   font-family: 'HarryP', sans-serif;
   font-size: 15rem;
