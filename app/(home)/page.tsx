@@ -8,6 +8,7 @@ import Home_GallerySection from "@/components/Home_GallerySection";
 import { navItems } from "@/lib/utils";
 import Home_EventsSection from "@/components/Home_EventsSection";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 
 
@@ -39,14 +40,22 @@ const HomePage = () => {
         </div>
 
 
-        <div id="events" className="h-[150vh] flex flex-col justify-center items-center pt-[100px]">
-        <p className="harry-text-Medium">Explore Events</p>
+        <div id="events" className="relative h-[150vh] flex flex-col justify-center items-center pt-[100px]">
+          <p className="harry-text-Medium">Explore Events</p>
           <Home_EventsSection />
+          <Link href="/events">
+            <p className="harry-text-vsmall absolute bottom-[200px] right-[100px] cursor-pointer">
+              explore all events ....
+            </p>
+          </Link>
         </div>
 
 
-        <div id="gallery" className=" h-[100vh] flex justify-center items-center gap-[20px] p-0 mx-36">
-          <Home_GallerySection />
+        <div id="gallery" className=" h-[120vh] flex justify-center items-center flex-col">
+          <p className="harry-text-Medium">Gallery</p>
+          <div className="flex  justify-center items-center gap-[20px] p-10 w-full">
+            <Home_GallerySection />
+          </div>
         </div>
 
       </div>

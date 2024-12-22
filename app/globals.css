@@ -144,6 +144,14 @@ body {
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
 }
 
+.harry-text-vsmall {
+  font-family: 'HarryP', sans-serif;
+  font-size: 2rem;
+  /* Smaller font size */
+  color: gold;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}
+
 .harry-text-Medium {
   font-family: 'HarryP', sans-serif;
   font-size: 6rem;

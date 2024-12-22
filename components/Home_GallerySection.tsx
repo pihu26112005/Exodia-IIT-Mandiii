@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home_GallerySection = () => {
   return (
-    <div className="gallery">
+    <div className="gallery max-w-[80%]">
                 <div
                   className="box box1 row2MEphailega"
                   style={{
