@@ -13,6 +13,15 @@ export default {
   ],
   theme: {
     extend:{
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to bottom, #171720, #171730, #171738)',
+      },
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+           // resolving conflict 
+     
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
