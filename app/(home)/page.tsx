@@ -10,6 +10,7 @@ import Home_EventsSection from "@/components/Home_EventsSection";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Home_JoinSection } from "@/components/Home_JoinSection";
+import Navbar from "@/components/Navbar";
 
 
 
@@ -17,6 +18,8 @@ const HomePage = () => {
   return (
     <>
       <div className="m-0 p-0 overflow-x-hidden">
+
+        <Navbar />
 
         <FloatingNav navItems={navItems} namex="P" />
 
