@@ -11,6 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imageUrl, title, description, location, price }) => {
     return (
+        <div className='event-card'>
         <div className="card">
             <div className="card-img" style={{ backgroundImage: `url(${imageUrl})` }}></div>
             <div className="card-body">
@@ -25,7 +26,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, location, pri
                     <button className="register-button">Register Now</button>  {/* Register button */}
                 </div>
             </div>
-        </div>
+        </div></div>
     );
 };
 

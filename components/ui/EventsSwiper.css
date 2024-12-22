@@ -4,17 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-body{
-    height: 140vh;
-    background-color: #01000c;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    scale: 1.5;
-    overflow-x: hidden;
-    
-}
+
 h1{
     color: #fff;
     font-size: 55px;
