@@ -76,7 +76,7 @@ Then follow the following steps:
     - Inside the message box, write a message for your commit.
     - Then press commit.
     - If something appears, press the OK button.
-7. Then check on your browser whether that change appears or not. If it appears, great! Go and start developing. If not, contact Piyush.
+7. Then check on your browser whether that change appears or not. If it appears, Balle Balle! Go and start developing. If not, contact Piyush 🫠 .
 8. Whenever you change code and push to your branch, you will see on the home page of your branch on the TOP - "CREATE PULL REQUEST".
     - Click on it.
     - Write the name and description and press create PR.

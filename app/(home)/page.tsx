@@ -1,9 +1,6 @@
 "use client";
 
-import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import Image from "next/image";
 import React from "react";
 import { FooterSocialMediaDock } from "@/components/Home_FooterSocialMediaDock";
 import Home_AboutSection from "@/components/Home_AboutSection";
