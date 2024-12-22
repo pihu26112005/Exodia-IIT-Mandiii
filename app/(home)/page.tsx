@@ -9,6 +9,7 @@ import { navItems } from "@/lib/utils";
 import Home_EventsSection from "@/components/Home_EventsSection";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { Home_JoinSection } from "@/components/Home_JoinSection";
 
 
 
@@ -58,6 +59,9 @@ const HomePage = () => {
           </div>
         </div>
 
+        <div id="contact" className="h-[100vh] flex justify-center items-center">
+          <Home_JoinSection />
+        </div>
       </div>
 
       <Footer />

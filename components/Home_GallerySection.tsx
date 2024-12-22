@@ -1,73 +1,48 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import Image from 'next/image';
+import { Lens } from './ui/lens';
 
 const Home_GallerySection = () => {
   return (
-    <div className="gallery max-w-[80%]">
-                <div
-                  className="box box1 row2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  tree
-                </div>
-                <div
-                  className="box box2 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  mountain
-                </div>
-                <div
-                  className="box box3"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  forest
-                </div>
-                <div
-                  className="box box4 row2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  sunset
-                </div>
-                <div
-                  className="box box5 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  nature
-                </div>
-                <div
-                  className="box box6"
-                  style={{
-                    backgroundImage:
-                      "url(https://plus.unsplash.com/premium_photo-1664547606956-22749d0e0d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  river
-                </div>
-                <div
-                  className="box box7 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  scenery
-                </div>
-              </div>
-  )
+    <div className="border-2 border-green-600 gallery max-w-[80%] grid grid-cols-1 md:grid-cols-3 gap-[100px]">
+      <div className="border-2 border-green-600 row-span-2">
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1aaaa.jpg"  alt="tree" width={100} height={10} />
+        </Lens>
+      </div>
+      <div className="border-2 border-green-600 col-span-2">
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1bbbb.jpg"  alt="mountain" width={100} height={10} />
+        </Lens>
+      </div>
+      <div>
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1cccc.jpg"  alt="forest" width={100} height={10} />
+        </Lens>
+      </div>
+      <div className="border-2 border-green-600 row-span-2">
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1dddd.jpg"  alt="sunset" width={100} height={10} />
+        </Lens>
+      </div>
+      <div className="border-2 border-green-600 col-span-2">
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1aaaa.jpg"  alt="nature" width={100} height={10} />
+        </Lens>
+      </div>
+      <div>
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1aaaa.jpg"  alt="river" width={100} height={10} />
+        </Lens>
+      </div>
+      <div className="border-2 border-green-600 col-span-2">
+        <Lens lensSize={140}>
+          <Image src="/assets/home-event-images/1aaaa.jpg"  alt="scenery" width={100} height={10} />
+        </Lens>
+      </div>
+    </div>
+  );
 }
 
-export default Home_GallerySection
+export default Home_GallerySection;
