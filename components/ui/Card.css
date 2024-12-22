@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+.event-card{
     width: 100%;
     display: flex;
     justify-content: space-around;
