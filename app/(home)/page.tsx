@@ -39,7 +39,8 @@ const HomePage = () => {
         </div>
 
 
-        <div id="events" className="h-[120vh] flex justify-center items-center bg-blue-600">
+        <div id="events" className="h-[150vh] flex flex-col justify-center items-center pt-[100px]">
+        <p className="harry-text-Medium">Explore Events</p>
           <Home_EventsSection />
         </div>
 
