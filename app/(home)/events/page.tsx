@@ -1,9 +1,9 @@
 "use client";
-import SwiperComponent from '@/components/EventsSwiper'
+import SwiperComponent from '@/components/Event_EventsSwiper'
 import React from 'react'
 import { Vortex } from "@/components/ui/vortex"
-import Card from '@/components/Card';
-import AllCards from '@/components/AllCards';
+import Card from '@/components/Event_Card';
+import AllCards from '@/components/Event_AllCards';
 
 const page = () => {
   const imageUrl = "https://www.ministryofvillas.com/wp-content/uploads/2017/12/phuket-kamala-villa-lomchoy-sunset.jpg";
