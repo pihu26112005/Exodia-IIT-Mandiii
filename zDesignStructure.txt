@@ -26,3 +26,9 @@
 21 dec(Player)-
     -Found some animations and design for the website that we can take reference from:
      https://www.behance.net/gallery/164743507/harry-potter-website-design
+
+22 dec (piyush)-
+    - resolve merge conflicts in PR 
+    - created Home page Events section Card 
+    - Add animations to it 
+    - Make use of expandable card 
