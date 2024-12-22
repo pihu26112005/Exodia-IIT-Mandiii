@@ -1,9 +1,14 @@
 "use client";
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import SwiperComponent from '@/components/EventsSwiper'
+=======
+import SwiperComponent from '@/components/Event_EventsSwiper'
+import React from 'react'
+>>>>>>> 40ef1f7389877387b2742d21643c0a74411fe3c3
 import { Vortex } from "@/components/ui/vortex"
-import Card from '@/components/Card';
-import AllCards from '@/components/AllCards';
+import Card from '@/components/Event_Card';
+import AllCards from '@/components/Event_AllCards';
 
 const Page = () => {
   const imageUrl = "https://www.ministryofvillas.com/wp-content/uploads/2017/12/phuket-kamala-villa-lomchoy-sunset.jpg";

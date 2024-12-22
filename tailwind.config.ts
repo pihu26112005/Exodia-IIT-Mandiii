@@ -5,6 +5,7 @@ const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,7 +13,15 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend:{
+    extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to bottom, #171720, #171730, #171738)',
+      },
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+      // resolving conflict 
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
