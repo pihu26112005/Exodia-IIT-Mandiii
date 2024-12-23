@@ -19,15 +19,7 @@ const HomePage = () => {
     <>
       <div className="m-0 p-0 overflow-x-hidden">
 
-<<<<<<< HEAD
-        <Navbar />
-=======
-<<<<<<< HEAD
-        <Navbar />
-=======
       <Navbar />
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
 
         <FloatingNav navItems={navItems} namex="P" />
 
@@ -63,15 +55,7 @@ const HomePage = () => {
         </div>
 
 
-<<<<<<< HEAD
-        <div id="gallery" className=" h-[120vh] flex justify-center items-center flex-col">
-=======
-<<<<<<< HEAD
-        <div id="gallery" className=" h-[120vh] flex justify-center items-center flex-col">
-=======
         <div id="gallery" className=" h-[150vh] flex justify-center items-center flex-col">
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
           <p className="harry-text-Medium">Gallery</p>
           <div className="flex  justify-center items-center gap-[20px] p-10 w-full">
             <Home_GallerySection />

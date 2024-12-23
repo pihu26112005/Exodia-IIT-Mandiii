@@ -12,19 +12,6 @@ const Navbar: React.FC = () => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5572e05 ( commit)
-    if (currentScrollY > lastScrollY) {
-      // Scrolling down
-      setIsVisible(false);
-    } else {
-      // Scrolling up
-      setIsVisible(true);
-<<<<<<< HEAD
-=======
-=======
     if (currentScrollY === 0) {
       // Always show the navbar when at the top
       setIsVisible(true);
@@ -34,8 +21,6 @@ const Navbar: React.FC = () => {
     } else {
       // Show navbar when scrolling up
       setIsVisible(false);
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
     }
 
     setLastScrollY(currentScrollY);
@@ -51,20 +36,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-<<<<<<< HEAD
-      className={`fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 z-50 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-=======
-<<<<<<< HEAD
-      className={`fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 z-50 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-=======
       className={`fixed top-0 left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
     >
       <div className="flex justify-between items-center px-6 py-3 md:px-10">
         {/* Logo */}
@@ -83,20 +56,8 @@ const Navbar: React.FC = () => {
 
         {/* Navbar Links */}
         <nav
-<<<<<<< HEAD
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } absolute md:static top-full left-0 w-full md:w-auto md:flex md:items-center bg-white/10 md:bg-transparent p-4 md:p-0`}
-=======
-<<<<<<< HEAD
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } absolute md:static top-full left-0 w-full md:w-auto md:flex md:items-center bg-white/10 md:bg-transparent p-4 md:p-0`}
-=======
           className={`${isMenuOpen ? "block" : "hidden"
             } absolute md:static top-full left-0 w-full md:w-auto md:flex md:items-center bg-white/10 md:bg-transparent p-4 md:p-0`}
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
         >
           <div className="flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-6">
             <a
@@ -130,16 +91,6 @@ const Navbar: React.FC = () => {
               Contact
             </a>
           </div>
-<<<<<<< HEAD
-        </nav>
-      </div>
-
-=======
-<<<<<<< HEAD
-        </nav>
-      </div>
-
-=======
 
 
         </nav>
@@ -149,8 +100,6 @@ const Navbar: React.FC = () => {
       </div>
 
 
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
       {/* Background Overlay for Mobile Menu */}
       {isMenuOpen && (
         <div

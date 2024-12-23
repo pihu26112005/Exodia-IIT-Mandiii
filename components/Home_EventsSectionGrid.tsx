@@ -7,17 +7,9 @@ import Home_EventsSectionCard from "./Home_EventsSectionCard";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { Events } from "@/lib/utils";
 
-<<<<<<< HEAD
-export function Home_EventsSectionGrid() {
-=======
-<<<<<<< HEAD
-export function Home_EventsSectionGrid() {
-=======
 export function Home_EventsSectionGrid(
   
 ) {
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
   const [active, setActive] = useState<(typeof Events)[number] | boolean | null>(
     null
   );
@@ -142,15 +134,7 @@ export function Home_EventsSectionGrid(
         ) : null}
       </AnimatePresence>
       
-<<<<<<< HEAD
-      <ul className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-9 m-0 my-0 py-0">
-=======
-<<<<<<< HEAD
-      <ul className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-9 m-0 my-0 py-0">
-=======
       <ul className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-9 m-0 my-0 py-0 ">
->>>>>>> b9cc671 (Your commit message)
->>>>>>> 5572e05 ( commit)
         {Events.map((card, index) => (
           
           <div>

@@ -37,7 +37,7 @@ body {
 /* HOME PAGE CSS */
 
 .background {
-  background-image: url('/assets/background6.webp');
+  background-image: url('/assets/background/background6.webp');
   background-size: cover;
   /* Ensure the background covers the container */
   background-position: 50%;
@@ -51,7 +51,7 @@ body {
 }
 
 .background-about {
-  background-image: url('/assets/background6.webp');
+  background-image: url('/assets/background/background6.webp');
   /* Add your image path */
   background-size: cover;
   background-position: center;
@@ -252,6 +252,20 @@ body {
         grid-column: span 3;
     }
 }
+
+/* HOME PAGE - EVENT SECTION  */
+
+.scroll-container {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.scroll-container > * {
+  flex: 0 0 auto;
+  margin-right: 1rem; /* spacing between cards */
+}
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
