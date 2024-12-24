@@ -7,7 +7,9 @@ import Home_EventsSectionCard from "./Home_EventsSectionCard";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { Events } from "@/lib/utils";
 
-export function Home_EventsSectionGrid() {
+export function Home_EventsSectionGrid(
+  
+) {
   const [active, setActive] = useState<(typeof Events)[number] | boolean | null>(
     null
   );
@@ -132,7 +134,7 @@ export function Home_EventsSectionGrid() {
         ) : null}
       </AnimatePresence>
       
-      <ul className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-9 m-0 my-0 py-0">
+      <ul className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-9 m-0 my-0 py-0 ">
         {Events.map((card, index) => (
           
           <div>

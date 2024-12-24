@@ -7,7 +7,7 @@ const Home_AboutSection = () => {
     <ContainerScroll titleComponent={<></>}>
     <BackgroundGradient
       className="relative rounded-[22px] bg-white dark:bg-zinc-900 w-[80vw] h-[80vh]"
-      backgroundImage="/assets/background6.webp"
+      backgroundImage="/assets/background/background6.webp"
     >
       <div className="background-about rounded-[22px] h-full">
         <div className="glasomorphic-about p-32 rounded-[22px]">

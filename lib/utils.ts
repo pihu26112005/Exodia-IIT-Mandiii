@@ -2,9 +2,8 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
-
 
 export const sleep = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
@@ -46,6 +45,41 @@ export const navItems = [
 ];
 
 
+export  const links = [
+  {
+    title: "Whatsapp",
+    icon: "📱",
+    href: "#",
+  },
+
+  {
+    title: "Instagram",
+    icon: "📦",
+    href: "#",
+  },
+  {
+    title: "Twitter",
+    icon:"🧩",
+    href: "#",
+  },
+  {
+    title: "Youtube",
+    icon: "🔄",
+    href: "#",
+  },
+
+  {
+    title: "LinkedIn",
+    icon: "🐦",
+    href: "#",
+  },
+  {
+    title: "Facebook",
+    icon: "🐙",
+    href: "#",
+  },
+];
+
 
 export const Events = [
   {
@@ -75,8 +109,11 @@ export const Events = [
     ctaLink: "https://ui.aceternity.com/templates",
     content: 
          " Metallica, an iconic American heavy metal band, is renowned for their powerful sound and intense performances that resonate deeply with their audience. Formed in Los Angeles, California, they have become a cultural icon in the heavy metal music industry. <br /> <br /> Their songs often reflect themes of aggression, social issues, and personal struggles, capturing the essence of the heavy metal genre. With a career spanning over four decades, Metallica has released numerous hit albums and singles that have garnered them a massive fan following both in the United States and abroad.",
-  }
+  },
+  
 ];
+
+
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

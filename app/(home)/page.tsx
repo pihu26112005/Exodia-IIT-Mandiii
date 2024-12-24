@@ -9,6 +9,8 @@ import { navItems } from "@/lib/utils";
 import Home_EventsSection from "@/components/Home_EventsSection";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { Home_JoinSection } from "@/components/Home_JoinSection";
+import Navbar from "@/components/Navbar";
 
 
 
@@ -16,6 +18,8 @@ const HomePage = () => {
   return (
     <>
       <div className="m-0 p-0 overflow-x-hidden">
+
+      <Navbar />
 
         <FloatingNav navItems={navItems} namex="P" />
 
@@ -51,13 +55,16 @@ const HomePage = () => {
         </div>
 
 
-        <div id="gallery" className=" h-[120vh] flex justify-center items-center flex-col">
+        <div id="gallery" className=" h-[150vh] flex justify-center items-center flex-col">
           <p className="harry-text-Medium">Gallery</p>
           <div className="flex  justify-center items-center gap-[20px] p-10 w-full">
             <Home_GallerySection />
           </div>
         </div>
 
+        <div id="contact" className="h-[100vh] flex justify-center items-center">
+          <Home_JoinSection />
+        </div>
       </div>
 
       <Footer />
