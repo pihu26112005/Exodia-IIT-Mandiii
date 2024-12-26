@@ -286,3 +286,71 @@ body {
   animation-timeline: view();
   animation-range: entry 0;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ABOUT SECTION CSS*/
+
+@media(max-width: 480px) {
+  .AboutExodia_top{
+      border-bottom: 2px solid var(#7d7e80);
+      padding-left:0;
+      padding-right:0;
+      text-align: center;
+      width:100%;
+  }
+  .AboutExodia_top_heading{
+      font-size: 50px;
+      text-align:center;
+  }
+  .AboutExodia_para{
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  .AboutExodia_bottom{
+      align-items: center;
+      border:none;
+      padding-left: 0;
+      padding-right: 0;
+      width:100%;
+  }
+  .AboutExodia_bottom_heading{
+      font-size: 50px;
+      text-align: center;
+  }
+  .AboutExodia_years{
+      display: flex;
+      flex-wrap: wrap;
+      gap:15px;
+      justify-content: center;
+      width:100%;
+  }
+  .AboutExodia_year div{
+      border:1px solid black;
+      font-size: .8rem;
+  }
+  .ytVideo{
+      aspect-ratio:16/9;
+      width:100%;
+      height:auto;
+  }
+}
+
+.AboutExodia_years div{
+  border:1px solid black;
+  border-radius: 50%;
+  cursor:pointer;
+  font-size:18px;
+  padding: 8px 15px;
+  position: relative;
+  transition: transform .3s ease-in-out;
+}
+
+.AboutExodia_years div:hover{
+  transform: translateY(5px);
+}  
+
+.active{
+  background-color: #d0d0d0;
+  font-weight: bold;
+} 
