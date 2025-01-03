@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollText, Calendar, MapPin, User, Wand } from 'lucide-react';
+import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
+import { events } from '@/lib/events'; 
 
 
 // Types
@@ -7,13 +8,14 @@ interface Params {
   id: string;
 }
 interface EventDetail {
-  id_: string;
+  id: string;
   title: string;
   description: string;
   date: string;
   location: string;
   organizer: string;
   spellCategory: string;
+  Fee: string;
   maxParticipants: number;
   currentParticipants: number;
   imageUrl: string;
@@ -48,33 +50,35 @@ const RegisterButton = () => (
   </button>
 );
 
-// Mock data (to be replaced with actual API call)
-const getEventDetails = (id: string): EventDetail => ({
-  id_:id,
-  title: "Pro Night",
-  description: "Experience DJ with you friends",
-  date: "3 April, 2025",
-  location: "Hockey Ground North Campus",
-  organizer: "Artist Name",
-  spellCategory: "Defense",
-  maxParticipants: 100,
-  currentParticipants: 15,
-  imageUrl: "/api/placeholder/800/400"
-});
+// Function to get event details by ID
+const getEventDetails = (id: string): EventDetail | undefined => {
+  const event = events.find(event => event.id === id);
+  
+  if (event) {
+    return event;
+  }
+
+  //Handle error
+  return undefined;
+}
+
 
 // Main Component
 const EventDetailsPage = ({ params }: { params: Params }) => {
-  const id_ = params?.id; // Correctly access 'id' from params
-  console.log("Event ID:", id_); // Debugging line to check if 'id' is passed correctly
+  const id_ = params?.id;
   const event = getEventDetails(id_);
+
+  if (!event) {
+    return <div>Event not found</div>;  //show a custom 404 page or a loading spinner
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white/80 backdrop-blur-sm shadow-xl border-amber-200">
+        <div className="bg-white/30 backdrop-blur-sm shadow-xl border-amber-200 p-6">
           <header>
-            <h1 className="text-3xl font-serif text-amber-900">
-              {event.title}+{id_}
+            <h1 className="text-5xl font-serif text-amber-900 py-4">
+              {event.title}
             </h1>
           </header>
           <div>
@@ -112,6 +116,11 @@ const EventDetailsPage = ({ params }: { params: Params }) => {
                   icon={Wand}
                   label="Spell Category"
                   value={event.spellCategory}
+                />
+                <EventInfoItem 
+                  icon={BadgeIndianRupee}
+                  label="Fee"
+                  value={event.Fee}
                 />
               </div>
 
