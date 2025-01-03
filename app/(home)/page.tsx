@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Home_JoinSection } from "@/components/Home_JoinSection";
 import Navbar from "@/components/Navbar";
+import ArrowButton from "@/components/Button";
 
 
 
@@ -44,13 +45,11 @@ const HomePage = () => {
         </div>
 
 
-        <div id="events" className="relative h-[150vh] flex flex-col justify-center items-center pt-[100px]">
-          <p className="harry-text-Medium">Explore Events</p>
+        <div id="events" className="relative h-[250vh] flex flex-col justify-center items-center pt-[100px]">
           <Home_EventsSection />
+          <br/>
           <Link href="/events">
-            <p className="harry-text-vsmall absolute bottom-[200px] right-[100px] cursor-pointer">
-              explore all events ....
-            </p>
+          <ArrowButton text='more events'/>
           </Link>
         </div>
 

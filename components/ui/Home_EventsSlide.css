@@ -1,0 +1,20 @@
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -170px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 0; /* No gap between images */
+  }
+  
+  .scroll-content img {
+    flex-shrink: 0;
+    width: 300px; /* Match image width */
+    height: 300px; /* Match image height */
+  }
+  
