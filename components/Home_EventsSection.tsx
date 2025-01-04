@@ -89,10 +89,15 @@ const Home_EventsSection = () => {
   ];
 
   return (
-    <div>
+    <div className="Mkd">
     <div className="gallery-container">
       <div className="box34">
-        <div className="center-text" style={{ color: "gold", fontFamily: "H3" }}>Events</div>
+        <div className="center-text"   style={{
+    backgroundImage: "linear-gradient(to right, rgb(255, 136, 0), rgb(255, 0, 255))",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    fontFamily: "H3",
+  }}>Events</div>
         <div className="animate">
         {cards.map((card, index) => (
           <span

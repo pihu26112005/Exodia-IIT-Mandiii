@@ -6,7 +6,9 @@
   transform: rotate(-12deg);
   position: relative;
 }
-
+.Mkd{
+  margin-top: -0px;
+}
 .box34 {
   position: relative;
   width: 150px;
@@ -16,6 +18,7 @@
 }
 .animate{
   width: 135px;
+  color:rgb(255, 157, 0);
   height: 92px;
   transform-style: preserve-3d;
   animation: animate 20s linear infinite;

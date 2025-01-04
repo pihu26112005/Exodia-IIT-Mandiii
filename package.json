@@ -29,6 +29,7 @@
     "simplex-noise": "^4.0.3",
     "swiper": "^9.4.1",
     "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0",
     "yet-another-react-lightbox": "^3.21.7"
   },
