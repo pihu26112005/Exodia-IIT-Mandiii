@@ -27,20 +27,21 @@ const Page = () => {
           particleCount={500}
           baseHue={55}
           className="px-2 md:px-10 py-0 w-full h-full flex flex-col items-center justify-start"
-        ><br /><br />
-        <div className="flex items-center justify-between w-full h-16 px-4 bg-black">
-  <div className="flex-none ml-52">
-    <Link href="/">
-      <ArrowButton text="Back" style={{scale:"0.7"}}/>
-    </Link>
-  </div>
-  <h2
-    className="flex-1 text-2xl md:text-6xl font-bold text-center mr-72"
-    style={{ color: "gold", fontFamily: "B1" }}
-  >
-    It's Exodia 2024!
-  </h2>
-</div>
+        >
+          <br /><br />
+          <div className="flex items-center justify-between w-full h-16 px-4 bg-black">
+            <div className="flex-none ml-52 mb-12">
+              <Link href="/">
+                <ArrowButton text="Back" style={{scale:"0.7"}}/>
+              </Link>
+            </div>
+            <h2
+              className="flex-1 text-2xl md:text-6xl font-bold text-center mr-72"
+              style={{ color: "gold", fontFamily: "B1" }}
+            >
+              It's Exodia 2024!
+            </h2>
+          </div>
 
           <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center" style={{ color: "gold" }}>
             Join us at Exodia 2024, IIT Mandi's cultural festival, Explore a diverse lineup of thrilling events and performances in the heart of the Himalayas.
@@ -58,12 +59,11 @@ const Page = () => {
           baseHue={55}
           className="px-2 md:px-10 py-0 w-full h-full flex flex-col items-center justify-start"
         >
-          <div className='text-white text-2xl md:text-6xl text-start' style={{ color: "gold", fontFamily: "B2" }}>Events</div>
+          <div className='text-white text-4xl md:text-6xl text-start' style={{ color: "gold", fontFamily: "B2" }}>Events</div>
           <AllCards />
         </Vortex>
       </div>
     </div>
-    
   )
 }
 

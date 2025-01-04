@@ -111,7 +111,8 @@ export default {
 			},
 		  },
 		  screens: {
-			'custom-lg': '1100px'
+			'custom-lg': '1100px',
+			'xs':'480px'
 		},
   		borderRadius: {
   			lg: 'var(--radius)',

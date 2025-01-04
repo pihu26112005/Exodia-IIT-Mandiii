@@ -77,6 +77,52 @@ body {
   -webkit-mask-size: 100% 100%;
   background-color: transparent; /* Adjust to blend with page background */
 }
+h1 {
+  color: #fff;
+  font-size: 55px;
+  margin: 80px 0;
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .views{
+    scale: 0.8;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .views{
+    scale: 0.6;
+  }
+}
+
+/* Mobile (small devices) View */
+@media (max-width: 480px) {
+  .views{
+    scale: 0.2;
+  }
+  .h-full{
+    height: 80%;
+  }
+  .text-sm {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.ml-52 {
+  margin-left: 2rem;
+  scale: 0.8;
+}
+h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 10px;
+}
+}
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* FONT  */
