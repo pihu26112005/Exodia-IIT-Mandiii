@@ -31,7 +31,7 @@ const Page = () => {
         <div className="flex items-center justify-between w-full h-16 px-4 bg-black">
   <div className="flex-none ml-52">
     <Link href="/">
-      <ArrowButton text="Back" />
+      <ArrowButton text="Back" style={{scale:"0.7"}}/>
     </Link>
   </div>
   <h2
