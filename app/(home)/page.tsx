@@ -11,6 +11,9 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Home_JoinSection } from "@/components/Home_JoinSection";
 import Navbar from "@/components/Navbar";
+import ArrowButton from "@/components/Button";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { HomeEvents } from "@/components/HomeEvents";
 
 
 
@@ -42,19 +45,9 @@ const HomePage = () => {
         >
           <Home_AboutSection />
         </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-
-        <div id="events" className="relative h-[150vh] flex flex-col justify-center items-center pt-[100px]">
-          <p className="harry-text-Medium">Explore Events</p>
-          <Home_EventsSection />
-          <Link href="/events">
-            <p className="harry-text-vsmall absolute bottom-[200px] right-[100px] cursor-pointer">
-              explore all events ....
-            </p>
-          </Link>
-        </div>
-
-
+        <HomeEvents/>
         <div id="gallery" className=" h-[150vh] flex justify-center items-center flex-col">
           <p className="harry-text-Medium">Gallery</p>
           <div className="flex  justify-center items-center gap-[20px] p-10 w-full">
