@@ -2,11 +2,11 @@ import React from 'react'
 
 const About_aboutSection = () => {
   return (
-    <div className='flex flex-col items-center justify-center mt-[10rem] mb-[5rem] gap-[5rem]'>
-        <div className='harry-text text-[7rem] max-md:text-[5rem] max-sm:text-[4rem]'>
+    <div className='flex flex-col items-center justify-center mt-[10rem] mb-[5rem] gap-[5rem] p-0'>
+        <div className='harry-text text-[7rem] max-md:text-[5rem] max-sm:text-[4rem] max-[500px]:text-[3rem]'>
             About Exodia
         </div>
-        <div className='w-[80%]'>
+        <div className='w-[80%] p-0 text-center text-lg max-md:text-base max-sm:text-sm'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis magni, tempora porro optio neque quod vitae ad voluptas. Obcaecati beatae, accusantium dignissimos quidem commodi earum deleniti amet eveniet exercitationem nihil.
             Alias est consectetur non, ipsa recusandae modi atque, voluptate laboriosam provident fuga cum iure voluptatem ex dolorem dolores in nesciunt aliquid omnis velit enim totam harum. Facere deleniti cumque a?
             Earum accusamus adipisci optio itaque nostrum consequatur dolor esse reiciendis, repudiandae totam rem magnam voluptate culpa! Amet atque, commodi excepturi optio ipsa cumque eius odio ipsam repellat nisi harum sapiente!

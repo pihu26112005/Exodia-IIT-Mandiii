@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <AboutExodiaBottom />
       </div> */}
 
-      <div>
+      <div className='m-0 p-0 overflow-x-hidden'>
         <Navbar />
         <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
 
