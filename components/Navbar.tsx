@@ -39,10 +39,10 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
     >
-      <div className="flex justify-between items-center px-6 py-3 md:px-10">
+      <div className="flex justify-between items-center px-6 md:px-10">
         {/* Logo */}
-        <a href="#" className="text-white text-lg font-semibold">
-          Logo
+        <a href="#" className="text-white font-semibold harry-text text-[3rem]">
+          Exodia
         </a>
 
         {/* Navbar Links */}
@@ -53,50 +53,50 @@ const Navbar: React.FC = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-6">
             <a
               href="/"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Home
             </a>
             <a
               href="/events"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Events
             </a>
             <a
               href="/gallery"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Gallery
             </a>
             <a
               href="/schedule"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Schedule
             </a>
             <a
               href="/sponsors"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Spnsors
             </a>
             <a
               href="/about"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               About
             </a>
             <a
               href="/contact"
-              className="text-white text-base hover:text-red-500 transition"
+              className="text-white text-base hover:text-yellow-300 transition"
             >
               Contact
             </a>
           </div>
 
           <div className={`${isMenuOpen ? "block" : "hidden"}`}>
-          P
+            P
           </div>
 
         </nav>
