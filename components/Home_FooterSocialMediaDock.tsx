@@ -18,7 +18,12 @@ export const FooterSocialMediaDock = () => {
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
+        desktopClassName="max-sm:hidden"
       />
+      <div className="sm:hidden">
+        {/* social media link on circles mapp  */}
+        
+      </div>
     </div>
   );
 }

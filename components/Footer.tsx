@@ -44,7 +44,7 @@ const Footer = () => {
 
       </div>
 
-      {/* <FooterSocialMediaDock /> */}
+      <FooterSocialMediaDock />
 
 
       {/* Social Icons and Copyright */}

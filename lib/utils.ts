@@ -48,34 +48,34 @@ export const navItems = [
 export  const links = [
   {
     title: "Whatsapp",
-    icon: "📱",
+    icon: "/icons/socialmedia/whatsapp.png",
     href: "#",
   },
 
   {
     title: "Instagram",
-    icon: "📦",
+    icon: "/icons/socialmedia/insta.png",
     href: "#",
   },
   {
     title: "Twitter",
-    icon:"🧩",
+    icon:"/icons/socialmedia/twitter.png",
     href: "#",
   },
   {
     title: "Youtube",
-    icon: "🔄",
+    icon: "/icons/socialmedia/youtube.png",
     href: "#",
   },
 
   {
     title: "LinkedIn",
-    icon: "🐦",
+    icon: "/icons/socialmedia/linkedin.png",
     href: "#",
   },
   {
     title: "Facebook",
-    icon: "🐙",
+    icon: "/icons/socialmedia/facebook.png",
     href: "#",
   },
 ];
