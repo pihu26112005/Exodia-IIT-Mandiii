@@ -7,6 +7,7 @@ import './page.css'
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/lib/utils';
+import Footer from '@/components/Footer';
 // import video from "./assets/video.mp4"
 
 // import hamburger from "./assets/hamburdger.png"
@@ -120,7 +121,11 @@ const page: React.FC = () => {
         <div>CONTACT</div>
       </div> : null}
 
+      <Footer />
+
     </div>
+
+    
   );
 }
 
