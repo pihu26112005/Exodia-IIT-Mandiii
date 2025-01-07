@@ -50,7 +50,7 @@ export const navItems = [
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-export  const links = [
+export  const Sociallinks = [
   {
     title: "Whatsapp",
     icon: "/icons/socialmedia/whatsapp.png",
@@ -84,6 +84,8 @@ export  const links = [
     href: "#",
   },
 ];
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 export const Events = [
@@ -410,5 +412,83 @@ export const Sliderslides = [
     subtitle: "Subtitle",
     description: "Description for the third slide.",
     image: "/assets/galery-raw-images/gallery-raw-3.jpg",
+  },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const teamsList = [ 
+  {
+    id: 'team1',
+    name: 'Publicity and Media',
+    members: [
+      { 
+        name: 'Member 1',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member1' },
+          { name: 'instagram', link: 'https://instagram.com/member1' },
+          { name: 'github', link: 'https://github.com/member1' },
+        ],
+      },
+      { 
+        name: 'Member 2',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member2' },
+          { name: 'instagram', link: 'https://instagram.com/member2' },
+          { name: 'github', link: 'https://github.com/member2' },
+        ],
+      },
+    ], 
+  },
+  {
+    id: 'team2',
+    name: 'Sponsorship',
+    members: [
+      { 
+        name: 'Member 3',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member3' },
+          { name: 'instagram', link: 'https://instagram.com/member3' },
+          { name: 'github', link: 'https://github.com/member3' },
+        ],
+      },
+      { 
+        name: 'Member 4',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member4' },
+          { name: 'instagram', link: 'https://instagram.com/member4' },
+          { name: 'github', link: 'https://github.com/member4' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team3',
+    name: 'Event Management',
+    members: [
+      { 
+        name: 'Member 5',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member5' },
+          { name: 'instagram', link: 'https://instagram.com/member5' },
+          { name: 'github', link: 'https://github.com/member5' },
+        ],
+      },
+      { 
+        name: 'Member 6',
+        photo: '/assets/background.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/member6' },
+          { name: 'instagram', link: 'https://instagram.com/member6' },
+          { name: 'github', link: 'https://github.com/member6' },
+        ],
+      },
+    ],
   },
 ];
