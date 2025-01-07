@@ -1,7 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from 'react';
 import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
 import { events } from '@/lib/events'; 
-
+import { BackgroundBeams } from "@/components/ui/Card-background";
 
 // Types
 interface Params {
@@ -73,6 +76,15 @@ const EventDetailsPage = ({ params }: { params: Params }) => {
   }
 
   return (
+    <motion.div
+      className="mx-auto z-10 shadow-md overflow-hidden"
+      initial={{ opacity: 0, y: 50 }} // Start position
+      animate={{ opacity: 1, y: 0 }} // End position
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }} // Animation timing 
+    >
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="bg-white/30 backdrop-blur-sm shadow-xl border-amber-200 p-6">
@@ -151,6 +163,8 @@ const EventDetailsPage = ({ params }: { params: Params }) => {
         </div>
       </div>
     </div>
+    <BackgroundBeams />
+  </motion.div>
   );
 };
 
