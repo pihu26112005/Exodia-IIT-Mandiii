@@ -1,3 +1,4 @@
+import Scrollbar from '@/components/Team_scrollbar';
 import { Sidebar } from 'lucide-react';
 import React from 'react';
 
