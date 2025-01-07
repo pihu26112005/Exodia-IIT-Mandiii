@@ -123,7 +123,7 @@ const page = () => {
           <h1 className="text-4xl font-bold text-white mt-28 harry-text z-[900]" style={{ fontSize: "15rem" }}>
             <TextAnimation text="Gallery" />
           </h1>
-          <div className="text-white text-center harry-text-small mt-4 mb-4 z-[900]">
+          <div className="text-white text-center harry-text text-[3rem] mt-4 mb-4 z-[900]">
             <TextAnimation text="Welcome to the Exodia IIT Mandi Gallery!" />
           </div>
         </header>
