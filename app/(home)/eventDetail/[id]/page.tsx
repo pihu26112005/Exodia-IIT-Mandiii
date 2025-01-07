@@ -1,19 +1,24 @@
-import React from 'react';
-import { ScrollText, Calendar, MapPin, User, Wand } from 'lucide-react';
+"use client";
 
+import { motion } from "framer-motion";
+import React from 'react';
+import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
+import { events } from '@/lib/events'; 
+import { BackgroundBeams } from "@/components/ui/Card-background";
 
 // Types
 interface Params {
   id: string;
 }
 interface EventDetail {
-  id_: string;
+  id: string;
   title: string;
   description: string;
   date: string;
   location: string;
   organizer: string;
   spellCategory: string;
+  Fee: string;
   maxParticipants: number;
   currentParticipants: number;
   imageUrl: string;
@@ -48,100 +53,119 @@ const RegisterButton = () => (
   </button>
 );
 
-// Mock data (to be replaced with actual API call)
-const getEventDetails = (id: string): EventDetail => ({
-  id_:id,
-  title: "Pro Night",
-  description: "Experience DJ with you friends",
-  date: "3 April, 2025",
-  location: "Hockey Ground North Campus",
-  organizer: "Artist Name",
-  spellCategory: "Defense",
-  maxParticipants: 100,
-  currentParticipants: 15,
-  imageUrl: "/api/placeholder/800/400"
-});
+// Function to get event details by ID
+const getEventDetails = (id: string): EventDetail | undefined => {
+  const event = events.find(event => event.id === id);
+  
+  if (event) {
+    return event;
+  }
+
+  //Handle error
+  return undefined;
+}
+
 
 // Main Component
 const EventDetailsPage = ({ params }: { params: Params }) => {
-  const id_ = params?.id; // Correctly access 'id' from params
-  console.log("Event ID:", id_); // Debugging line to check if 'id' is passed correctly
+  const id_ = params?.id;
   const event = getEventDetails(id_);
 
+  if (!event) {
+    return <div>Event not found</div>;  //show a custom 404 page or a loading spinner
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-amber-100 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white/80 backdrop-blur-sm shadow-xl border-amber-200">
-          <header>
-            <h1 className="text-3xl font-serif text-amber-900">
-              {event.title}+{id_}
-            </h1>
-          </header>
-          <div>
-            <div className="space-y-8">
-              {/* Event Image */}
-              <div className="relative h-64 rounded-lg overflow-hidden">
-                <img 
-                  src={event.imageUrl}
-                  alt={event.title}
-                  className="object-cover w-full h-full"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <h2 className="text-white text-xl font-bold">{event.title}</h2>
-                </div>
-              </div>
-
-              {/* Event Information */}
-              <div className="grid gap-4">
-                <EventInfoItem 
-                  icon={Calendar}
-                  label="Date"
-                  value={event.date}
-                />
-                <EventInfoItem 
-                  icon={MapPin}
-                  label="Location"
-                  value={event.location}
-                />
-                <EventInfoItem 
-                  icon={User}
-                  label="Organizer"
-                  value={event.organizer}
-                />
-                <EventInfoItem 
-                  icon={Wand}
-                  label="Spell Category"
-                  value={event.spellCategory}
-                />
-              </div>
-
-              {/* Description */}
-              <div className="bg-amber-50 p-4 rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <ScrollText size={20} className="text-amber-700" />
-                  <h3 className="font-bold text-amber-900">Event Description</h3>
-                </div>
-                <p className="text-amber-800 leading-relaxed">
-                  {event.description}
-                </p>
-              </div>
-
-              {/* Participants Counter */}
+    <motion.div
+      className="mx-auto z-10 shadow-md overflow-hidden"
+      initial={{ opacity: 0, y: 50 }} // Start position
+      animate={{ opacity: 1, y: 0 }} // End position
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }} // Animation timing 
+    >
+      {/* <div className="w-full min-h-screen bg-neutral-900 relative flex flex-col items-center justify-center antialiased py-12"> */}
+        <div className="min-h-screen bg-neutral-900 py-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className=" bg-gradient-to-b from-amber-50 to-amber-100 shadow-xl border-amber-200 p-6 z-10 rounded-lg">
+              <header>
+                <h1 className="text-5xl font-serif text-amber-900 py-4">
+                  {event.title}
+                </h1>
+              </header>
               <div>
-                <h3 className="font-bold text-amber-900 mb-2">Available Spots</h3>
-                <ParticipantCounter 
-                  current={event.currentParticipants}
-                  max={event.maxParticipants}
-                />
-              </div>
+                <div className="space-y-8">
+                  {/* Event Image */}
+                  <div className="relative h-64 rounded-lg overflow-hidden">
+                    <img
+                      src={event.imageUrl}
+                      alt={event.title}
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                      <h2 className="text-white text-xl font-bold">{event.title}</h2>
+                    </div>
+                  </div>
 
-              {/* Register Button */}
-              <RegisterButton />
+                  {/* Event Information */}
+                  <div className="grid gap-4">
+                    <EventInfoItem
+                      icon={Calendar}
+                      label="Date"
+                      value={event.date}
+                    />
+                    <EventInfoItem
+                      icon={MapPin}
+                      label="Location"
+                      value={event.location}
+                    />
+                    <EventInfoItem
+                      icon={User}
+                      label="Organizer"
+                      value={event.organizer}
+                    />
+                    <EventInfoItem
+                      icon={Wand}
+                      label="Spell Category"
+                      value={event.spellCategory}
+                    />
+                    <EventInfoItem
+                      icon={BadgeIndianRupee}
+                      label="Fee"
+                      value={event.Fee}
+                    />
+                  </div>
+
+                  {/* Description */}
+                  <div className="bg-amber-50 p-4 rounded-lg">
+                    <div className="flex items-center gap-2 mb-2">
+                      <ScrollText size={20} className="text-amber-700" />
+                      <h3 className="font-bold text-amber-900">Event Description</h3>
+                    </div>
+                    <p className="text-amber-800 leading-relaxed">
+                      {event.description}
+                    </p>
+                  </div>
+
+                  {/* Participants Counter */}
+                  <div>
+                    <h3 className="font-bold text-amber-900 mb-2">Available Spots</h3>
+                    <ParticipantCounter
+                      current={event.currentParticipants}
+                      max={event.maxParticipants}
+                    />
+                  </div>
+
+                  {/* Register Button */}
+                  <RegisterButton />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        <BackgroundBeams />
+    </motion.div>
   );
 };
 
