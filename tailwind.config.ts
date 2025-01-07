@@ -20,6 +20,7 @@ export default {
   			'custom-gradient': 'linear-gradient(to bottom, #171720, #171730, #171738)'
   		},
   		colors: {
+			'gold': '#ffcc00',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

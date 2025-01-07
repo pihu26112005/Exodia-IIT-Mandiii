@@ -20,9 +20,9 @@ const GalleryImage: React.FC<ImageProps> = ({src, alt, onClick, className, index
     };
 
     return (
-        <motion.div variants={variants} initial="hidden" animate="visible" transition={{delay: index * 0.25, ease: "easeInOut", duration: 0.5}} viewport={{ amount: 0 }} className="my-8">
-            <div className="group overflow-hidden rounded-lg relative w-full" onClick={handleClick}>
-                <Image height={200} width={380} alt={alt} src={src} className={`transition ease duration-1000 group-hover:scale-110 ${className}`} objectFit="cover"/>
+        <motion.div variants={variants} initial="hidden" animate="visible" transition={{delay: index * 0.25, ease: "easeInOut", duration: 0.5}} viewport={{ amount: 0 }} className="my-8 ">
+            <div className="group overflow-hidden rounded-lg relative border border-yellow-300 h-72 w-96" onClick={handleClick}>
+                <Image loading="lazy" fill={true} alt={alt} src={src} style={{objectFit: "cover"}} className={`transition ease duration-1000 group-hover:scale-110 ${className}`}/>
             </div>
         </motion.div>
     );
