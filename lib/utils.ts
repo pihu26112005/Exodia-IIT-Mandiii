@@ -385,3 +385,30 @@ export const eventcards = [
     price: "600₹",
   },
 ];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const Sliderslides = [
+  {
+    id: 1,
+    title: "First Slide",
+    subtitle: "Subtitle",
+    description: "Description for the first slide.",
+    image: "/assets/galery-raw-images/gallery-raw-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Second Slide",
+    subtitle: "Subtitle",
+    description: "Description for the second slide.",
+    image: "/assets/galery-raw-images/gallery-raw-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Third Slide",
+    subtitle: "Subtitle",
+    description: "Description for the third slide.",
+    image: "/assets/galery-raw-images/gallery-raw-3.jpg",
+  },
+];
