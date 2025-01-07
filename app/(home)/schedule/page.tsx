@@ -1,14 +1,19 @@
+"use client"
 
 import { useEffect, useState } from 'react';
 import React from 'react';
 import ScrollTimeline from './Timeline';
 import './page.css'
-import video from "./assets/video.mp4"
+import Navbar from '@/components/Navbar';
+import { FloatingNav } from '@/components/ui/floating-navbar';
+import { navItems } from '@/lib/utils';
+import Footer from '@/components/Footer';
+// import video from "./assets/video.mp4"
 
-import hamburger from "./assets/hamburdger.png"
-import cross from "./assets/cross.png"
+// import hamburger from "./assets/hamburdger.png"
+// import cross from "./assets/cross.png"
 
-import try1 from "./assets/bg_mid_light.png"
+// import try1 from "./assets/bg_mid_light.png"
 
 const page: React.FC = () => {
   const [active, isActive] = useState(false);
@@ -37,14 +42,16 @@ const page: React.FC = () => {
   return (
     <div className="relative w-full h-screen bg-black text-yellow-400">
       {/* Header Section */}
-      <div className="z-20 fixed w-full bg-black shadow-lg  flex items-center justify-between px-20 py-6 ">
+      {/* <div className="z-20 fixed w-full bg-black shadow-lg  flex items-center justify-between px-20 py-6 ">
         <h1 className="text-5xl font-bold font-harryPotter">EXODIA</h1>
-        {active ? <img width={28} onClick={handleClick} src={cross} alt='cross icon' />
-          : <img width={28} onClick={handleClick} className=' transition-all ' src={hamburger} alt='hameburger menu' />}
+        {active ? <img width={28} onClick={handleClick} src="/assets/schedule_assets/cross.png" alt='cross icon' />
+          : <img width={28} onClick={handleClick} className=' transition-all ' src="/assets/schedule_assets/hamburdger.png" alt='hameburger menu' />}
 
 
 
-      </div>
+      </div> */}
+      <Navbar />
+      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
 
       {/* Video Section */}
       <div className="relative w-full h-full  z-0">
@@ -54,14 +61,15 @@ const page: React.FC = () => {
           autoPlay
           muted
         >
-          <source src={video} type="video/mp4" />
+          {/* <source src={video} type="video/mp4" /> */}
+          <source src="/assets/schedule_assets/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       {/* section 2 */}
       <div className='h-screen bg-black'>
 
-        <img src={try1} alt='harry image' className='absolute object-cover- w-full mx-auto h-full' />
+        <img src="/assets/schedule_assets/bg_mid_light.png" alt='harry image' className='absolute object-cover- w-full mx-auto h-full' />
         <div className='relative text-center font-harryPotter pt-20 text-6xl text-black font-semibold'>
           TIMELINE
         </div>
@@ -113,7 +121,11 @@ const page: React.FC = () => {
         <div>CONTACT</div>
       </div> : null}
 
+      <Footer />
+
     </div>
+
+    
   );
 }
 
