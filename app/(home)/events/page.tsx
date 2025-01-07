@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/utils";
+import Image from "next/image";
 
 const pageVariants = {
   initial: {
@@ -59,7 +60,8 @@ const Page = () => {
         </div>
 
         <div className="w-full">
-          <div className="text-white text-4xl md:text-6xl text-center mt-[10rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem]"
+           {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
+          <div className="text-white text-4xl md:text-6xl text-center mt-[10rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
             style={{ color: "gold", fontFamily: "B2" }}>
             Events
           </div>

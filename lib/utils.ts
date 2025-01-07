@@ -15,20 +15,20 @@ export const sleep = (ms: number) =>
 
 export const navItems = [
   {
-    name: "Home",
-    link: "/",
-  },
-  {
     name: "Events",
     link: "/events",
+  },
+  {
+    name: "Schedule",
+    link: "/schedule",
   },
   {
     name: "Gallery",
     link: "/gallery",
   },
   {
-    name: "Schedule",
-    link: "/schedule",
+    name: "Announcements",
+    link: "/announcements",
   },
   {
     name: "Sponsors",

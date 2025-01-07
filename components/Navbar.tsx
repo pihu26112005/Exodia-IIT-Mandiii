@@ -39,12 +39,12 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
     >
       <div className="flex justify-between items-center px-6 md:px-10">
         {/* Logo */}
-        <a href="#" className="text-white font-semibold harry-text text-[3rem]">
+        <a href="/" className="text-white font-semibold harry-text text-[3rem]">
           Exodia
         </a>
 

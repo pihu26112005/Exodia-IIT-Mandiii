@@ -17,6 +17,7 @@ import { HomeEvents } from "@/components/HomeEvents";
 import Home_MainSection from "@/components/Home_MainSection";
 import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
+import CustomCursor from "@/components/CustomCursor";
 
 
 
@@ -24,6 +25,8 @@ const HomePage = () => {
   return (
     <>
       <div className="m-0 p-0 overflow-x-hidden">
+
+       {/* <CustomCursor />  */}
 
       <Navbar />
 
@@ -49,7 +52,7 @@ const HomePage = () => {
 
  {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
-        <div id="gallery" className=" h-[140vh] flex justify-center items-center flex-col">
+        <div id="gallery" className=" h-[140vh] flex justify-center items-center flex-col relative z-[900]">
           {/* <Image src="/assets/schedule_assets/bg_mid_light.png" alt="bg" width={100} height={100} className='absolute object-cover- w-full mx-auto h-[150%]' /> */}
           <p className="harry-text text-[5rem]">Gallery</p>
           <div className="flex  justify-center items-center w-full h-[45%] max-sm:h-0">

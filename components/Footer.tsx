@@ -8,7 +8,7 @@ const Footer = () => {
 
       <div className="container mx-auto grid grid-cols-4 max-md:grid-cols-1">
 
-        <div>
+        <div className='z-[900]'>
           <p className="harry-text-small flex justify-center items-center">EXODIA '25</p>
         </div>
 

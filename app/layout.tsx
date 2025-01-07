@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Exodia '25 || IIT Mandi",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="dark">
         <div>
+        <CustomCursor /> 
         {children}
         </div>
       </body>
