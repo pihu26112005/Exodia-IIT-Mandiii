@@ -119,7 +119,7 @@ const page = () => {
         </Modal>
       </div>
       <div className="flex flex-col items-center px-20 py-12 mt-10">
-        <header className="flex flex-col items-center z-[900]">
+        <header className="flex flex-col items-center z-[200]">
           <h1 className="text-4xl font-bold text-white mt-28 harry-text z-[900]" style={{ fontSize: "15rem" }}>
             <TextAnimation text="Gallery" />
           </h1>
