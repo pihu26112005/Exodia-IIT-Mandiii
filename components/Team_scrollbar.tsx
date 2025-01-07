@@ -45,7 +45,7 @@ const teams: TeamInfo[] = [
 ];
 
 const Scrollbar: React.FC = () => {
-    useEffect(() => {
+    useEffectz(() => {
         const checkBoxes = () => {
           const triggerBottom = window.innerHeight / 5 * 4;
           const boxes = document.querySelectorAll<HTMLDivElement>('.box');

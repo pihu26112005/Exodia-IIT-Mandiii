@@ -1,6 +1,6 @@
+import { Sidebar } from 'lucide-react';
 import React from 'react';
-import Sidebar from './Sidebar';
-import Scrollbar from './Scrollbar';
+
 
 const page: React.FC = () => {
   const handleTeamClick = (teamId: string) => {
