@@ -50,7 +50,7 @@ const Page = () => {
       <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
 
       <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
-        <div className="h-[100vh] w-full flex flex-col items-center justify-center">
+        <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
           <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
             Events
           </div>

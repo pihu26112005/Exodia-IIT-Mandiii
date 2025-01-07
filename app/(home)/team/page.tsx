@@ -1,5 +1,5 @@
 import Scrollbar from '@/components/Team_scrollbar';
-import { Sidebar } from 'lucide-react';
+import Sidebar from '@/components/Team_sidebar';
 import React from 'react';
 
 
@@ -16,7 +16,8 @@ const page: React.FC = () => {
 
   return (
     <div className="container flex">
-      <Sidebar onTeamClick={handleTeamClick} />
+      {/* <Sidebar onTeamClick={handleTeamClick} /> */}
+      <Sidebar />
       <Scrollbar />
     </div>
   );

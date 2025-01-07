@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from 'react';
 
 interface TeamInfo {
   id: string;
@@ -45,7 +46,7 @@ const teams: TeamInfo[] = [
 ];
 
 const Scrollbar: React.FC = () => {
-    useEffectz(() => {
+    useEffect(() => {
         const checkBoxes = () => {
           const triggerBottom = window.innerHeight / 5 * 4;
           const boxes = document.querySelectorAll<HTMLDivElement>('.box');
@@ -87,13 +88,13 @@ const Scrollbar: React.FC = () => {
                     <div key={index} className="content">
                     <h5>{member.name}</h5>
                     <div className="app-icons">
-                    <a href={members.linkedin} target="_blank" rel="noopener noreferrer">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href={members.instagram} target="_blank" rel="noopener noreferrer">
+                    <a href={member.instagram} target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-instagram"></i>
                     </a>
-                    <a href={members.github} target="_blank" rel="noopener noreferrer">
+                    <a href={member.github} target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-github"></i>
                     </a>
                     </div>
