@@ -9,6 +9,7 @@ import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/lib/utils';
 import Footer from '@/components/Footer';
 import About_VideoSection from '@/components/About_VideoSection';
+import About_JoinSection from '@/components/About_JoinSection';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,8 @@ const App: React.FC = () => {
         <About_aboutSection />
 
         <About_VideoSection />
+
+        <About_JoinSection />
 
         <Footer />
       </div>

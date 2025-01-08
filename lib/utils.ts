@@ -133,6 +133,42 @@ export  const Sociallinks = [
   },
 ];
 
+
+export  const AboutSociallinks = [
+  {
+    title: "Whatsapp",
+    icon: "/icons/socialmedia3/whatsapp.png",
+    href: "#",
+  },
+
+  {
+    title: "Instagram",
+    icon: "/icons/socialmedia3/insta.png",
+    href: "#",
+  },
+  {
+    title: "Twitter",
+    icon:"/icons/socialmedia3/twitter.png",
+    href: "#",
+  },
+  {
+    title: "Youtube",
+    icon: "/icons/socialmedia3/youtube.png",
+    href: "#",
+  },
+
+  {
+    title: "LinkedIn",
+    icon: "/icons/socialmedia3/linkedin.png",
+    href: "#",
+  },
+  {
+    title: "Facebook",
+    icon: "/icons/socialmedia3/facebook.png",
+    href: "#",
+  },
+];
+
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
