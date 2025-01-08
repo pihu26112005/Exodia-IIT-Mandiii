@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { navItems } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
 
@@ -64,6 +65,7 @@ const Navbar: React.FC = () => {
           onMouseEnter={() => item.subItems && toggleDropdown(index)}
           onMouseLeave={() => item.subItems && toggleDropdown(null)}
           >
+            <div className="flex">
             <a
               href={item.link}
               className="text-base hover:text-yellow-300 transition"
@@ -71,6 +73,10 @@ const Navbar: React.FC = () => {
             >
               {item.name}
             </a>
+            {item.subItems && (
+              <Image src="/icons/custom/dropdown.svg" alt="Arrow Down" width={20} height={20} style={{ filter: 'invert(1)' }} />
+            )}
+            </div>
             {/* Dropdown Menu */}
             {item.subItems && dropdownOpen === index && (
               <div className="absolute top-full left-0 bg-gray-800 text-white  rounded-2xl shadow-lg  bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300">
