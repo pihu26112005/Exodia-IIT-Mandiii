@@ -44,6 +44,7 @@ const Page: React.FC = () => {
 
 
   return (
+   <>
     <div className="relative w-full h-screen bg-black text-yellow-400">
       <Navbar />
       <FloatingNav namex="P" className="max-md:hidden" />
@@ -133,6 +134,7 @@ const Page: React.FC = () => {
 
     </div>
 
+   </>
   );
 }
 

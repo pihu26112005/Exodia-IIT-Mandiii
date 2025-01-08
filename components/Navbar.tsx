@@ -107,11 +107,11 @@ const Navbar: React.FC = () => {
           <SheetTrigger asChild className="flex justify-center items-center mb-5">
             {/* <Button variant="outline">Open</Button> */}
             <button
-              className="text-white text-2xl md:hidden"
+              className="text-white bg-yellow-300  text-2xl md:hidden"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
-              ☰
+              <p className="invert p-0 m-0 text-white">☰</p>
             </button>
           </SheetTrigger>
           <SheetContent>
