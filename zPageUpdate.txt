@@ -80,3 +80,4 @@ custom cursor - 99,100
 Navbar - 980
 text ko rkhna hai - 900    
 animated modal me - 950
+
