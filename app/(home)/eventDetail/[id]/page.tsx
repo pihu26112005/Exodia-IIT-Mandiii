@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import React from 'react';
 import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
-import { events } from '@/lib/events'; 
+import { eventDetails } from '@/lib/utils'; 
 import { BackgroundBeams } from "@/components/ui/Card-background";
 
 // Types
@@ -55,7 +55,7 @@ const RegisterButton = () => (
 
 // Function to get event details by ID
 const getEventDetails = (id: string): EventDetail | undefined => {
-  const event = events.find(event => event.id === id);
+  const event = eventDetails.find(event => event.title === id);
   
   if (event) {
     return event;
@@ -90,7 +90,7 @@ const EventDetailsPage = ({ params }: { params: Params }) => {
           <div className="max-w-4xl mx-auto">
             <div className=" bg-gradient-to-b from-amber-50 to-amber-100 shadow-xl border-amber-200 p-6 z-10 rounded-lg">
               <header>
-                <h1 className="text-5xl font-serif text-amber-900 py-4">
+                <h1 className="text-5xl font-serif text-amber-900 py-4 font-face">
                   {event.title}
                 </h1>
               </header>
