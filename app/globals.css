@@ -213,6 +213,13 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
 }
 
+.harry-text-black {
+  font-family: 'HarryP', sans-serif;
+  /* font-size: 15rem; */
+  color: black;
+  /* text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000; */
+}
+
 
 /* 
 .harry-text-small {
