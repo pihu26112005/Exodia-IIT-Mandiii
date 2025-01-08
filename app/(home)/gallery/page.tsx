@@ -64,7 +64,7 @@ const page = () => {
     <div className="h-screen">
       <Navbar />
 
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+      <FloatingNav namex="P" className="max-md:hidden" />
       <div className="absolute top-8 left-8 flex items-center justify-center">
         <Modal>
           <ModalTrigger className="harry-text-vsmall border border-yellow-300 flex justify-center group/modal-btn mt-10">

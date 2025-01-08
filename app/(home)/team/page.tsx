@@ -53,7 +53,7 @@ const Page = () => {
     <>
       <Navbar />
 
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+      <FloatingNav  namex="P" className="max-md:hidden" />
       <div className="p-8 font-sans">
 
         <h1 className="harry-text text-center text-[6rem] font-bold mb-12">Core Team</h1>

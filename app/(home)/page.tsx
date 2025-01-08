@@ -30,7 +30,7 @@ const HomePage = () => {
 
       <Navbar />
 
-        <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
+        <FloatingNav  namex="P" className="max-md:hidden"/>
  {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
         <Home_MainSection />

@@ -17,7 +17,7 @@ const page = () => {
     <>
       <Navbar />
 
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+      <FloatingNav namex="P" className="max-md:hidden" />
 
       <div className='m-0 p-0 w-full'>
         <div className='h-[100vh] bg-black flex justify-center items-center'>

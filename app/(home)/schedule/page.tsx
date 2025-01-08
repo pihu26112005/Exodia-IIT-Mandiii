@@ -45,7 +45,7 @@ const Page: React.FC = () => {
   return (
     <div className="relative w-full h-screen bg-black text-yellow-400">
       <Navbar />
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
+      <FloatingNav  namex="P" className="max-md:hidden"/>
 
       {/* Header Section */}
       {/* <div className="z-20 fixed w-full bg-black shadow-lg  flex items-center justify-between px-20 py-6 ">

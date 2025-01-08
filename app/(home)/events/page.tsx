@@ -47,7 +47,7 @@ const Page = () => {
       <div className="m-0 p-0 overflow-x-hidden">
       <Navbar />
 
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+      <FloatingNav  namex="P" className="max-md:hidden" />
 
       <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
         <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">

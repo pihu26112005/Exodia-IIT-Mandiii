@@ -26,7 +26,7 @@ const Page: React.FC = () => {
     <div>
       <Navbar />
 
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+      <FloatingNav  namex="P" className="max-md:hidden" />
       <Spomsors_section />
 
       <Footer />
