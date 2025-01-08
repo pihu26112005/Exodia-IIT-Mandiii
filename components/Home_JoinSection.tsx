@@ -14,7 +14,7 @@ export function Home_JoinSection() {
     "/assets/home-join-images/j1dddd.JPG",
   ];
   return (
-    <ImagesSlider className="h-[40rem] max-sm:h-[30rem] mx-[100px] max-2xl:mx-[80px] max-xl:mx-[70px] max-lg:mx-[60px] max-md:mx-[40px] max-sm:mx-[20px] border-2 border-yellow-300" images={images}>
+    <ImagesSlider className="h-[40rem] max-sm:h-[20rem] max-sm:rounded-xl mx-[100px] max-2xl:mx-[80px] max-xl:mx-[70px] max-lg:mx-[60px] max-md:mx-[40px] max-sm:mx-[20px] border-2 border-yellow-300" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -29,7 +29,7 @@ export function Home_JoinSection() {
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <div className="flex flex-col w-[50%] h-full mb-[5rem] items-center justify-center absolute right-0 ">
+        <div className="flex flex-col w-[50%] h-full mb-[5rem] max-sm:mb-[3rem] items-center justify-center absolute right-0 ">
           <div className="flex gap-5 max-sm:gap-[8px] ">
             <motion.p className="max-sm:m-0 harry-text-white font-bold max-sm:text-[0.7rem] max-xl:text-[2.5rem] max-md:text-[2rem] text-[5rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
               Join the
@@ -54,7 +54,7 @@ export function Home_JoinSection() {
         </button> */}
         </div>
         <hr className=" absolute w-[2px] h-[80%] bg-yellow-300 my-4" />
-        <div className="absolute flex items-center justify-center harry-text-white text-[2rem] max-sm:text-[0.7rem] max-xl:text-[1.5rem] px-[3rem] w-[50%] h-full left-0">
+        <div className="absolute flex items-center justify-center harry-text-white text-[2rem] max-sm:text-[0.7rem] max-xl:text-[1.5rem] px-[3rem] max-sm:px-[20px] w-[50%] h-full left-0">
           Stay tuned for all the thrilling updates, event spotlights, and exclusive content about Exodia, our premier annual tech-cultural festival. Get ready to witness innovation, creativity, and the dynamic spirit of campus life coming together. Don`t miss a moment of the excitement. This is where brilliance takes center stage!
         </div>
       </motion.div>

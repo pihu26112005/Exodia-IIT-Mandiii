@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "sm:translate-y-0" : "sm:-translate-y-full"
         }`}
     >
       <div className="flex justify-between items-center px-6 md:px-10">
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
 
         {/* Menu Icon (Mobile Only) */}
         <Sheet>
-          <SheetTrigger asChild>
+          <SheetTrigger asChild className="flex justify-center items-center mb-5">
             {/* <Button variant="outline">Open</Button> */}
             <button
               className="text-white text-2xl md:hidden"
