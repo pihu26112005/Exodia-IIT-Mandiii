@@ -24,7 +24,7 @@ export const FooterSocialMediaDock = () => {
       <div className="sm:hidden flex justify-center items-center gap-2 mb-4">
         {/* social media link on circles mapp  */}
         {Sociallinks.map((link, index) => (
-          <div>
+          <div key={index}>
             <Link href={link.href} key={index}>
             <Image src={link.icon} height={10} width={20} alt={link.title} />
             </Link>

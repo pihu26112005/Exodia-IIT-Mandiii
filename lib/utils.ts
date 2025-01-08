@@ -13,6 +13,41 @@ export const sleep = (ms: number) =>
 
 // HOME PAGE UTILS 
 
+// export const navItems = [
+//   {
+//     name: "Events",
+//     link: "/events",
+//   },
+//   {
+//     name: "Schedule",
+//     link: "/schedule",
+//   },
+//   {
+//     name: "Gallery",
+//     link: "/gallery",
+//   },
+//   {
+//     name: "Announcements",
+//     link: "/announcements",
+//   },
+//   {
+//     name: "Sponsors",
+//     link: "/sponsors",
+//   },
+//   {
+//     name: "About",
+//     link: "/about",
+//   },
+//   {
+//     name: "Team",
+//     link: "/team",
+//   },
+//   {
+//     name: "Contact",
+//     link: "/contact",
+//   },
+// ];
+
 export const navItems = [
   {
     name: "Events",
@@ -25,6 +60,11 @@ export const navItems = [
   {
     name: "Gallery",
     link: "/gallery",
+    subItems: [
+      { name: "Gallery", link: "/gallery" },
+      { name: "Brochure", link: "/brochure" },
+      { name: "Vertical Layout", link: "/vertical-layout" },
+    ],
   },
   {
     name: "Announcements",
@@ -41,10 +81,19 @@ export const navItems = [
   {
     name: "Team",
     link: "/team",
+    subItems: [
+      { name: "Core Team", link: "/team" },
+      { name: "Developers", link: "/developers" },
+    ],
   },
   {
     name: "Contact",
     link: "/contact",
+    subItems: [
+      { name: "Contact Us", link: "/contact" },
+      { name: "How to Reach", link: "/howtoreach" },
+      { name: "3D Map", link: "/3dmap" },
+    ],
   },
 ];
 

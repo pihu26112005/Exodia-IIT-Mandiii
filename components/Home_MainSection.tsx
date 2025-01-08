@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home_MainSection = () => {
     return (
-        <div className="flex items-center justify-center relative h-[100vh] w-full z-[900]">
+        <div className="flex items-center justify-center relative h-[100vh] w-full z-[900] ">
             <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0">
                 <p className="harry-text text-[3rem] max-lg:hidden
                             absolute top-[10rem] left-[17%] ">
