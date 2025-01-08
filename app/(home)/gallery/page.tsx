@@ -4,8 +4,9 @@ import TextAnimation from "@/components/Gallery_TextAnimation";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { Fullscreen, Zoom, Thumbnails } from "yet-another-react-lightbox/plugins";
+import { Fullscreen, Zoom, Thumbnails, Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 import LoadMore from "@/components/LoadMore";
 import { ImageRenderer } from "@/components/ImageRenderer";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
@@ -53,6 +54,7 @@ const page = () => {
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
     src: images[index],
+    description: "Press ESC to exit\nUse arrow keys to navigate",
   }));
 
   const onClick = (index: number) => openLightbox(index);
@@ -130,7 +132,7 @@ const page = () => {
         <ImageRenderer onClick={onClick} images={images} />
         <LoadMore onClick={onClick} />
       </div>
-      <Lightbox className="z-0" index={idx} plugins={[Fullscreen, Zoom, Thumbnails]} open={open} slides={slides} close={() => setOpen(false)} />
+      <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions]} open={open} slides={slides} close={() => setOpen(false)} />
     </div>
   );
 }
