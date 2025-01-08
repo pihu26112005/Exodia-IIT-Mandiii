@@ -658,6 +658,8 @@ export const eventDetails = [
     description: "Relax and play with us.",
     currentParticipants: 16,
     maxParticipants: 50,
+  }
+]
 
 export const teamsList = [ 
   {
