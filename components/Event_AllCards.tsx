@@ -6,11 +6,11 @@ import { cardData } from "@/lib/utils";
 
 function AllCards() {
   return (
-    <div className="space-y-8 px-5 w-[90%] mx-auto">
+    <div className="space-y-8 px-5 w-[90%] mx-auto ">
     {cardData.map((dayData, index) => (
-      <div key={index} className="space-y-4 flex flex-col justify-center items-center gap-4">
+      <div key={index} className=" space-y-4 flex flex-col justify-center items-center gap-4">
         {/* Day Title */}
-        <h2 className="text-[5rem] harry-text" style={{color:"gold"}}>{dayData.day}</h2>
+        <h2 className="text-[5rem] harry-text " style={{color:"gold"}}>{dayData.day}</h2>
   
         {/* Card Container */}
         <div className="flex flex-wrap gap-8 w-full justify-center items-center">

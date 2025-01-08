@@ -18,6 +18,12 @@ body {
   
 }
 
+/* In globals.css */
+html, body {
+  cursor: none; /* Hides the default cursor */
+}
+
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* HOME PAGE About CSS */
@@ -200,29 +206,45 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
   z-index: 1;
 }
 
+.harry-text-white {
+  font-family: 'HarryP', sans-serif;
+  /* font-size: 15rem; */
+  color: white;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}
+
+.harry-text-black {
+  font-family: 'HarryP', sans-serif;
+  /* font-size: 15rem; */
+  color: black;
+  /* text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000; */
+}
+
+
+/* 
 .harry-text-small {
   font-family: 'HarryP', sans-serif;
   font-size: 3rem;
   /* Smaller font size */
-  color: gold;
-  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
-}
+  /* color: gold; */
+  /* text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000; */
+/* } */
 
-.harry-text-vsmall {
+/* .harry-text-vsmall {
   font-family: 'HarryP', sans-serif;
   font-size: 2rem;
   /* Smaller font size */
-  color: gold;
-  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
-}
+  /* color: gold; */
+  /* text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000; */
+/* } */ 
 
-.harry-text-Medium {
-  font-family: 'HarryP', sans-serif;
+/* .harry-text-Medium { */
+  /* font-family: 'HarryP', sans-serif;
   font-size: 6rem;
   /* Smaller font size */
-  color: gold;
-  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
-}
+  /* color: gold; */
+  /* text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;/ */
+/* } */
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 

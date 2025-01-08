@@ -9,6 +9,7 @@ import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/lib/utils';
 import Footer from '@/components/Footer';
 import About_VideoSection from '@/components/About_VideoSection';
+import About_JoinSection from '@/components/About_JoinSection';
 
 const App: React.FC = () => {
   return (
@@ -21,11 +22,13 @@ const App: React.FC = () => {
 
       <div className='m-0 p-0 overflow-x-hidden'>
         <Navbar />
-        <FloatingNav navItems={navItems} namex="P" className="max-md:hidden" />
+        <FloatingNav  namex="P" className="max-md:hidden" />
 
         <About_aboutSection />
 
         <About_VideoSection />
+
+        <About_JoinSection />
 
         <Footer />
       </div>

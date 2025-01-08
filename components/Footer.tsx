@@ -8,17 +8,17 @@ const Footer = () => {
 
       <div className="container mx-auto grid grid-cols-4 max-md:grid-cols-1">
 
-        <div>
-          <p className="harry-text-small flex justify-center items-center">EXODIA '25</p>
+        <div className='z-[900]'>
+          <p className="harry-text text-[3rem] flex justify-center items-center">EXODIA '25</p>
         </div>
 
         {/* Participate Section */}
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Participate</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-pink-500">Events Portal</a></li>
-            <li><a href="#" className="hover:text-pink-500">CA Portal</a></li>
-            <li><a href="#" className="hover:text-pink-500">Join The Community</a></li>
+            <li><a href="/events" className="hover:text-pink-500">Events Portal</a></li>
+            <li><a href="/events" className="hover:text-pink-500">Join The Community</a></li>
+            <li><a href="/brochure" className="hover:text-pink-500">Brochure</a></li>
           </ul>
         </div>
 
@@ -26,9 +26,9 @@ const Footer = () => {
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Explore More</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-pink-500">Star Attractions</a></li>
-            <li><a href="#" className="hover:text-pink-500">Hall Of Fame</a></li>
-            <li><a href="#" className="hover:text-pink-500">Brochure</a></li>
+          <li><a href="/about" className="hover:text-pink-500">About Exodia</a></li>
+            <li><a href="/gallery" className="hover:text-pink-500">Previous Star Attractions</a></li>
+            <li><a href="/gallery" className="hover:text-pink-500">Gallery</a></li>
           </ul>
         </div>
 
@@ -36,9 +36,9 @@ const Footer = () => {
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Reach Out To Us</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-pink-500">Have Any Queries?</a></li>
-            <li><a href="#" className="hover:text-pink-500">Contact Us</a></li>
-            <li><a href="#" className="hover:text-pink-500">Associate With Us</a></li>
+            <li><a href="/contact" className="hover:text-pink-500">Have Any Queries?</a></li>
+            <li><a href="/contact" className="hover:text-pink-500">Contact Us</a></li>
+            <li><a href="/team" className="hover:text-pink-500">Associate With Us</a></li>
           </ul>
         </div>
 

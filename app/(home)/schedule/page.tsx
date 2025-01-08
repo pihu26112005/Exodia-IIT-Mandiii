@@ -2,23 +2,27 @@
 
 import { useEffect, useState } from 'react';
 import React from 'react';
+import Image from 'next/image';
 import ScrollTimeline from './Timeline';
 import './page.css'
+import hamburger from "../../../public/assets/sch_assets/hamburdger.png"
+import cross from "../../../public/assets/sch_assets/cross.png"
+
+import try1 from "../../../public/assets/sch_assets/bg_mid_light.png"
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
-import { navItems } from '@/lib/utils';
+import { navItems, ScheduleEventList } from '@/lib/utils';
 import Footer from '@/components/Footer';
-// import video from "./assets/video.mp4"
+import { HoverEffect } from '@/components/ui/card-hover-effect';
 
-// import hamburger from "./assets/hamburdger.png"
-// import cross from "./assets/cross.png"
+// import video from "../../../public/assets/sch_assets/"
 
-// import try1 from "./assets/bg_mid_light.png"
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const [active, isActive] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [selectedDay, setSelectedDay] = useState<string>('day1'); // State to manage selected day
+
 
 
   useEffect(() => {
@@ -40,18 +44,20 @@ const page: React.FC = () => {
 
 
   return (
+   <>
     <div className="relative w-full h-screen bg-black text-yellow-400">
+      <Navbar />
+      <FloatingNav namex="P" className="max-md:hidden" />
+
       {/* Header Section */}
       {/* <div className="z-20 fixed w-full bg-black shadow-lg  flex items-center justify-between px-20 py-6 ">
         <h1 className="text-5xl font-bold font-harryPotter">EXODIA</h1>
-        {active ? <img width={28} onClick={handleClick} src="/assets/schedule_assets/cross.png" alt='cross icon' />
-          : <img width={28} onClick={handleClick} className=' transition-all ' src="/assets/schedule_assets/hamburdger.png" alt='hameburger menu' />}
+        {active ? <Image width={28} onClick={handleClick} src={cross} alt='cross icon' />
+          : <Image width={28} onClick={handleClick} className=' transition-all ' src={hamburger} alt='hameburger menu' />}
 
 
 
       </div> */}
-      <Navbar />
-      <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
 
       {/* Video Section */}
       <div className="relative w-full h-full  z-0">
@@ -61,15 +67,14 @@ const page: React.FC = () => {
           autoPlay
           muted
         >
-          {/* <source src={video} type="video/mp4" /> */}
-          <source src="/assets/schedule_assets/video.mp4" type="video/mp4" />
+          <source src="/assets/sch_assets/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       {/* section 2 */}
       <div className='h-screen bg-black'>
 
-        <img src="/assets/schedule_assets/bg_mid_light.png" alt='harry image' className='absolute object-cover- w-full mx-auto h-full' />
+        <Image src={try1} alt='harry image' className='absolute object-cover- w-full mx-auto h-full' />
         <div className='relative text-center font-harryPotter pt-20 text-6xl text-black font-semibold'>
           TIMELINE
         </div>
@@ -97,7 +102,7 @@ const page: React.FC = () => {
       </div>
 
       {showPopup && !active ? (
-        <div className="absolute top-1/2 left-[42%] z-10   text-center ">
+        <div className="z-[900] absolute top-1/2 left-[42%]  text-center ">
           <div className='flex gap-5 '>
 
             <h2 className="text-8xl font-harryPotter flex font-bold text-yellow-400 overflow-hidden whitespace-nowrap typing-demo">
@@ -121,14 +126,18 @@ const page: React.FC = () => {
         <div>CONTACT</div>
       </div> : null}
 
+      <div className="max-w-full mx-0 px-0 max-sm:hidden">
+      <HoverEffect items={ScheduleEventList} />
+      </div>
+
       <Footer />
 
     </div>
 
-    
+   </>
   );
 }
 
-export default page
+export default Page
 
 

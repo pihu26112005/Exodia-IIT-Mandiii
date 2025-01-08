@@ -92,7 +92,7 @@ const SwiperComponent = () => {
     if (count < 4) {
       setTimeout(() => setCount(count + 1), delay);
     } else if (count === 4) {
-      setDelay(3000);
+      setDelay(1000);
       setCount(count + 1);
     }
   }, [count, delay]);

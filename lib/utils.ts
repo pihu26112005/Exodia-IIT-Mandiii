@@ -13,22 +13,61 @@ export const sleep = (ms: number) =>
 
 // HOME PAGE UTILS 
 
+// export const navItems = [
+//   {
+//     name: "Events",
+//     link: "/events",
+//   },
+//   {
+//     name: "Schedule",
+//     link: "/schedule",
+//   },
+//   {
+//     name: "Gallery",
+//     link: "/gallery",
+//   },
+//   {
+//     name: "Announcements",
+//     link: "/announcements",
+//   },
+//   {
+//     name: "Sponsors",
+//     link: "/sponsors",
+//   },
+//   {
+//     name: "About",
+//     link: "/about",
+//   },
+//   {
+//     name: "Team",
+//     link: "/team",
+//   },
+//   {
+//     name: "Contact",
+//     link: "/contact",
+//   },
+// ];
+
 export const navItems = [
-  {
-    name: "Home",
-    link: "/",
-  },
   {
     name: "Events",
     link: "/events",
   },
   {
-    name: "Gallery",
-    link: "/gallery",
-  },
-  {
     name: "Schedule",
     link: "/schedule",
+  },
+  {
+    name: "Gallery",
+    link: "/gallery",
+    subItems: [
+      { name: "Gallery", link: "/gallery" },
+      { name: "Brochure", link: "/brochure" },
+    ],
+  },
+  {
+    name: "Announcements",
+    link: "/announcements",
   },
   {
     name: "Sponsors",
@@ -41,16 +80,25 @@ export const navItems = [
   {
     name: "Team",
     link: "/team",
+    subItems: [
+      { name: "Core Team", link: "/team" },
+      { name: "Developers", link: "/developers" },
+    ],
   },
   {
     name: "Contact",
     link: "/contact",
+    subItems: [
+      { name: "Contact Us", link: "/contact" },
+      { name: "How to Reach", link: "/howtoreach" },
+      { name: "3D Map", link: "/3dmap" },
+    ],
   },
 ];
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-export  const links = [
+export  const Sociallinks = [
   {
     title: "Whatsapp",
     icon: "/icons/socialmedia/whatsapp.png",
@@ -84,6 +132,44 @@ export  const links = [
     href: "#",
   },
 ];
+
+
+export  const AboutSociallinks = [
+  {
+    title: "Whatsapp",
+    icon: "/icons/socialmedia3/whatsapp.png",
+    href: "#",
+  },
+
+  {
+    title: "Instagram",
+    icon: "/icons/socialmedia3/insta.png",
+    href: "#",
+  },
+  {
+    title: "Twitter",
+    icon:"/icons/socialmedia3/twitter.png",
+    href: "#",
+  },
+  {
+    title: "Youtube",
+    icon: "/icons/socialmedia3/youtube.png",
+    href: "#",
+  },
+
+  {
+    title: "LinkedIn",
+    icon: "/icons/socialmedia3/linkedin.png",
+    href: "#",
+  },
+  {
+    title: "Facebook",
+    icon: "/icons/socialmedia3/facebook.png",
+    href: "#",
+  },
+];
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 export const Events = [
@@ -572,5 +658,326 @@ export const eventDetails = [
     description: "Relax and play with us.",
     currentParticipants: 16,
     maxParticipants: 50,
+
+export const teamsList = [ 
+  {
+    id: 'team1',
+    name: 'Secretary',
+    members: [
+      { 
+        name: 'Ayush Sinha',
+        photo: '/assets/team/ayush.JPG',
+        heading: 'Literary Secretary',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-sinha-iit-mandi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/cultureshock_poet' },
+          { name: 'whatsapp', link: '7992323005' },
+          { name: 'email', link: 'literary_secretary@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Vivek Aggarwal',
+        photo: '/assets/team/vivek.jpeg',
+        heading: 'Cultural Secretary',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/vivek-aggarwal-b005b125a/' },
+          { name: 'instagram', link: 'https://www.instagram.com/vivekaggarwal05/' },
+          { name: 'whatsapp', link: '7417899100' },
+          { name: 'email', link: 'cultural_secretary@students.iitmandi.ac.in' },
+        ],
+      },
+    ], 
+  },
+  {
+    id: 'team2',
+    name: 'Sponsorship Team ',
+    members: [
+      { 
+        name: 'Ayan Garg',
+        photo: '/assets/team/ayan.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://linkedin.com/in/AyanGargAyanGarg' },
+          { name: 'instagram', link: 'https://instagram.com/ayangarg2' },
+          { name: 'whatsapp', link: '7756837945' },
+          { name: 'email', link: 'ayangarg2005@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Ayush Bhardwaj',
+        photo: '/assets/team/ayushb.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-bhardwaj01' },
+          { name: 'whatsapp', link: '9877809383' },
+          { name: 'email', link: 'b23199@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Hardeep Gupta',
+        photo: '/assets/team/hardeep.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/hardeep-gupta-14ab7b337' },
+          { name: 'instagram', link: 'https://instagram.com/hardeepgupta123' },
+          { name: 'whatsapp', link: '9219602541' },
+          { name: 'email', link: 'hardeepgupta2912@gmail.com' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team3',
+    name: 'Planning And Management Team',
+    members: [
+      { 
+        name: 'Avishkar Chavan',
+        photo: '/assets/team/avishkar.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/avishkarchavan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+          { name: 'instagram', link: 'https://instagram.com/avishkar_95' },
+          { name: 'whatsapp', link: '8767757524' },
+          { name: 'email', link: 'avishkarchavan55@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Tushar Bhati',
+        photo: '/assets/team/tushar.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/tushar-bhati-632862318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+          { name: 'instagram', link: 'https://instagram.com/tusharbhatiiii' },
+          { name: 'whatsapp', link: '9870226606' },
+          { name: 'email', link: 'B23104@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Sujay Ghonshetwad',
+        photo: '/assets/team/sujay.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/sujay-ghonshetwad-233b89225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/itz_sujay_20' },
+          { name: 'whatsapp', link: '8767430882' },
+          { name: 'email', link: '20sujay04@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Jaspinder kaur ',
+        photo: '/assets/team/jasbinder.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/jaspinder-kaur-ba33242a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'whatsapp', link: '9780771121' },
+          { name: 'email', link: 'B23264@students.iitmandi.ac.in' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team4',
+    name: 'Development Team',
+    members: [
+      { 
+        name: 'Piyush Kumar',
+        photo: '/assets/team/piyush.jpeg',
+        socialMediaLinks: [
+        ],
+      },
+      { 
+        name: 'Pragyansh',
+        photo: '/assets/team/pragyansh.png',
+        socialMediaLinks: [
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team5',
+    name: 'Publicity team ',
+    members: [
+      { 
+        name: 'Deepansha Deora',
+        photo: '/assets/team/depansha.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/deepansha-deora-27b8b4280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/deepansha_05' },
+          { name: 'whatsapp', link: '97823 96590 ' },
+          { name: 'email', link: '23deepansha@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Gourav Chaudhary ',
+        photo: '/assets/team/gaurav.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/gourav-chaudhary-845a78344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/Chodry_gourav_22' },
+          { name: 'whatsapp', link: '8278741047' },
+          { name: 'email', link: 'b23370@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Namita Singh ',
+        photo: '/assets/team/namita.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/namita-singh-b00346329' },
+          { name: 'instagram', link: 'https://instagram.com/namitasingh14114' },
+          { name: 'whatsapp', link: '9811197429' },
+          { name: 'email', link: 'b22224@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Divyanshu Raj',
+        photo: '/assets/team/divyanshu.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/divyanshu-raj-784306329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'whatsapp', link: '8797003838' },
+          { name: 'email', link: 'b23438@students.iitmandi.ac.in' },
+          { name: 'instagram', link: 'https://instagram.com/divyanshu_raj_2004' },
+        ],
+      },
+    ],
+  },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+export const faqquestions = [
+  {
+    id: 1,
+    question: "Popular Articles",
+    answer: "Details about popular articles.",
+  },
+  {
+    id: 2,
+    question: "Fix problems & request removals",
+    answer: "Details about fixing problems and removals.",
+  },
+  {
+    id: 3,
+    question: "Browse the web",
+    answer: "Details about browsing the web.",
+  },
+  {
+    id: 4,
+    question: "Search on your phone or tablet",
+    answer: "Details about searching on your device.",
+  },
+];
+
+
+export const announcementFaq = [
+  {
+    quote:
+      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+    name: "Charles Dickens",
+    title: "A Tale of Two Cities",
+  },
+  {
+    quote:
+      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+    name: "William Shakespeare",
+    title: "Hamlet",
+  },
+  {
+    quote: "All that we see or seem is but a dream within a dream.",
+    name: "Edgar Allan Poe",
+    title: "A Dream Within a Dream",
+  },
+  {
+    quote:
+      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+    name: "Jane Austen",
+    title: "Pride and Prejudice",
+  },
+  {
+    quote:
+      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+    name: "Herman Melville",
+    title: "Moby-Dick",
+  },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+export const ScheduleEventList = [
+  {
+    title: "Anima",
+    Date:"09/09/0909",
+    Day:
+      "Monday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Itachi",
+    Date:"09/09/0909",
+    Day:
+      "TuesDay",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Sasuke Uchiha",
+    Date:"09/09/0909",
+    Day:
+      "Wednesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "MADARA",
+    Date:"09/09/0909",
+    Day:
+      "Thursday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Gojo Saturo",
+    Date:"09/09/0909",
+    Day:
+      "Friday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "MicroVenom",
+    Date:"09/09/0909",
+    Day:
+      "Saturday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Teriasekitesi",
+    Date:"09/09/0909",
+    Day:
+      "Sunday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Noa",
+    Date:"09/09/0909",
+    Day:
+      "Monday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "NarutoKun",
+    Date:"09/09/0909",
+    Day:
+      "Tuesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "dattevaya",
+    Date:"09/09/0909",
+    Day:
+      "Wednesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+
   },
 ];

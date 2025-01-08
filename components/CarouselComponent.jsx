@@ -21,7 +21,7 @@ const CarouselComponent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-    }, 3000); // 3 seconds per slide
+    }, 1000); // 3 seconds per slide
     return () => clearInterval(interval); // Cleanup on unmount
   }, [images.length]);
 

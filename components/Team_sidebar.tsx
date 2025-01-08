@@ -1,10 +1,25 @@
+"use client";
 import React from 'react';
 
 interface SidebarProps {
   onTeamClick: (teamId: string) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ onTeamClick }) => {
+
+const handleTeamClick = (teamId: string) => {
+  const teamBox = document.getElementById(teamId);
+  if (teamBox) {
+    window.scrollTo({
+      top: teamBox.offsetTop,
+      behavior: 'smooth',
+    });
+  }
+};
+
+
+// const Sidebar: React.FC<SidebarProps> = ({ onTeamClick }) => {
+  const Sidebar: React.FC = () => {
+
   const teams = [
     { id: 'team1', name: 'Publicity and Media' },
     { id: 'team2', name: 'Sponsorship' },
@@ -22,7 +37,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onTeamClick }) => {
         <div
           key={team.id}
           className="team-name cursor-pointer"
-          onClick={() => onTeamClick(team.id)}
+          onClick={() => handleTeamClick(team.id)}
         >
           {team.name}
         </div>

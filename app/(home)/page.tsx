@@ -17,6 +17,7 @@ import { HomeEvents } from "@/components/HomeEvents";
 import Home_MainSection from "@/components/Home_MainSection";
 import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
+import CustomCursor from "@/components/CustomCursor";
 
 
 
@@ -25,9 +26,11 @@ const HomePage = () => {
     <>
       <div className="m-0 p-0 overflow-x-hidden">
 
+       {/* <CustomCursor />  */}
+
       <Navbar />
 
-        <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
+        <FloatingNav  namex="P" className="max-md:hidden"/>
  {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
         <Home_MainSection />
@@ -36,7 +39,7 @@ const HomePage = () => {
 
         <div
           id="about"
-          className="h-[100vh]  flex justify-center items-center"
+          className="h-[100vh]  flex justify-center items-center max-sm:hidden"
         >
           <Home_AboutSection />
         </div>
@@ -49,10 +52,10 @@ const HomePage = () => {
 
  {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
-        <div id="gallery" className=" h-[140vh] flex justify-center items-center flex-col">
+        <div id="gallery" className=" h-[140vh] max-sm:h-[60vh] flex justify-center items-center flex-col max-sm:gap-[3.5rem] relative z-[900]">
           {/* <Image src="/assets/schedule_assets/bg_mid_light.png" alt="bg" width={100} height={100} className='absolute object-cover- w-full mx-auto h-[150%]' /> */}
-          <p className="harry-text text-[5rem]">Gallery</p>
-          <div className="flex  justify-center items-center w-full h-[45%] max-sm:h-0">
+          <p className="harry-text text-[5rem] ">Gallery</p>
+          <div className="flex  justify-center items-center w-full h-[45%] ">
             {/* <Home_GallerySection /> */}
             <CarouselComponent />
           </div>
@@ -60,7 +63,7 @@ const HomePage = () => {
 
  {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
-        <div id="contact" className="h-[100vh] flex justify-center items-center ">
+        <div id="contact" className="h-[100vh] max-sm:h-[60vh] flex justify-center items-center ">
           <Home_JoinSection />
         </div>
         
