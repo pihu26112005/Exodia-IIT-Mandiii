@@ -421,75 +421,172 @@ export const Sliderslides = [
 export const teamsList = [ 
   {
     id: 'team1',
-    name: 'Publicity and Media',
+    name: 'Secretary',
     members: [
       { 
-        name: 'Member 1',
-        photo: '/assets/background.jpg',
+        name: 'Ayush Sinha',
+        photo: '/assets/team/ayush.JPG',
+        heading: 'Literary Secretary',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member1' },
-          { name: 'instagram', link: 'https://instagram.com/member1' },
-          { name: 'github', link: 'https://github.com/member1' },
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-sinha-iit-mandi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/cultureshock_poet' },
+          { name: 'whatsapp', link: '7992323005' },
+          { name: 'email', link: 'literary_secretary@students.iitmandi.ac.in' },
         ],
       },
       { 
-        name: 'Member 2',
-        photo: '/assets/background.jpg',
+        name: 'Vivek Aggarwal',
+        photo: '/assets/team/vivek.jpeg',
+        heading: 'Cultural Secretary',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member2' },
-          { name: 'instagram', link: 'https://instagram.com/member2' },
-          { name: 'github', link: 'https://github.com/member2' },
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/vivek-aggarwal-b005b125a/' },
+          { name: 'instagram', link: 'https://www.instagram.com/vivekaggarwal05/' },
+          { name: 'whatsapp', link: '7417899100' },
+          { name: 'email', link: 'cultural_secretary@students.iitmandi.ac.in' },
         ],
       },
     ], 
   },
   {
     id: 'team2',
-    name: 'Sponsorship',
+    name: 'Sponsorship Team ',
     members: [
       { 
-        name: 'Member 3',
-        photo: '/assets/background.jpg',
+        name: 'Ayan Garg',
+        photo: '/assets/team/ayan.jpeg',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member3' },
-          { name: 'instagram', link: 'https://instagram.com/member3' },
-          { name: 'github', link: 'https://github.com/member3' },
+          { name: 'linkedin', link: 'https://linkedin.com/in/AyanGargAyanGarg' },
+          { name: 'instagram', link: 'https://instagram.com/ayangarg2' },
+          { name: 'whatsapp', link: '7756837945' },
+          { name: 'email', link: 'ayangarg2005@gmail.com' },
         ],
       },
       { 
-        name: 'Member 4',
-        photo: '/assets/background.jpg',
+        name: 'Ayush Bhardwaj',
+        photo: '/assets/team/ayushb.jpeg',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member4' },
-          { name: 'instagram', link: 'https://instagram.com/member4' },
-          { name: 'github', link: 'https://github.com/member4' },
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-bhardwaj01' },
+          { name: 'whatsapp', link: '9877809383' },
+          { name: 'email', link: 'b23199@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Hardeep Gupta',
+        photo: '/assets/team/hardeep.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/hardeep-gupta-14ab7b337' },
+          { name: 'instagram', link: 'https://instagram.com/hardeepgupta123' },
+          { name: 'whatsapp', link: '9219602541' },
+          { name: 'email', link: 'hardeepgupta2912@gmail.com' },
         ],
       },
     ],
   },
   {
     id: 'team3',
-    name: 'Event Management',
+    name: 'Planning And Management Team',
     members: [
       { 
-        name: 'Member 5',
-        photo: '/assets/background.jpg',
+        name: 'Avishkar Chavan',
+        photo: '/assets/team/avishkar.jpeg',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member5' },
-          { name: 'instagram', link: 'https://instagram.com/member5' },
-          { name: 'github', link: 'https://github.com/member5' },
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/avishkarchavan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+          { name: 'instagram', link: 'https://instagram.com/avishkar_95' },
+          { name: 'whatsapp', link: '8767757524' },
+          { name: 'email', link: 'avishkarchavan55@gmail.com' },
         ],
       },
       { 
-        name: 'Member 6',
-        photo: '/assets/background.jpg',
+        name: 'Tushar Bhati',
+        photo: '/assets/team/tushar.jpeg',
         socialMediaLinks: [
-          { name: 'linkedin', link: 'https://linkedin.com/in/member6' },
-          { name: 'instagram', link: 'https://instagram.com/member6' },
-          { name: 'github', link: 'https://github.com/member6' },
-          { name: 'whatsapp', link: 'https://github.com/member6' },
-          { name: 'email', link: 'https://github.com/member6' },
-          { name: 'call', link: 'https://github.com/member6' },
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/tushar-bhati-632862318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+          { name: 'instagram', link: 'https://instagram.com/tusharbhatiiii' },
+          { name: 'whatsapp', link: '9870226606' },
+          { name: 'email', link: 'B23104@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Sujay Ghonshetwad',
+        photo: '/assets/team/sujay.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/sujay-ghonshetwad-233b89225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/itz_sujay_20' },
+          { name: 'whatsapp', link: '8767430882' },
+          { name: 'email', link: '20sujay04@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Jaspinder kaur ',
+        photo: '/assets/team/jasbinder.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/jaspinder-kaur-ba33242a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'whatsapp', link: '9780771121' },
+          { name: 'email', link: 'B23264@students.iitmandi.ac.in' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team4',
+    name: 'Development Team',
+    members: [
+      { 
+        name: 'Piyush Kumar',
+        photo: '/assets/team/piyush.jpeg',
+        socialMediaLinks: [
+        ],
+      },
+      { 
+        name: 'Pragyansh',
+        photo: '/assets/team/pragyansh.png',
+        socialMediaLinks: [
+        ],
+      },
+    ],
+  },
+  {
+    id: 'team5',
+    name: 'Publicity team ',
+    members: [
+      { 
+        name: 'Deepansha Deora',
+        photo: '/assets/team/depansha.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/deepansha-deora-27b8b4280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/deepansha_05' },
+          { name: 'whatsapp', link: '97823 96590 ' },
+          { name: 'email', link: '23deepansha@gmail.com' },
+        ],
+      },
+      { 
+        name: 'Gourav Chaudhary ',
+        photo: '/assets/team/gaurav.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/gourav-chaudhary-845a78344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'instagram', link: 'https://instagram.com/Chodry_gourav_22' },
+          { name: 'whatsapp', link: '8278741047' },
+          { name: 'email', link: 'b23370@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Namita Singh ',
+        photo: '/assets/team/namita.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/namita-singh-b00346329' },
+          { name: 'instagram', link: 'https://instagram.com/namitasingh14114' },
+          { name: 'whatsapp', link: '9811197429' },
+          { name: 'email', link: 'b22224@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Divyanshu Raj',
+        photo: '/assets/team/divyanshu.jpg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/divyanshu-raj-784306329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'whatsapp', link: '8797003838' },
+          { name: 'email', link: 'b23438@students.iitmandi.ac.in' },
+          { name: 'instagram', link: 'https://instagram.com/divyanshu_raj_2004' },
         ],
       },
     ],

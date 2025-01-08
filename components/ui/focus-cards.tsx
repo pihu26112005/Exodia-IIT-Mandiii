@@ -16,43 +16,52 @@ export const Card = React.memo(
     hovered: number | null;
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
   }) => (
-    <div
-      onMouseEnter={() => setHovered(index)}
-      onMouseLeave={() => setHovered(null)}
-      className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-80 w-full transition-all duration-300 ease-out",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
-      )}
-    >
-      <Image
-        src={card.photo}
-        alt={card.name}
-        fill
-        className="object-cover absolute inset-0"
-      />
-      <div
+    <>
+     <div>
+     <div
+        onMouseEnter={() => setHovered(index)}
+        onMouseLeave={() => setHovered(null)}
         className={cn(
-          "z-[900] absolute inset-0 bg-black/50 flex flex-col justify-end items-center gap-2 px-4 transition-opacity duration-300",
-          hovered === index ? "opacity-100" : "opacity-0"
+          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-80 w-full transition-all duration-300 ease-out",
+          hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
         )}
       >
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {card.name}
-        </div>
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          <div className="flex justify-center items-center gap-2 mb-4">
-            {/* social media link on circles mapp  */}
-            {card.socialMediaLinks.map((l: { name: string; link: string }, index: number) => (
-              <div className="bg-white rounded-3xl" key={index}>
-              <Link href={l.link}>
-                <Image src={`/icons/socialmedia2/${l.name}.png`} height={10} width={30} alt={l.name} />
-              </Link>
-              </div>
-            ))}
+        <Image
+          src={card.photo}
+          alt={card.name}
+          fill
+          className="object-cover absolute inset-0"
+        />
+        <div
+          className={cn(
+            "z-[900] absolute inset-0 bg-black/50 flex flex-col justify-end items-center gap-2 px-4 transition-opacity duration-300",
+            hovered === index ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+            {card.name}
+          </div>
+          <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+            <div className="flex justify-center items-center gap-2 mb-4">
+              {/* social media link on circles mapp  */}
+              {card.socialMediaLinks.map((l: { name: string; link: string }, index: number) => (
+                <div className="bg-white rounded-3xl hover:scale-150 transition-transform duration-300" key={index}>
+                  <Link href={l.link}>
+                    <Image src={`/icons/socialmedia2/${l.name}.png`} height={10} width={30} alt={l.name} />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {card.heading && (
+        <div className="text-center mt-4">
+          <h3 className="text-lg md:text-xl font-semibold">{card.heading}</h3>
+        </div>
+      )}
+     </div>
+    </>
   )
 );
 
@@ -66,9 +75,10 @@ Card.displayName = "Card";
 type Card = {
   name: string;
   photo: string;
-  socialMediaLinks: { 
-    name: string; 
-    link: string; 
+  heading?: string;
+  socialMediaLinks: {
+    name: string;
+    link: string;
   }[];
 };
 
