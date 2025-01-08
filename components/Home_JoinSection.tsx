@@ -22,7 +22,7 @@ export function Home_JoinSection() {
           y: 0,
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.1,
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
