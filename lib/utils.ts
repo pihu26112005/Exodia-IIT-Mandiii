@@ -63,7 +63,6 @@ export const navItems = [
     subItems: [
       { name: "Gallery", link: "/gallery" },
       { name: "Brochure", link: "/brochure" },
-      { name: "Vertical Layout", link: "/vertical-layout" },
     ],
   },
   {
@@ -704,3 +703,87 @@ export const announcementFaq = [
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+export const ScheduleEventList = [
+  {
+    title: "Anima",
+    Date:"09/09/0909",
+    Day:
+      "Monday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Itachi",
+    Date:"09/09/0909",
+    Day:
+      "TuesDay",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Sasuke Uchiha",
+    Date:"09/09/0909",
+    Day:
+      "Wednesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "MADARA",
+    Date:"09/09/0909",
+    Day:
+      "Thursday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Gojo Saturo",
+    Date:"09/09/0909",
+    Day:
+      "Friday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "MicroVenom",
+    Date:"09/09/0909",
+    Day:
+      "Saturday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Teriasekitesi",
+    Date:"09/09/0909",
+    Day:
+      "Sunday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "Noa",
+    Date:"09/09/0909",
+    Day:
+      "Monday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "NarutoKun",
+    Date:"09/09/0909",
+    Day:
+      "Tuesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+  {
+    title: "dattevaya",
+    Date:"09/09/0909",
+    Day:
+      "Wednesday",
+    Time:"09:00",
+    link: "/eventDetail/Anima",
+  },
+];

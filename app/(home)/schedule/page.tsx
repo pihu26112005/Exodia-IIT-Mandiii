@@ -11,8 +11,9 @@ import cross from "../../../public/assets/sch_assets/cross.png"
 import try1 from "../../../public/assets/sch_assets/bg_mid_light.png"
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
-import { navItems } from '@/lib/utils';
+import { navItems, ScheduleEventList } from '@/lib/utils';
 import Footer from '@/components/Footer';
+import { HoverEffect } from '@/components/ui/card-hover-effect';
 
 // import video from "../../../public/assets/sch_assets/"
 
@@ -45,7 +46,7 @@ const Page: React.FC = () => {
   return (
     <div className="relative w-full h-screen bg-black text-yellow-400">
       <Navbar />
-      <FloatingNav  namex="P" className="max-md:hidden"/>
+      <FloatingNav namex="P" className="max-md:hidden" />
 
       {/* Header Section */}
       {/* <div className="z-20 fixed w-full bg-black shadow-lg  flex items-center justify-between px-20 py-6 ">
@@ -123,6 +124,10 @@ const Page: React.FC = () => {
         <div>ABOUT</div>
         <div>CONTACT</div>
       </div> : null}
+
+      <div className="max-w-full mx-0 px-0 max-sm:hidden">
+      <HoverEffect items={ScheduleEventList} />
+      </div>
 
       <Footer />
 

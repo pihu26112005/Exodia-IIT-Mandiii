@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import Home_EventsSectionCard from "../Home_EventsSectionCard";
 
 export const HoverEffect = ({
   items,
@@ -10,7 +9,9 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
+    Date: string;
+    Day: string;
+    Time: string;
     link: string;
   }[];
   className?: string;
@@ -20,7 +21,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 ",
+        "max-w-full py-10 flex flex-wrap justify-center gap-4 mt-5 mb-10",
         className
       )}
     >
@@ -28,14 +29,14 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group  block "
+          className="relative group  block p-2 h-80 w-80"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0  bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -49,11 +50,12 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          {/* <Card>
+          <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card> */}
-          <Home_EventsSectionCard />
+            <CardDescription>{item.Date}</CardDescription>
+            <CardDescription>{item.Day}</CardDescription>
+            <CardDescription>{item.Time}</CardDescription>
+          </Card>
         </Link>
       ))}
     </div>
@@ -70,7 +72,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        " rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -88,7 +90,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 harry-text text-[3rem] font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -103,7 +105,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-white tracking-wide leading-relaxed text-sm",
         className
       )}
     >

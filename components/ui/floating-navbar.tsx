@@ -70,6 +70,7 @@ export const FloatingNav = ({
       >
         {navItems.map((navItem: any, idx: number) => (
           <div
+            key={idx}
             className="relative group p-2"
             onMouseEnter={() => navItem.subItems && toggleDropdown(idx)}
             onMouseLeave={() => navItem.subItems && toggleDropdown(null)}>

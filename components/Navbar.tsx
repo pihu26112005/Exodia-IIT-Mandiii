@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               <div className="flex">
                 <a
                   href={item.link}
-                  className="text-base hover:text-yellow-300 transition"
+                  className="text-base text-white hover:text-yellow-300 transition"
 
                 >
                   {item.name}
