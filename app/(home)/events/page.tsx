@@ -14,6 +14,27 @@ import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/utils";
 import Image from "next/image";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+
+
+const words = [
+  {
+    text: "Explore",
+  },
+  {
+    text: "all",
+  },
+  {
+    text: "events",
+  },
+  {
+    text: "of",
+  },
+  {
+    text: "EXODIA.",
+    className: "text-yellow-300 dark:text-yellow-300",
+  },
+];
 
 const pageVariants = {
   initial: {
@@ -45,33 +66,40 @@ const Page = () => {
 
     <>
       <div className="m-0 p-0 overflow-x-hidden">
-      <Navbar />
+        <Navbar />
 
-      <FloatingNav  namex="P" className="max-md:hidden" />
+        <FloatingNav namex="P" className="max-md:hidden" />
 
-      <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
-        <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-          <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
-            Events
+        <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
+          <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
+            <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
+              Events
+            </div>
+            <div className="mt-[6rem] max-sm:mt-[1rem]">
+              <SwiperComponent />
+            </div>
           </div>
-          <div className="mt-[6rem] max-sm:mt-[1rem]">
-            <SwiperComponent />
+
+          <div className="w-full h-[20vh] flex justify-center items-end">
+            <TypewriterEffect words={words} />
+          </div>
+
+          <div className="w-full">
+            {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
+            <div className="text-white text-4xl md:text-6xl text-center mt-[5rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
+              style={{ color: "gold", fontFamily: "B2" }}>
+              Events
+            </div>
+            <div>
+              <AllCards />
+            </div>
+          </div>
+          <div className="w-full h-[50vh] flex justify-center items-center">
+            <TypewriterEffect words={words} />
           </div>
         </div>
 
-        <div className="w-full">
-           {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
-          <div className="text-white text-4xl md:text-6xl text-center mt-[10rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
-            style={{ color: "gold", fontFamily: "B2" }}>
-            Events
-          </div>
-          <div>
-            <AllCards />
-          </div>
-        </div>
-      </div>
-
-      <Footer />
+        <Footer />
       </div>
     </>
   );
