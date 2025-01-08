@@ -24,7 +24,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
 }) => {
   return (
     <button
-      style={{ borderColor: borderColor, width: "100px" }}
+      style={{ borderColor: borderColor, width: "100px",animation: "shine 2s infinite linear" , boxShadow: "0 0 10px 2px white", }}
       {...props}
       className={cn(
         "group relative inline-flex items-center justify-center overflow-hidden rounded-full border-2 border-yellow-400 bg-background px-6 py-3 font-medium shadow-md transition duration-300 ease-out",
@@ -34,7 +34,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
       <span
         style={{ background: buttonOverlayColor }}
         className={cn(
-          "ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-yellow-400 text-black duration-300 group-hover:translate-x-0",
+          "px-10 ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-yellow-400 text-black duration-300 group-hover:translate-x-0",
         )}
       >
         <MoveRight style={{ color: iconColor }} />
@@ -42,7 +42,7 @@ const ArrowButton: React.FC<ArrowButtonProps> = ({
       <span
         style={{ color: textColor }}
         className={cn(
-          "absolute flex h-full w-full transform items-center justify-center font-bold transition-all duration-300 ease-in-out group-hover:translate-x-full",
+          "px-10  py-4 absolute flex h-full w-full transform items-center justify-center font-bold transition-all duration-300 ease-in-out group-hover:translate-x-full",
         )}
       >
         {text}

@@ -104,10 +104,10 @@ const Navbar: React.FC = () => {
 
         {/* Menu Icon (Mobile Only) */}
         <Sheet>
-          <SheetTrigger asChild className="flex justify-center items-center mb-5">
+          <SheetTrigger asChild className="flex justify-center items-center mb-5 max-sm:mb-4 max-sm:rounded-xl">
             {/* <Button variant="outline">Open</Button> */}
             <button
-              className="text-white bg-yellow-300  text-2xl md:hidden"
+              className="text-white bg-yellow-300  text-2xl md:hidden max-sm:p-2"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >

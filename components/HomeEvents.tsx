@@ -8,7 +8,7 @@ export function HomeEvents() {
     <div className="box12 h-[100vh]">
       {/* <BackgroundGradientAnimation> */}
         <div className="z-50 ">
-          <div id="events" className="relative z-50  flex flex-col justify-center items-center">
+          <div id="events" className="relative z-50  flex flex-col justify-center items-center gap-4">
             <Home_EventsSection />
             <br />
             <Link href="/events">
