@@ -19,7 +19,7 @@ const About_VideoSection = () => {
           <div className='w-[60%] flex flex-col max-xl:flex-row gap-[20px] items-center justify-center mx-auto'>
             {Object.keys(videoLinks).map((year) => (
               <div key={year}
-                className={`rounded-3xl hover:bg-yellow-200 cursor-pointer py-5 px-7 max-xl:px-4 max-xl:py-5 max-md:px-3 max-md:py-3 max-md:rounded-2xl flex items-center justify-center bg-white text-black ${Number(year) === activeYear ? "bg-yellow-300 text-black" : ""}`}
+                className={`rounded-3xl hover:bg-yellow-200 cursor-pointer py-5 px-7 max-xl:px-4 max-xl:py-5 max-md:px-3 max-md:py-3 max-sm:px-2 max-sm:py-2 max-md:rounded-2xl flex items-center justify-center bg-white text-black ${Number(year) === activeYear ? "bg-yellow-300 text-black" : ""}`}
                 data-year={year}
                 onClick={() => handleYearClick(Number(year))}>
                 {year}

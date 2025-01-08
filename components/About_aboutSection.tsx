@@ -10,7 +10,7 @@ const About_aboutSection = () => {
       <div className='h-[80%] w-[90%] flex justify-center items-center p-5 bg-white border-2 border-yellow-300 rounded-2xl'
         style={{ backgroundImage: 'url(/assets/about/abgxgx.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
-        <div className='w-[90%] p-5 flex justify-center items-center harry-text-black text-[3rem] text-center'>
+        <div className='w-[90%] p-5 flex justify-center items-center harry-text-black text-[3rem] max-sm:text-[1rem] text-center'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis magni, tempora porro optio neque quod vitae ad voluptas. Obcaecati beatae, accusantium dignissimos quidem commodi earum deleniti amet eveniet exercitationem nihil.
           Alias est consectetur non, ipsa recusandae modi atque, voluptate laboriosam provident fuga cum iure voluptatem ex dolorem dolores in nesciunt aliquid omnis velit enim totam harum. Facere deleniti cumque a?
           Earum accusamus adipisci optio itaque nostrum consequatur dolor esse reiciendis, repudiandae totam rem magnam voluptate culpa! Amet atque, commodi excepturi optio ipsa cumque eius odio ipsam repellat nisi harum sapiente!
