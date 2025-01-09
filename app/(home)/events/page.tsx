@@ -78,7 +78,7 @@ const Page = () => {
             <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
               Events
             </div>
-            <div className="mt-[6rem] max-sm:mt-[1rem]">
+            <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60">
               {/* <SwiperComponent /> */}  {/* DEPLOYMENT FIX */}
             </div>
           </div>
