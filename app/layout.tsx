@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import ClientLoader from "@/components/ClientLoader";
+import localFont from 'next/font/local'
+
 
 export const metadata: Metadata = {
   title: "Exodia '25 || IIT Mandi",
   description: "Exodia '25, the annual cultural fest of IIT Mandi",
   // icons: [{ rel: "icon", url: "/assets/favicon.ico" }],
 };
+
+// const myFont = localFont({ // DEPLOYMENT FIX
+//   src: '../public/fonts/HarryP.TTF',
+//   display: 'swap',
+// })
 
 export default function RootLayout({
   children,
@@ -23,7 +30,7 @@ export default function RootLayout({
         {children}
         </div> */}
         <ClientLoader>
-          <div>
+          <div >
             <CustomCursor />
             {children}
           </div>
