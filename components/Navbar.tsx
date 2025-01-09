@@ -22,28 +22,53 @@ const Navbar: React.FC = () => {
   };
 
   const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    // const currentScrollY = window.scrollY; // DEPLOYMENT FIX
 
-    if (currentScrollY === 0) {
-      // Always show the navbar when at the top
-      setIsVisible(true);
-    } else if (currentScrollY > lastScrollY) {
-      // Hide navbar when scrolling down
-      setIsVisible(true);
-    } else {
-      // Show navbar when scrolling up
-      setIsVisible(false);
+    // if (currentScrollY === 0) {
+    //   // Always show the navbar when at the top
+    //   setIsVisible(true);
+    // } else if (currentScrollY > lastScrollY) {
+    //   // Hide navbar when scrolling down
+    //   setIsVisible(true);
+    // } else {
+    //   // Show navbar when scrolling up
+    //   setIsVisible(false);
+    // }
+
+    // setLastScrollY(currentScrollY);
+
+    if(typeof window != undefined)
+    {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY === 0) {
+        // Always show the navbar when at the top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Hide navbar when scrolling down
+        setIsVisible(true);
+      } else {
+        // Show navbar when scrolling up
+        setIsVisible(false);
+      }
+  
+      setLastScrollY(currentScrollY);
     }
-
-    setLastScrollY(currentScrollY);
-  };
+    };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll); // DEPLOYMENT FIX
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll);
+    // };
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [lastScrollY]);
 
   return (

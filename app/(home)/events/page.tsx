@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import SwiperComponent from "@/components/Event_EventsSwiper";
+// import SwiperComponent from "@/components/Event_EventsSwiper";  // DEPLOYMENT FIX
 import { Vortex } from "@/components/ui/vortex";
 import Card from "@/components/Event_Card";
 import AllCards from "@/components/Event_AllCards";
@@ -59,7 +59,10 @@ const Page = () => {
 
   // Reset scroll position to left when the page loads
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0); // DEPLOYMENT FIX
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   return (
@@ -76,7 +79,7 @@ const Page = () => {
               Events
             </div>
             <div className="mt-[6rem] max-sm:mt-[1rem]">
-              <SwiperComponent />
+              {/* <SwiperComponent /> */}  {/* DEPLOYMENT FIX */}
             </div>
           </div>
 

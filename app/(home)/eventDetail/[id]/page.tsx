@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from 'react';
+import React, { use } from 'react';
 import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
 import { eventDetails } from '@/lib/utils'; 
 import { BackgroundBeams } from "@/components/ui/Card-background";
 
 // Types
-interface Params {
+type Params = {
   id: string;
 }
 interface EventDetail {
@@ -67,9 +67,10 @@ const getEventDetails = (id: string): EventDetail | undefined => {
 
 
 // Main Component
-const EventDetailsPage = ({ params }: { params: Params }) => {
-  const id_ = params?.id;
-  const event = getEventDetails(id_);
+const EventDetailsPage = ({params}: {params: Promise<{ id: string }>}) => {
+  // const id_ = params!.id;
+  const { id } = use(params);// DEPLOYMENT FIX
+  const event = getEventDetails(id);
 
   if (!event) {
     return <div>Event not found</div>;  //show a custom 404 page or a loading spinner

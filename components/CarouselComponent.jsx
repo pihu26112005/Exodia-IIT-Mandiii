@@ -2,6 +2,23 @@ import React, { useState, useEffect } from "react";
 
 const CarouselComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0); // DEPLOYMENT FIX
+
+  useEffect(() => { // DEPLOYMENT FIX
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
   // Add more images as needed
   const images = [
@@ -39,7 +56,7 @@ const CarouselComponent = () => {
         <div
           className="absolute w-full h-full transform-gpu transition-transform duration-500"
           style={{
-            transform: `rotateX(${ window.innerWidth < 640 ? "0deg" : "-5deg"}) rotateY(${currentSlide * -(360 / images.length)}deg)`,
+            transform: `rotateX(${windowWidth < 640 ? "0deg" : "-5deg"}) rotateY(${currentSlide * -(360 / images.length)}deg)`,
             transformStyle: "preserve-3d",
           }}
         >
@@ -49,7 +66,7 @@ const CarouselComponent = () => {
               className="absolute w-full h-full bg-cover bg-center border-2 border-yellow-300"
               style={{
                 transform: `rotateY(${(index * 360) / images.length}deg) translateZ(${
-                  window.innerWidth < 640 ? "550px" : "900px" // Adjust radius dynamically
+                 windowWidth < 640 ? "550px" : "900px" // Adjust radius dynamically
                 })`,
                 backgroundImage: `url(${image})`,
                 opacity: currentSlide === index ? 1 : 0.5,

@@ -59,28 +59,54 @@ export const ImagesSlider = ({
       .catch((error) => console.error("Failed to load images", error));
   };
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowRight") {
-        handleNext();
-      } else if (event.key === "ArrowLeft") {
-        handlePrevious();
+    // DEPLOYMENT FIX
+    // const handleKeyDown = (event: KeyboardEvent) => {
+    //   if (event.key === "ArrowRight") {
+    //     handleNext();
+    //   } else if (event.key === "ArrowLeft") {
+    //     handlePrevious();
+    //   }
+    // };
+
+    // window.addEventListener("keydown", handleKeyDown);
+
+    // // autoplay
+    // let interval: any;
+    // if (autoplay) {
+    //   interval = setInterval(() => {
+    //     handleNext();
+    //   }, 1500);
+    // }
+
+    // return () => {
+    //   window.removeEventListener("keydown", handleKeyDown);
+    //   clearInterval(interval);
+    // };
+
+    if(typeof window != undefined){
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "ArrowRight") {
+          handleNext();
+        } else if (event.key === "ArrowLeft") {
+          handlePrevious();
+        }
+      };
+  
+      window.addEventListener("keydown", handleKeyDown);
+  
+      // autoplay
+      let interval: any;
+      if (autoplay) {
+        interval = setInterval(() => {
+          handleNext();
+        }, 1500);
       }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    // autoplay
-    let interval: any;
-    if (autoplay) {
-      interval = setInterval(() => {
-        handleNext();
-      }, 1500);
+  
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+        clearInterval(interval);
+      };
     }
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      clearInterval(interval);
-    };
   }, []);
 
   const slideVariants = {
