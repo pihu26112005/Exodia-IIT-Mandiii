@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   // icons: [{ rel: "icon", url: "/assets/favicon.ico" }],
 };
 
-// const myFont = localFont({ // DEPLOYMENT FIX
-//   src: '../public/fonts/HarryP.TTF',
-//   display: 'swap',
-// })
+const myFont = localFont({ // DEPLOYMENT FIX
+  src: '../public/fonts/HarryP.woff2',
+  display: 'swap',
+})
 
 export default function RootLayout({
   children,
@@ -30,7 +30,7 @@ export default function RootLayout({
         {children}
         </div> */}
         <ClientLoader>
-          <div >
+          <div   className={myFont.className}>
             <CustomCursor />
             {children}
           </div>
