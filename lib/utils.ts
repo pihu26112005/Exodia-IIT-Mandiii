@@ -663,6 +663,23 @@ export const eventDetails:EventDetail[] = [
 
 export const teamsList = [ 
   {
+    id: 'team0',
+    name: 'Convener',
+    members: [
+      { 
+        name: 'Vishal Kumar',
+        photo: '/assets/team/vishal.jpeg',
+        heading: 'Vishal Kumar',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/vishal-kumar-gupta-b5a664252/' },
+          { name: 'instagram', link: 'https://www.instagram.com/bitchaal/' },
+          { name: 'whatsapp', link: '7739301036' },
+          { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
+        ],
+      },
+    ], 
+  },
+  {
     id: 'team1',
     name: 'Secretary',
     members: [
@@ -994,6 +1011,15 @@ export const teamsList = [
           { name: 'instagram', link: 'Pranjalol' },
           { name: 'whatsapp', link: '9821044361' },
           { name: 'email', link: 'B23022@students.iitmandi.ac.in' },
+        ],
+      },
+      { 
+        name: 'Prashashti',
+        photo: '/assets/team/prashashti.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/prashasti-singh-5516a8288' },
+          { name: 'instagram', link: ' https://www.instagram.com/prashasti._.x?igsh=MTY3bmo5em00anc3dQ%3D%3D&utm_source=qr' },
+          { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
         ],
       },
     ],
