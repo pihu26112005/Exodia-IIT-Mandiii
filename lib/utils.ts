@@ -1283,3 +1283,38 @@ export const ScheduleEventList = [
 
   },
 ];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const AboutPrevGuestData = [
+  {
+    title: "Itachi Uchia",
+    src: "/assets/about/prevguest/g1.JPG",
+  },
+  {
+    title: "Madara Uchiha",
+    src: "/assets/about/prevguest/g2.JPG",
+  },
+  {
+    title: "Levi Ackerman",
+    src: "/assets/about/prevguest/g3.JPG",
+  },
+ 
+  {
+    title: "Radhe Karn",
+    src: "/assets/about/prevguest/g4.JPG",
+  },
+  {
+    title: "Kai Sakamuru",
+    src: "/assets/about/prevguest/g5.JPG",
+  },
+  {
+    title: "Gojo Saturo",
+    src: "/assets/about/prevguest/g6.JPG",
+  },
+  {
+      title: "Kakashi Hatake",
+      src: "/assets/about/prevguest/g7.JPG",
+    },
+];

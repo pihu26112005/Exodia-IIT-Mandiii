@@ -10,6 +10,7 @@ import { navItems } from '@/lib/utils';
 import Footer from '@/components/Footer';
 import About_VideoSection from '@/components/About_VideoSection';
 import About_JoinSection from '@/components/About_JoinSection';
+import About_PrevGuest from '@/components/About_PrevGuest';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,8 @@ const App: React.FC = () => {
         <About_aboutSection />
 
         <About_VideoSection />
+
+        <About_PrevGuest />
 
         <About_JoinSection />
 
