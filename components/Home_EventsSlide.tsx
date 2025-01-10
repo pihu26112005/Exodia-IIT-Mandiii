@@ -10,47 +10,92 @@ function Home_EventsSlide(): JSX.Element {
   const [startAnimation, setStartAnimation] = useState<boolean>(false); // State to track animation start
 
   useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    if (!scrollContainer) return;
+    // const scrollContainer = scrollRef.current;
+    // if (!scrollContainer) return;
 
-    const initializePosition = () => {
-      const containerWidth = scrollContainer.offsetWidth;
-      const contentWidth = scrollContainer.scrollWidth / 2;
-      positionRef.current = -(contentWidth / 2 - containerWidth / 2); // Center the first image
-      scrollContainer.style.transform = `translateX(${positionRef.current}px)`;
-    };
+    // const initializePosition = () => {
+    //   const containerWidth = scrollContainer.offsetWidth;
+    //   const contentWidth = scrollContainer.scrollWidth / 2;
+    //   positionRef.current = -(contentWidth / 2 - containerWidth / 2); // Center the first image
+    //   scrollContainer.style.transform = `translateX(${positionRef.current}px)`;
+    // };
 
-    const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      if (scrollY > 150) {
-        setStartAnimation(true);
-      }
-    };
+    // const handleScroll = () => {
+    //   const scrollY = window.scrollY || document.documentElement.scrollTop;
+    //   if (scrollY > 150) {
+    //     setStartAnimation(true);
+    //   }
+    // };
 
-    const scroll = () => {
-      if (startAnimation) {
-        positionRef.current -= speedRef.current; // Use speedRef for dynamic control
+    // const scroll = () => {
+    //   if (startAnimation) {
+    //     positionRef.current -= speedRef.current; // Use speedRef for dynamic control
+    //     scrollContainer.style.transform = `translateX(${positionRef.current}px)`;
+
+    //     const scrollWidth = scrollContainer.scrollWidth / 2;
+
+    //     if (Math.abs(positionRef.current) >= scrollWidth) {
+    //       positionRef.current = 0;
+    //     }
+    //   }
+
+    //   requestAnimationFrame(scroll);
+    // };
+
+    // initializePosition();
+
+    // window.addEventListener('scroll', handleScroll);
+
+    // scroll();
+
+    // return () => {
+    //   window.removeEventListener('scroll', handleScroll);
+    // }; //DEPLOYMENT FIX
+
+    if(typeof window != undefined)
+    {
+      const scrollContainer = scrollRef.current;
+      if (!scrollContainer) return;
+  
+      const initializePosition = () => {
+        const containerWidth = scrollContainer.offsetWidth;
+        const contentWidth = scrollContainer.scrollWidth / 2;
+        positionRef.current = -(contentWidth / 2 - containerWidth / 2); // Center the first image
         scrollContainer.style.transform = `translateX(${positionRef.current}px)`;
-
-        const scrollWidth = scrollContainer.scrollWidth / 2;
-
-        if (Math.abs(positionRef.current) >= scrollWidth) {
-          positionRef.current = 0;
+      };
+  
+      const handleScroll = () => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        if (scrollY > 150) {
+          setStartAnimation(true);
         }
-      }
-
-      requestAnimationFrame(scroll);
-    };
-
-    initializePosition();
-
-    window.addEventListener('scroll', handleScroll);
-
-    scroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+      };
+  
+      const scroll = () => {
+        if (startAnimation) {
+          positionRef.current -= speedRef.current; // Use speedRef for dynamic control
+          scrollContainer.style.transform = `translateX(${positionRef.current}px)`;
+  
+          const scrollWidth = scrollContainer.scrollWidth / 2;
+  
+          if (Math.abs(positionRef.current) >= scrollWidth) {
+            positionRef.current = 0;
+          }
+        }
+  
+        requestAnimationFrame(scroll);
+      };
+  
+      initializePosition();
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      scroll();
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, [startAnimation]);
 
   const handleMouseEnter = () => {

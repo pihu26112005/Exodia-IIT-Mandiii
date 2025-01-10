@@ -137,8 +137,14 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
       }
     }
 
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    // DEPLOYMENT FIX
+    // window.addEventListener('keydown', handleKeyDown)
+    // return () => window.removeEventListener('keydown', handleKeyDown)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown)
+      return () => window.removeEventListener('keydown', handleKeyDown)
+    }
+
   }, [])
 
   return (

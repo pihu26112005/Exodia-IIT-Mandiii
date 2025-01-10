@@ -16,14 +16,25 @@ export const ContainerScroll = ({
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
+    // DEPLOYMENT FIX
+    // const checkMobile = () => {
+    //   setIsMobile(window.innerWidth <= 768);
+    // };
+    // checkMobile();
+    // window.addEventListener("resize", checkMobile);
+    // return () => {
+    //   window.removeEventListener("resize", checkMobile);
+    // };
+    if(typeof window !== 'undefined'){
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => {
+        window.removeEventListener("resize", checkMobile);
+      };
+    }
   }, []);
 
   const scaleDimensions = () => {

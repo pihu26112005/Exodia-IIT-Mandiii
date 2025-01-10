@@ -17,11 +17,24 @@ import { HoverEffect } from '@/components/ui/card-hover-effect';
 
 // import video from "../../../public/assets/sch_assets/"
 
+interface TimelineEvent { // DEPLOYMENT FIX
+  time: string
+  title: string
+  description: string
+  venue: string
+}
+
+
+interface EventDays { // DEPLOYMENT FIX
+  day1: TimelineEvent[]
+  day2: TimelineEvent[]
+  day3: TimelineEvent[]
+}
 
 const Page: React.FC = () => {
   const [active, isActive] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedDay, setSelectedDay] = useState<string>('day1'); // State to manage selected day
+  const [selectedDay, setSelectedDay] = useState<keyof EventDays>('day1'); // DEPLOYMENT FIX
 
 
 
@@ -37,7 +50,7 @@ const Page: React.FC = () => {
     isActive(!active)
   }
 
-  const handleDayClick = (day: string) => {
+  const handleDayClick = (day: keyof EventDays) => { // DEPLOYMENT FIX
     setSelectedDay(day); // Update selected day
   };
 

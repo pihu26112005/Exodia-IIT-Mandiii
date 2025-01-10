@@ -1,13 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from 'react';
+import React, { use } from 'react';
 import { ScrollText, Calendar, MapPin, User, Wand, BadgeIndianRupee } from 'lucide-react';
-import { eventDetails } from '@/lib/utils'; 
+import { eventDetails } from '@/lib/utils';
 import { BackgroundBeams } from "@/components/ui/Card-background";
+import Navbar from "@/components/Navbar";
+import { FloatingNav } from "@/components/ui/floating-navbar";
+import Footer from "@/components/Footer";
 
 // Types
-interface Params {
+type Params = {
   id: string;
 }
 interface EventDetail {
@@ -36,9 +39,9 @@ const EventInfoItem = ({ icon: Icon, label, value }: { icon: any, label: string,
 const ParticipantCounter = ({ current, max }: { current: number, max: number }) => (
   <div className="flex items-center gap-2 mt-4">
     <div className="w-full bg-amber-200 rounded-full h-4">
-      <div 
+      <div
         className="bg-amber-600 h-4 rounded-full transition-all duration-500"
-        style={{ width: `${(current/max) * 100}%` }}
+        style={{ width: `${(current / max) * 100}%` }}
       />
     </div>
     <span className="text-amber-900 font-bold">
@@ -56,7 +59,7 @@ const RegisterButton = () => (
 // Function to get event details by ID
 const getEventDetails = (id: string): EventDetail | undefined => {
   const event = eventDetails.find(event => event.title === id);
-  
+
   if (event) {
     return event;
   }
@@ -67,25 +70,32 @@ const getEventDetails = (id: string): EventDetail | undefined => {
 
 
 // Main Component
-const EventDetailsPage = ({ params }: { params: Params }) => {
-  const id_ = params?.id;
-  const event = getEventDetails(id_);
+const EventDetailsPage = ({ params }: { params: Promise<{ id: string }> }) => {
+  // const id_ = params!.id;
+  const { id } = use(params);// DEPLOYMENT FIX
+  const event = getEventDetails(id);
 
   if (!event) {
     return <div>Event not found</div>;  //show a custom 404 page or a loading spinner
   }
 
   return (
-    <motion.div
-      className="mx-auto z-10 shadow-md overflow-hidden"
-      initial={{ opacity: 0, y: 50 }} // Start position
-      animate={{ opacity: 1, y: 0 }} // End position
-      transition={{
-        duration: 0.6,
-        ease: "easeOut",
-      }} // Animation timing 
-    >
-      {/* <div className="w-full min-h-screen bg-neutral-900 relative flex flex-col items-center justify-center antialiased py-12"> */}
+    <>
+
+      <Navbar />
+
+      <FloatingNav namex="P" className="max-md:hidden" />
+
+      <motion.div
+        className="mx-auto z-10 shadow-md overflow-hidden"
+        initial={{ opacity: 0, y: 50 }} // Start position
+        animate={{ opacity: 1, y: 0 }} // End position
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+        }} // Animation timing 
+      >
+        {/* <div className="w-full min-h-screen bg-neutral-900 relative flex flex-col items-center justify-center antialiased py-12"> */}
         <div className="min-h-screen bg-neutral-900 py-12 px-4">
           <div className="max-w-4xl mx-auto">
             <div className=" bg-gradient-to-b from-amber-50 to-amber-100 shadow-xl border-amber-200 p-6 z-10 rounded-lg">
@@ -165,7 +175,10 @@ const EventDetailsPage = ({ params }: { params: Params }) => {
           </div>
         </div>
         <BackgroundBeams />
-    </motion.div>
+      </motion.div>
+
+      <Footer />
+    </>
   );
 };
 

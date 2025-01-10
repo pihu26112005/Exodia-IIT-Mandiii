@@ -10,7 +10,7 @@ const Home_EventsSection = () => {
   return (
     <>
     <div className="Mkd">
-      <div className="gallery-container" style={{scale:"0.4"}}>
+      <div className="gallery-container" style={{scale:"0.8"}}>
         <div className="box34">
           <div className="center-text" style={{
             backgroundImage: "linear-gradient(to right, gold, gold",

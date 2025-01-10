@@ -9,10 +9,17 @@ interface SidebarProps {
 const handleTeamClick = (teamId: string) => {
   const teamBox = document.getElementById(teamId);
   if (teamBox) {
-    window.scrollTo({
-      top: teamBox.offsetTop,
-      behavior: 'smooth',
-    });
+    // DEPLOYMENT FIX
+    // window.scrollTo({
+    //   top: teamBox.offsetTop,
+    //   behavior: 'smooth',
+    // });
+    if(typeof window !== 'undefined'){
+      window.scrollTo({
+        top: teamBox.offsetTop,
+        behavior: 'smooth',
+      });
+    }
   }
 };
 

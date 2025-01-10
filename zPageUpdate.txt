@@ -81,3 +81,6 @@ Navbar - 980
 text ko rkhna hai - 900    
 animated modal me - 950
 
+
+
+DEPLOYMENT FIX

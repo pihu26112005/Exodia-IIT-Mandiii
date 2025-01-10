@@ -5,7 +5,7 @@ import Home_EventsSection from "./Home_EventsSection";
 
 export function HomeEvents() {
   return (
-    <div className="box12 h-[100vh]">
+    <div className="box12 h-[100vh] flex justify-center items-center">
       {/* <BackgroundGradientAnimation> */}
         <div className="z-50 ">
           <div id="events" className="relative z-50  flex flex-col justify-center items-center gap-4">
