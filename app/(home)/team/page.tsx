@@ -54,13 +54,14 @@ const Page = () => {
       <Navbar />
 
       <FloatingNav  namex="P" className="max-md:hidden" />
+
       <div className="p-8 font-sans">
 
-        <h1 className="harry-text text-center text-[6rem] font-bold mb-12">Core Team</h1>
+        <h1 className="harry-text text-center text-[6rem] font-bold mb-12">Organizing Team</h1>
         {teamsList.map((team) => (
           <div key={team.id} className="mb-[5rem] " id={team.id}>
             <h2 className=" harry-text-white text-[3rem] font-semibold mb-6">{team.name}</h2>
-            <div className="flex flex-row flex-wrap justify-center items-center gap-10">
+            {/* <div className="flex flex-row flex-wrap justify-center items-center gap-10"> */}
               {/* {team.members.map((member, index) => (
                 <div
                   key={index}
@@ -75,7 +76,7 @@ const Page = () => {
                 </div>
               ))} */}
             <FocusCards cards={team.members} />
-            </div>
+            {/* </div> */}
           </div>
         ))}
       </div>

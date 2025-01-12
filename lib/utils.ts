@@ -663,6 +663,23 @@ export const eventDetails:EventDetail[] = [
 
 export const teamsList = [ 
   {
+    id: 'team0',
+    name: 'Convener',
+    members: [
+      { 
+        name: 'Vishal Kumar',
+        photo: '/assets/team/vishal.jpeg',
+        heading: 'Vishal Kumar',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/vishal-kumar-gupta-b5a664252/' },
+          { name: 'instagram', link: 'https://www.instagram.com/bitchaal/' },
+          { name: 'whatsapp', link: '7739301036' },
+          { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
+        ],
+      },
+    ], 
+  },
+  {
     id: 'team1',
     name: 'Secretary',
     members: [
@@ -996,6 +1013,15 @@ export const teamsList = [
           { name: 'email', link: 'B23022@students.iitmandi.ac.in' },
         ],
       },
+      { 
+        name: 'Prashashti',
+        photo: '/assets/team/prashashti.jpeg',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/prashasti-singh-5516a8288' },
+          { name: 'instagram', link: ' https://www.instagram.com/prashasti._.x?igsh=MTY3bmo5em00anc3dQ%3D%3D&utm_source=qr' },
+          { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
+        ],
+      },
     ],
   },
   {
@@ -1256,4 +1282,39 @@ export const ScheduleEventList = [
     link: "/eventDetail/Anima",
 
   },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const AboutPrevGuestData = [
+  {
+    title: "Itachi Uchia",
+    src: "/assets/about/prevguest/g1.JPG",
+  },
+  {
+    title: "Madara Uchiha",
+    src: "/assets/about/prevguest/g2.JPG",
+  },
+  {
+    title: "Levi Ackerman",
+    src: "/assets/about/prevguest/g3.JPG",
+  },
+ 
+  {
+    title: "Radhe Karn",
+    src: "/assets/about/prevguest/g4.JPG",
+  },
+  {
+    title: "Kai Sakamuru",
+    src: "/assets/about/prevguest/g5.JPG",
+  },
+  {
+    title: "Gojo Saturo",
+    src: "/assets/about/prevguest/g6.JPG",
+  },
+  {
+      title: "Kakashi Hatake",
+      src: "/assets/about/prevguest/g7.JPG",
+    },
 ];

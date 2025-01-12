@@ -182,7 +182,7 @@ const CarouselComponent = () => {
                 alt={`Slide ${index + 1}`}
                 fill
                 quality={100}
-                placeholder="blur"
+                // placeholder="blur"
                 sizes="(max-width: 640px) 100vw, 50vw"
                 style={{
                   objectFit: "cover",

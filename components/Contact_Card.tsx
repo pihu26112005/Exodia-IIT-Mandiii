@@ -45,40 +45,40 @@ interface CardProps {
 
 const ContactCard: React.FC<CardProps> = (props) => {
   return (
-    <div className="flex flex-col items-center justify-center p-4 m-4 border border-yellow-500 rounded-xl shadow-lg bg-gradient-to-br from-yellow-200 via-yellow-300 to-yellow-400 hover:scale-105 transition-transform duration-300">
-      <h4 className="text-lg font-bold text-center mb-2">{props.title}</h4>
+    <div className="flex flex-col items-center justify-center gap-[1rem] max-sm:gap-1 p-4 m-4 max-sm:m-2 max-sm:p-2 h-[30rem] max-sm:h-[10rem] max-sm:w-[8rem] border border-yellow-500 rounded-xl shadow-lg bg-gradient-to-br from-yellow-200 via-yellow-300 to-yellow-400 hover:scale-105 transition-transform duration-300">
+      <h4 className="text-xl max-sm:text-[10px] font-bold text-center mb-2 max-sm:mb-0">{props.title}</h4>
       <Image
-        className="w-24 h-24 rounded-full shadow-md mb-4"
+        className="w-24 h-24 max-sm:h-10 max-sm:w-10 rounded-full shadow-md mb-4 max-sm:mb-0"
         src={props.src}
         alt={`${props.title} image`}
         width={96}
         height={96}
         objectFit="cover"
       />
-      <p className="text-sm text-center mb-4">{props.desc}</p>
-      <div className="flex items-center space-x-2 mb-4">
-        <Image src="/icons/socialmedia2/call.png" alt="Call" width={20} height={20} />
-        <span className="text-sm">+91-9378882318</span>
+      <p className="text-sm max-sm:text-[8px] mb-4 max-sm:mb-0">{props.desc}</p>
+      <div className="flex items-center justify-center gap-4 max-sm:gap-2 mb-4 max-sm:mb-0">
+        <Image src="/icons/socialmedia2/call.png" className='max-sm:w-2 max-sm:h-2' alt="Call" width={20} height={20} />
+        <div className="text-[1rem] max-sm:text-[10px]">+91-9378882318</div>
       </div>
-      <div className="flex gap-4">
-        <Link href="" className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
+      <div className="flex gap-4 max-sm:gap-1">
+        <Link href="" className="p-2 max-sm:p-0 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
           {/* <a target="_blank" > */}
-          <Image src="/icons/socialmedia2/email.png" alt="Email" width={32} height={32} />
+          <Image src="/icons/socialmedia2/email.png" className='max-sm:h-2 max-sm:w-2' alt="Email" width={32} height={32} />
           {/* </a> */}
         </Link>
-        <Link href="" className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
+        <Link href="" className="p-2 max-sm:p-0 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
           {/* <a target="_blank" > */}
-          <Image src="/icons/socialmedia2/instagram.png" alt="Instagram" width={32} height={32} />
+          <Image src="/icons/socialmedia2/instagram.png" className='max-sm:h-2 max-sm:w-2' alt="Instagram" width={32} height={32} />
           {/* </a> */}
         </Link>
-        <Link href="" className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
+        <Link href="" className="p-2 max-sm:p-0 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
           {/* <a target="_blank" > */}
-          <Image src="/icons/socialmedia2/linkedin.png" alt="LinkedIn" width={32} height={32} />
+          <Image src="/icons/socialmedia2/linkedin.png" className='max-sm:h-2 max-sm:w-2' alt="LinkedIn" width={32} height={32} />
           {/* </a> */}
         </Link>
-        <Link href="" className="p-2 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
+        <Link href="" className="p-2 max-sm:p-0 bg-white rounded-full shadow-md hover:scale-110 transition-transform">
           {/* <a target="_blank" > */}
-          <Image src="/icons/socialmedia2/whatsapp.png" alt="WhatsApp" width={32} height={32} />
+          <Image src="/icons/socialmedia2/whatsapp.png" className='max-sm:h-2 max-sm:w-2' alt="WhatsApp" width={32} height={32} />
           {/* </a> */}
         </Link>
       </div>
