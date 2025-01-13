@@ -59,17 +59,17 @@ const events: EventDays = {
 const TimelineItem: React.FC<{ event: TimelineEvent }> = ({ event }) => {
   return (
     <motion.div
-      className="mb-32 first:mt-8"
+      className="mb-32 first:mt-8 relative"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-xl">
-        <div className="text-5xl font-bold mb-4 ">{event.time}</div>
+        <div className="text-5xl max-sm:text-lg max-lg:text-3xl  font-bold mb-4  max-sm:mb-1 ">{event.time}</div>
         <ul className="list-disc ml-5 space-y-2">
-          <li className="text-xl leading-relaxed">{event.title}</li>
-          <li className="text-xl leading-relaxed">{event.description}</li>
+          <li className="text-xl font-semibold max-sm:text-sm max-lg:lg leading-relaxed">{event.title}</li>
+          <li className="text-xl font-semibold max-sm:text-sm max-lg:lg leading-relaxed">{event.description}</li>
         </ul>
       </div>
     </motion.div>
@@ -148,12 +148,12 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
   }, [])
 
   return (
-    <div className="h-[70vh] flex items-center justify-center ">
-      <div className="relative w-1/2 h-3/4 px-10  overflow-hidden">
-        <div className="absolute  left-4 top-1/2 transform -translate-y-1/2 z-10">
+    <div className="ml-96  max-sm:ml-24 max-lg:ml-52 h-[60vh] max-sm:h-[50vh]  flex items-center justify-center ">
+    <div className="relative w-1/2 h-3/4 px-7  overflow-hidden">
+    <div className="absolute  left-4 top-1/2 transform -translate-y-1/2 z-10">
           <div
             ref={timelineRef}
-            className="h-[300px] w-0.5 bg-yellow-400 relative cursor-pointer "
+            className="h-[280px] max-sm:h-[100px] max-lg:h-[150px] w-0.5 bg-white relative cursor-pointer "
             onClick={handleTimelineClick}
             role="slider"
             aria-valuemin={0}
@@ -163,7 +163,7 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
             tabIndex={0}
           >
             <motion.div
-              className="absolute w-3 h-3 bg-yellow-400 rounded-full -translate-x-[5px]"
+              className="absolute w-3 h-3 bg-white rounded-full -translate-x-[5px]"
               animate={{ 
                 top: `${(activeIndex / (events[selectedDay].length - 1)) * 100}%` 
               }}
@@ -179,6 +179,7 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
         <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 flex flex-col gap-3">
           <button
             onClick={() => navigateTimeline('up')}
+            // className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50w-8 h-8 sm:w-6 sm:h-6 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50"
             className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50"
             disabled={activeIndex === 0}
             aria-label="↑"
@@ -187,6 +188,7 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
           </button>
           <button
             onClick={() => navigateTimeline('down')}
+            // className="w-8 h-8 sm:w-6 sm:h-6 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50"
             className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50"
             disabled={activeIndex === events[selectedDay].length - 1}
             aria-label="↓"
@@ -196,7 +198,8 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
         </div>
         <div 
           ref={containerRef}
-          className="h-full overflow-y-auto px-16 mt-20 scrollbar-hide"
+          // className="h-full overflow-y-auto px-16 sm:px-8 mt-20 sm:mt-10 scrollbar-hide"
+          className="h-full overflow-y-scroll px-16 max-sm:px-2 max-lg:px-8 mt-12 max-lg:mt-8 max-sm:mt-2 scrollbar-hide"
         >
           {events[selectedDay].map((event, index) => (
             <TimelineItem key={index} event={event} />
