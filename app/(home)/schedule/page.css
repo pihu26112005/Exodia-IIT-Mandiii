@@ -12,6 +12,8 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'HarryPotter';
+  src: url('/fonts/HarryP.TTF') format('truetype');
 }
 
 
