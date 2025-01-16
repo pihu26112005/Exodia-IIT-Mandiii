@@ -132,7 +132,7 @@ const page = () => {
         {/* <ImageRenderer onClick={onClick} images={images} /> */}
         <LoadMore onClick={onClick} />
       </div>
-      <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions]} open={open} slides={slides} close={() => setOpen(false)} />
+      <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions, Thumbnails]} open={open} slides={slides} close={() => setOpen(false)} />
     </div>
   );
 }
