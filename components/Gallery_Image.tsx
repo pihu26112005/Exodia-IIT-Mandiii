@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 interface ImageProps {
-    src: string;
+    src: StaticImageData;
     alt: string;
     onClick: (index: number) => void;
     className?: string;

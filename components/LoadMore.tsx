@@ -1,6 +1,7 @@
 "use client";
+
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { ImageRenderer } from "./ImageRenderer";
 
@@ -19,7 +20,7 @@ const LoadMore: React.FC<LoadMoreProps> = ({ onClick }) => {
         img2
     ];
     const { ref, inView } = useInView();
-    const [data, setData] = useState<string[]>([]);
+    const [data, setData] = useState<(StaticImageData)[]>([]);
     useEffect(() => {
         if(inView) {
             setData(() => [...data, ...images]);
