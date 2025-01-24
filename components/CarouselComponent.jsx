@@ -163,34 +163,41 @@ const CarouselComponent = () => {
             transformStyle: "preserve-3d",
           }}
         >
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="absolute w-full h-full"
-              style={{
-                transform: `rotateY(${(index * 360) / images.length}deg) translateZ(${
-                  windowWidth < 640 ? "550px" : "900px"
-                })`,
-                opacity: currentSlide === index ? 1 : 0.5,
-                 transition: "opacity 0.5s, transform 0.5s", // Smooth transition for scaling
-                 scale: currentSlide === index ? 1 : 1,
-              }}
-            >
-              {/* Optimized Image */}
-              <Image
-                src={image}
-                alt={`Slide ${index + 1}`}
-                fill
-                quality={100}
-                // placeholder="blur"
-                sizes="(max-width: 640px) 100vw, 50vw"
+          {images.map((image, index) => {
+            const isCurrent = currentSlide === index;
+            const isNext = currentSlide === (index + 1) % images.length;
+            const isBefore = currentSlide === (index - 1) % images.length;
+            const isAfterNext = currentSlide === (index + 2) % images.length;
+            const isBeforeLast = currentSlide === (index - 2) % images.length;
+
+            return (
+              <div
+                key={index}
+                className="absolute w-full h-full border-2 border-gold rounded-3xl"
                 style={{
-                  objectFit: "cover",
-                  borderRadius: "8px", // Optional for rounded corners
+                  transform: `rotateY(${(index * 360) / images.length}deg) translateZ(${windowWidth < 640 ? "550px" : "900px"
+                    })`,
+                  opacity: isCurrent || isNext || isBefore ? 1 : (isAfterNext || isBeforeLast ? 0.7 : 0.5),
+                  filter: isCurrent || isNext || isBefore ? "none" : (isAfterNext || isBeforeLast ? "brightness(0.5)" : "blur(2px)"),
+                  transition: "opacity 0.5s, transform 0.5s, filter 0.5s",
                 }}
-              />
-            </div>
-          ))}
+              >
+                {/* Optimized Image */}
+                <Image
+                  className="rounded-3xl"
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  quality={100}
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            );
+          })}
+
         </div>
       </div>
 
