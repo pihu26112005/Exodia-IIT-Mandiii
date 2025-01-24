@@ -137,34 +137,34 @@ export  const Sociallinks = [
 export  const AboutSociallinks = [
   {
     title: "Whatsapp",
-    icon: "/icons/socialmedia3/whatsapp.png",
+    icon: "/icons/socialmedia/whatsapp.png",
     href: "#",
   },
 
   {
     title: "Instagram",
-    icon: "/icons/socialmedia3/insta.png",
+    icon: "/icons/socialmedia/insta.png",
     href: "#",
   },
   {
     title: "Twitter",
-    icon:"/icons/socialmedia3/twitter.png",
+    icon:"/icons/socialmedia/twitter.png",
     href: "#",
   },
   {
     title: "Youtube",
-    icon: "/icons/socialmedia3/youtube.png",
+    icon: "/icons/socialmedia/youtube.png",
     href: "#",
   },
 
   {
     title: "LinkedIn",
-    icon: "/icons/socialmedia3/linkedin.png",
+    icon: "/icons/socialmedia/linkedin.png",
     href: "#",
   },
   {
     title: "Facebook",
-    icon: "/icons/socialmedia3/facebook.png",
+    icon: "/icons/socialmedia/facebook.png",
     href: "#",
   },
 ];
