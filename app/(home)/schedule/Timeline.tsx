@@ -148,12 +148,12 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
   }, [])
 
   return (
-    <div className="ml-96  max-sm:ml-24 max-lg:ml-52 h-[60vh] max-sm:h-[50vh]  flex items-center justify-center ">
-    <div className="relative w-1/2 h-3/4 px-7  overflow-hidden">
+    <div className="ml-96  max-sm:ml-24 max-lg:ml-52 h-[50vh] max-sm:h-[40vh]  flex items-center justify-center ">
+    <div className="relative w-1/2 h-full px-7  overflow-hidden">
     <div className="absolute  left-4 top-1/2 transform -translate-y-1/2 z-10">
           <div
             ref={timelineRef}
-            className="h-[280px] max-sm:h-[100px] max-lg:h-[150px] w-0.5 bg-white relative cursor-pointer "
+            className=" h-[280px] max-sm:h-[100px] max-lg:h-[150px] w-0.5 bg-white relative cursor-pointer "
             onClick={handleTimelineClick}
             role="slider"
             aria-valuemin={0}
@@ -176,7 +176,7 @@ const ScrollTimeline: React.FC<{selectedDay: keyof EventDays}> = ({selectedDay})
             />
           </div>
         </div>
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 flex flex-col gap-3">
+        <div className="absolute  right-4 top-1/2 transform -translate-y-1/2 z-10 flex flex-col gap-3">
           <button
             onClick={() => navigateTimeline('up')}
             // className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50w-8 h-8 sm:w-6 sm:h-6 rounded-full bg-black text-white flex items-center justify-center transition-opacity hover:opacity-75 disabled:opacity-50"
