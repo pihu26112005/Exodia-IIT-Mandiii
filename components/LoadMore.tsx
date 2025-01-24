@@ -5,8 +5,8 @@ import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 import { ImageRenderer } from "./ImageRenderer";
 
-import img1 from "@/images/gallery/DSC_0372.jpg";
-import img2 from "@/images/gallery/DSC06940.jpg";
+import img1 from "../public/assets/images/gallery/DSC06940.jpg";
+import img2 from "../public/assets/images/gallery/DSC_0372.jpg";
 
 interface LoadMoreProps {
     onClick: (index: number) => void;
