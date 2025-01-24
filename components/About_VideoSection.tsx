@@ -35,7 +35,7 @@ const About_VideoSection = () => {
             ))}
           </div>
         </div>
-        <div className='bg-black rounded-3xl flex justify-center items-center'>
+        <div className='bg-black rounded-3xl flex justify-center items-center mt-20'>
           <div className=" p-10 rounded-3xl border-yellow-400 border-2 aspect-[16/9] w-full max-md:w-[80%] max-sm:w-[50%] text-center flex items-center justify-center"
               style={{
                 animation: "shine 2s infinite linear" ,
