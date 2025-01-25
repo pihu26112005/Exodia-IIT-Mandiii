@@ -23,9 +23,9 @@ function App() {
   ];
 
   useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (!e.target.closest(".route-container")) {
-        setSelectedRoute(null);
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest(".route-container")) {
+      setSelectedRoute(null);
       }
     };
     document.addEventListener("click", handleOutsideClick);
