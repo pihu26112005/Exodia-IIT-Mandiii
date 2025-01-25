@@ -142,6 +142,7 @@ const Page: React.FC = () => {
       </div> : null} */}
 
       <div className="max-w-full mx-0 px-0 max-sm:hidden">
+        <div className='p-4 flex justify-center items-center text-[4rem] mt-8'>TimeLine of All Events</div>
       <HoverEffect items={ScheduleEventList} />
       </div>
 

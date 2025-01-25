@@ -6,7 +6,7 @@ const words = ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Offici
 const About_aboutSection = () => {
   return (
     <div className='flex flex-col items-center justify-center mt-[10rem] mb-[5rem] gap-[5rem] p-0'>
-      <div className='harry-text text-[7rem] max-md:text-[5rem] max-sm:text-[4rem] max-[500px]:text-[3rem]'>
+      <div className='text-gold text-[5rem] max-md:text-[5rem] max-sm:text-[4rem] max-[500px]:text-[3rem]'>
         About Exodia
       </div>
 
