@@ -2,6 +2,7 @@ import localFont from 'next/font/local'
 import React from 'react'
 import FAQ from './Announcement_qnaSection'
 import { announcements, faqquestions } from '@/lib/utils'
+import Image from 'next/image'
 
 const aboutNPfont = localFont({
     src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf',
@@ -56,8 +57,15 @@ const Anouncement_NewsSection = () => {
                                         <div className={`w-[80%] ${aboutNPfont3.className} font-serif italic text-[40px] max-sm:text-[20px] text-start`}>
                                             {item.title}
                                         </div>
-                                        <div className={`w-[80%] text-[15px] max-sm:text-[10px] ${aboutNPfont4.className} text-start mt-4 mb-8`}>
-                                            {item.description}
+                                        <div className='flex max-sm:flex-col w-[80%] mt-4 mb-8'>
+                                            {item.image && (
+                                                <div className='w-[40%] flex justify-start items-center'>
+                                                    <Image className='w-[20rem]' src={item.image} alt={item.title} width={200} height={200} />
+                                                </div>
+                                            )}
+                                            <div className={`${item.image ? "w-[30%] max-sm:w-[100%] mt-2" : "w-[80%]"} text-[15px] max-sm:text-[10px] ${aboutNPfont4.className} text-start `}>
+                                                {item.description}
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='w-[1px] h-full '>
@@ -76,7 +84,7 @@ const Anouncement_NewsSection = () => {
                                     </div>
                                 </div>
                                 <div className='flex justify-center items-center w-[80%] mb-8'>
-                                    <hr className="absolute w-[70%] h-[1px] bg-black mt-1" />
+                                    <hr className="absolute w-[70%] max-sm:w-[90%] h-[1px] bg-black mt-1" />
                                 </div>
                             </>
                         ))}

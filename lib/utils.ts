@@ -1336,7 +1336,8 @@ export const announcements = [
       description: 'Researchers have made a major breakthrough in artificial intelligence, paving the way for advanced applications in healthcare, robotics, and more.',
       day: 'Wednesday',
       date: '15 November, 2023',
-      time: '12:00 PM'
+      time: '12:00 PM',
+      image: '/assets/anouncement/nppic/1.jpg'
   },
   {
       title: 'Exodia Tech Conference 2025',
@@ -1350,6 +1351,7 @@ export const announcements = [
       description: 'An innovative team has unveiled the first prototype of a fully functional Iron Man suit, marking a milestone in technology and engineering.',
       day: 'Sunday',
       date: '19 March, 2025',
-      time: '02:00 PM'
+      time: '02:00 PM',
+      image: '/assets/anouncement/nppic/2.jpg'
   }
 ]
