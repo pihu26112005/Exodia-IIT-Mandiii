@@ -16,6 +16,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/utils";
+import { aboutNPfont } from "@/lib/font.utils";
 
 const page = () => {
   const [open, setOpen] = useState(false);
@@ -124,10 +125,10 @@ const page = () => {
       </div>
       <div className="flex flex-col items-center px-20 py-12 mt-10">
         <header className="flex flex-col items-center z-[200] sm:static relative">
-          <h1 className="text-3xl font-bold text-gold mt-28  z-[900] md:text-[15rem] text-[10rem]">
+          <h1 className={`font-bold text-gold mt-28  z-[900] text-[5rem] max-sm:text-[3rem] ${aboutNPfont.className}`}>
             <TextAnimation text="Gallery" />
           </h1>
-          <div className="text-white text-center text-[2rem] mt-14 mb-20 z-[900]">
+          <div className="text-white text-center text-[2rem]  mb-20 z-[900]">
             <TextAnimation text="Welcome to the Exodia IIT Mandi Gallery!" />
           </div>
         </header>
