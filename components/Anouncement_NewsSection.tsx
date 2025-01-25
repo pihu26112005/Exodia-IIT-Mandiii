@@ -61,7 +61,7 @@ const Anouncement_NewsSection = () => {
                                         <div className={`w-[80%] ${aboutNPfont3.className} font-serif italic text-[40px] max-sm:text-[20px] text-start`}>
                                             {item.title}
                                         </div>
-                                        <div className='flex max-sm:flex-col w-[80%] mt-4 mb-8 gap-12'>
+                                        <div className='flex max-sm:flex-col w-[80%] mt-4 mb-8 gap-12 max-sm:gap-0'>
                                             {item.image && (
                                                 <>
                                                     <div className='w-[40%] flex justify-start items-center '>
