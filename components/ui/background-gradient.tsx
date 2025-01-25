@@ -50,7 +50,7 @@ export const BackgroundGradient = ({
             : undefined
         }
         style={{
-          backgroundSize: animate ? "600% 600%" : undefined,
+          backgroundSize: animate ? "800% 800%" : undefined,
         }}
         className={cn(
           "absolute inset-0 rounded-3xl z-[1] opacity-40 group-hover:opacity-80 blur-xl transition duration-500 will-change-transform",
@@ -71,7 +71,7 @@ export const BackgroundGradient = ({
             : undefined
         }
         style={{
-          backgroundSize: animate ? "400% 400%" : undefined,
+          backgroundSize: animate ? "800% 800%" : undefined,
         }}
         className={cn(
           "absolute inset-0 rounded-3xl z-[1] will-change-transform",

@@ -71,7 +71,7 @@ const HomePage = () => {
 
         <div id="gallery" className=" h-[100vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[6rem] max-sm:gap-[3.5rem] relative z-[900]">
           {/* <Image src="/assets/schedule_assets/bg_mid_light.png" alt="bg" width={100} height={100} className='absolute object-cover- w-full mx-auto h-[150%]' /> */}
-          <p className="harry-text text-[5rem] ">Gallery</p>
+          <p className="text-gold text-[5rem] ">Gallery</p>
           <div className="flex  justify-center items-center w-full h-[45%] ">
             {/* <Home_GallerySection /> */}
             <CarouselComponent />

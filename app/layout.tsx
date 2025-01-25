@@ -36,7 +36,7 @@ export default function RootLayout({
         </div> */}
         <ClientLoader>
           <div   className={myNewFont.className}>
-            <CustomCursor />
+            {/* <CustomCursor /> */}
             {children}
           </div>
         </ClientLoader>

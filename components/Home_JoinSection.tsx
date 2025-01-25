@@ -54,7 +54,7 @@ export function Home_JoinSection() {
         </button> */}
         </div>
         <hr className=" absolute w-[2px] h-[80%] bg-yellow-300 my-4" />
-        <div className="absolute flex items-center justify-center harry-text-white text-[2rem] max-sm:text-[0.7rem] max-xl:text-[1.5rem] px-[3rem] max-sm:px-[20px] w-[50%] h-full left-0">
+        <div className="absolute flex items-center justify-center  text-[2rem] max-sm:text-[0.7rem] max-xl:text-[1.5rem] px-[3rem] max-sm:px-[20px] w-[50%] h-full left-0">
           Stay tuned for all the thrilling updates, event spotlights, and exclusive content about Exodia, our premier annual tech-cultural festival. Get ready to witness innovation, creativity, and the dynamic spirit of campus life coming together. Don`t miss a moment of the excitement. This is where brilliance takes center stage!
         </div>
       </motion.div>

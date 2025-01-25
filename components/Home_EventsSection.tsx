@@ -28,7 +28,7 @@ const Home_EventsSection = () => {
                   "--i": index + 6,
                 } as React.CSSProperties}
               >
-                <img src={card.imageUrl} alt={card.title} />
+                <img className="border border-gold rounded-xl" src={card.imageUrl} alt={card.title} />
               </span>
             ))}
           </div>
