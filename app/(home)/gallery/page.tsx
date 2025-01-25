@@ -27,35 +27,37 @@ const page = () => {
   }
 
   const images = [
-    "/assets/images/gallery/DSC06940.jpg",
-    "/assets/images/gallery/DSC_0372.jpg",
-    "/assets/images/gallery/DSC_0373.jpg",
-    "/assets/images/gallery/DSC07046.jpg",
-    "/assets/images/gallery/DSC07220.jpg",
-    "/assets/images/gallery/DSC07242.jpg",
-    "/assets/images/gallery/DSC07249.jpg",
-    "/assets/images/gallery/DSC07252.jpg",
-    "/assets/images/gallery/DSC07253.jpg",
-    "/assets/images/gallery/DSC07260.jpg",
-    "/assets/images/gallery/DSC07268.jpg",
-    "/assets/images/gallery/DSC07270.jpg",
-    "/assets/images/gallery/DSC07275.jpg",
-    "/assets/images/gallery/DSC07390.jpg",
-    "/assets/images/gallery/DSC08347.jpg",
-    "/assets/images/gallery/DSC08403.jpg",
-    "/assets/images/gallery/DSC08467.jpg",
-    "/assets/images/gallery/DSC08472.jpg",
-    "/assets/images/gallery/DSC08481.jpg",
-    "/assets/images/gallery/DSC08482.jpg",
-    "/assets/images/gallery/DSC08487.jpg",
-    "/assets/images/gallery/DSC08499.jpg",
-    "/assets/images/gallery/LEH07282.jpg",
+    "/assets/exodia-gallery-images/DSC_0372.JPG",
+    "/assets/exodia-gallery-images/DSC_0373.JPG",
+    "/assets/exodia-gallery-images/DSC06940.JPG",
+    "/assets/exodia-gallery-images/DSC07046.JPG",
+    "/assets/exodia-gallery-images/DSC07220.JPG",
+    "/assets/exodia-gallery-images/DSC07242.JPG",
+    "/assets/exodia-gallery-images/DSC07249.JPG",
+    "/assets/exodia-gallery-images/DSC07252.JPG",
+    "/assets/exodia-gallery-images/DSC07253.JPG",
+    "/assets/exodia-gallery-images/DSC07260.JPG",
+    "/assets/exodia-gallery-images/DSC07268.JPG",
+    "/assets/exodia-gallery-images/DSC07270.JPG",
+    "/assets/exodia-gallery-images/DSC07275.JPG",
+    "/assets/exodia-gallery-images/DSC07390.JPG",
+    "/assets/exodia-gallery-images/DSC08347.JPG",
+    "/assets/exodia-gallery-images/DSC08403.JPG",
+    "/assets/exodia-gallery-images/DSC08467.JPG",
+    "/assets/exodia-gallery-images/DSC08472.JPG",
+    "/assets/exodia-gallery-images/DSC08481.JPG",
+    "/assets/exodia-gallery-images/DSC08482.JPG",
+    "/assets/exodia-gallery-images/DSC08487.JPG",
+    "/assets/exodia-gallery-images/DSC08499.JPG",
+    "/assets/exodia-gallery-images/LEH07282.JPG",
   ];
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
     src: images[index],
-    description: ((typeof window != undefined) && window.innerWidth > 1140) ? "Press ESC to exit\nUse arrow keys to navigate" : "",
+    description: window.innerWidth > 1140 ? "Press ESC to exit\nUse arrow keys to navigate" : "",
   }));
+
+  console.log(window.innerWidth);
 
   const onClick = (index: number) => openLightbox(index);
 
@@ -67,8 +69,8 @@ const page = () => {
       <FloatingNav namex="P" className="max-md:hidden" />
       <div className="absolute top-8 left-8 flex items-center justify-center">
         <Modal>
-          <ModalTrigger className="harry-text-vsmall border border-yellow-300 flex justify-center group/modal-btn mt-10">
-            <span className="group-hover/modal-btn:translate-x-40 text-yellow-300 text-center transition duration-500">
+          <ModalTrigger className="harry-text border border-yellow-300 flex justify-center group/modal-btn mt-10">
+            <span className="text-[1.3rem] group-hover/modal-btn:translate-x-40 text-yellow-300 text-center transition duration-500 harry-text">
               Hover here!
             </span>
             <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -132,7 +134,7 @@ const page = () => {
         {/* <ImageRenderer onClick={onClick} images={images} /> */}
         <LoadMore onClick={onClick} />
       </div>
-      <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions, Thumbnails]} open={open} slides={slides} close={() => setOpen(false)} />
+      <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions]} open={open} slides={slides} close={() => setOpen(false)} />
     </div>
   );
 }
