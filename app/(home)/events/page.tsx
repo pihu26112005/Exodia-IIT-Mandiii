@@ -75,7 +75,7 @@ const Page = () => {
 
         <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
           <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-            <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
+            <div className="mt-[2rem] max-sm:mt-[4rem] text-gold text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
               Events
             </div>
             <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60">

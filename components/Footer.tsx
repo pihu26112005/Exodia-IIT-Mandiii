@@ -16,9 +16,9 @@ const Footer = () => {
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Participate</h3>
           <ul className="space-y-2">
-            <li><a href="/events" className="hover:text-pink-500">Events Portal</a></li>
-            <li><a href="/events" className="hover:text-pink-500">Join The Community</a></li>
-            <li><a href="/brochure" className="hover:text-pink-500">Brochure</a></li>
+            <li><a href="/events" className="hover:text-gold">Events Portal</a></li>
+            <li><a href="/ExodiaInstagramLink" className="hover:text-gold">Join The Community</a></li>
+            <li><a href="/brochure" className="hover:text-gold">Brochure</a></li>
           </ul>
         </div>
 
@@ -26,9 +26,9 @@ const Footer = () => {
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Explore More</h3>
           <ul className="space-y-2">
-          <li><a href="/about" className="hover:text-pink-500">About Exodia</a></li>
-            <li><a href="/gallery" className="hover:text-pink-500">Previous Star Attractions</a></li>
-            <li><a href="/gallery" className="hover:text-pink-500">Gallery</a></li>
+            <li><a href="/about" className="hover:text-gold">About Exodia</a></li>
+            <li><a href="/gallery" className="hover:text-gold">Previous Star Attractions</a></li>
+            <li><a href="/gallery" className="hover:text-gold">Gallery</a></li>
           </ul>
         </div>
 
@@ -36,9 +36,9 @@ const Footer = () => {
         <div className='max-md:hidden'>
           <h3 className="text-gray-400 font-semibold mb-3">Reach Out To Us</h3>
           <ul className="space-y-2">
-            <li><a href="/contact" className="hover:text-pink-500">Have Any Queries?</a></li>
-            <li><a href="/contact" className="hover:text-pink-500">Contact Us</a></li>
-            <li><a href="/team" className="hover:text-pink-500">Associate With Us</a></li>
+            <li><a href="/contact" className="hover:text-gold">Contact Us</a></li>
+            <li><a href="/githubLinkSoon" className="hover:text-gold">Contribute With Us</a></li>
+            <li><a href="/developers" className="hover:text-gold">Developers</a></li>
           </ul>
         </div>
 

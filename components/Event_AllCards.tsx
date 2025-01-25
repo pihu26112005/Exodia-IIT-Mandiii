@@ -10,14 +10,14 @@ function AllCards() {
     {cardData.map((dayData, index) => (
       <div key={index} className=" space-y-4 flex flex-col justify-center items-center gap-4">
         {/* Day Title */}
-        <h2 className="text-[5rem] harry-text " style={{color:"gold"}}>{dayData.day}</h2>
+        <h2 className="text-[3rem]  " style={{color:"gold"}}>{dayData.day}</h2>
   
         {/* Card Container */}
         <div className="flex flex-wrap gap-8 w-full justify-center items-center">
           {dayData.cards.map((card, idx) => (
             <div
               key={idx}
-              className="max-sm:w-full  transition-transform p-8 hover:border-2 border-yellow-300 rounded-3xl"
+              className="max-sm:w-full  transition-transform p-8  rounded-3xl"
             >
               <Card
                 imageUrl={card.imageUrl}

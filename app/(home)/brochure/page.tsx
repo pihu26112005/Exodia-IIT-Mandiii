@@ -65,13 +65,13 @@ const WizardCarousel = () => {
 
       <FloatingNav namex="P" className="max-md:hidden" />
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-      <div className="min-h-screen bg-gray-900 py-12 px-4">
-        <div className="text-4xl text-white text-center p-10 font-sans"> Page {currentIndex + 1} of {images.length}</div>
+      <div className="min-h-screen bg-black py-12 px-4 mt-5 max-sm:mt-2">
+        <div className="text-4xl text-white text-center p-10 "> Page "{currentIndex + 1}" of "{images.length}"</div>
         <div className="max-w-4xl mx-auto">
           {/* Main Image Container */}
-          <div className="relative aspect-[16/9] mb-8 rounded-lg overflow-hidden bg-gray-800 shadow-xl">
+          <div className="relative aspect-[16/9] mb-8  overflow-hidden bg-black shadow-xl rounded-3xl">
             <div
-              className={`absolute inset-0 transition-transform duration-500 ease-in-out ${isAnimating
+              className={`border-2 rounded-3xl border-black absolute inset-0 transition-transform duration-500 ease-in-out ${isAnimating
                   ? direction === 'right'
                     ? '-translate-x-full'
                     : 'translate-x-full'
@@ -81,7 +81,7 @@ const WizardCarousel = () => {
               <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover border border-black rounded-3xl"
               />
             </div>
 
@@ -108,14 +108,14 @@ const WizardCarousel = () => {
                   key={idx}
                   onClick={() => handleThumbnailClick(idx)}
                   className={`flex-shrink-0 transition-all duration-300 ${idx === currentIndex
-                      ? 'ring-2 ring-amber-500 scale-105'
-                      : 'opacity-60 hover:opacity-100'
+                      ? 'ring-2 ring-amber-500 scale-105 rounded-xl'
+                      : 'opacity-60 hover:opacity-100 rounded-xl'
                     }`}
                 >
                   <img
                     src={img}
                     alt={`Thumbnail ${idx + 1}`}
-                    className="h-20 w-32 object-cover rounded"
+                    className="h-20 w-32 object-cover rounded-xl"
                   />
                 </button>
               ))}

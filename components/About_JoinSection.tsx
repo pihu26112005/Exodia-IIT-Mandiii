@@ -1,3 +1,4 @@
+import { aboutNPfont, aboutNPfont2, aboutNPfont3 } from '@/lib/font.utils'
 import { AboutSociallinks } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,7 +8,7 @@ const About_JoinSection = () => {
   return (
     <>
     <div className='m-0 p-0 flex  flex-col justify-center items-center z-[900] relative mb-[10rem] max-sm:gap-[1rem]'>
-        <div className='harry-text text-[4rem] max-sm:text-[2rem] max-2xl:text-[3rem]'>
+        <div className={`text-gold text-[3rem] max-sm:text-[1.5rem] max-sm:p-4 max-2xl:text-[3rem] ${aboutNPfont.className}`}>
             Join the Exodia Community 
         </div>
         <div className='flex gap-[1rem] '>

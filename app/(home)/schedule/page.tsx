@@ -74,7 +74,7 @@ const Page: React.FC = () => {
       </div> */}
 
       {/* Video Section */}
-      <div className="relative w-full h-full  z-0">
+      {/* <div className="relative w-full h-full  z-0">
         <video
           className="w-full h-full object-cover"
           loop
@@ -84,7 +84,7 @@ const Page: React.FC = () => {
           <source src="/assets/sch_assets/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div> */}
       {/* section 2 */}
       <div className='h-screen bg-black'>
 
@@ -116,7 +116,7 @@ const Page: React.FC = () => {
         <div className='relative font-harryPotter  text-black flex justify-center '><ScrollTimeline selectedDay={selectedDay} /> </div>
       </div>
 
-      {showPopup && !active ? (
+      {/* {showPopup && !active ? (
         <div className="absolute top-1/2 left-[42%] z-10  text-center max-sm:left-[38%]">
           <div className='flex gap-5 '>
 
@@ -129,9 +129,9 @@ const Page: React.FC = () => {
             Scroll to Checkout
           </p>
         </div>
-      ) : null}
+      ) : null} */}
 
-      {active ? <div className='fixed  bg-black  h-screen top-0 opacity-90 left-0 right-0 z-10  '></div> : <div></div>}
+      {/* {active ? <div className='fixed  bg-black  h-screen top-0 opacity-90 left-0 right-0 z-10  '></div> : <div></div>}
       {active ? <div className="fixed cursor-pointer  top-48 left-0 right-0 z-10 flex flex-col items-center space-y-10 max-sm:space-y-4 max-sm:top-28 max-sm:text-xl font-harryPotter  text-3xl text-white">
         <div>HOME</div>
         <div>EVENTS</div>
@@ -139,9 +139,10 @@ const Page: React.FC = () => {
         <div className=' hover:border-b-yellow-300 hover:border-b-2'>SCHEDULE</div>
         <div>ABOUT</div>
         <div>CONTACT</div>
-      </div> : null}
+      </div> : null} */}
 
       <div className="max-w-full mx-0 px-0 max-sm:hidden">
+        <div className='p-4 flex justify-center items-center text-[4rem] mt-8'>TimeLine of All Events</div>
       <HoverEffect items={ScheduleEventList} />
       </div>
 

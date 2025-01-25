@@ -32,6 +32,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { FocusCards } from '@/components/ui/focus-cards';
+import { aboutNPfont, aboutNPfont4 } from '@/lib/font.utils';
 import { navItems, teamsList } from '@/lib/utils';
 import React from 'react';
 
@@ -55,12 +56,12 @@ const Page = () => {
 
       <FloatingNav  namex="P" className="max-md:hidden" />
 
-      <div className="p-8 font-sans">
+      <div className="p-8 mt-8 font-sans">
 
-        <h1 className="harry-text text-center text-[6rem] font-bold mb-12">Organizing Team</h1>
+        <h1 className={`text-center text-[4rem] max-sm:text-[2rem] text-gold font-bold mb-12 ${aboutNPfont.className}`}>Organizing Team</h1>
         {teamsList.map((team) => (
           <div key={team.id} className="mb-[5rem] " id={team.id}>
-            <h2 className=" harry-text-white text-[3rem] font-semibold mb-6">{team.name}</h2>
+            <h2 className={`text-[2rem] max-sm:text-[1.4rem] text-gold font-semibold mb-6 ${aboutNPfont4.className}`}>{team.name}</h2>
             {/* <div className="flex flex-row flex-wrap justify-center items-center gap-10"> */}
               {/* {team.members.map((member, index) => (
                 <div

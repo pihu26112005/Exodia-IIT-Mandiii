@@ -15,7 +15,7 @@ const About_VideoSection = () => {
 
       <div className='flex max-xl:flex-col w-[80%] mx-auto items-center justify-center gap-[5rem] mt-[5rem] mb-[5rem] max-sm:mb-[5rem]'>
         <div className='max-xl:flex max-xl:flex-col max-xl:items-center'>
-          <div className='harry-text text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-sm:text-[3.5rem] max-sm:mb-[1rem]'>Flash Backs</div>
+          <div className='text-gold text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-sm:text-[3.5rem] max-sm:mb-[1rem]'>Flash Backs</div>
           <div className='w-[60%] flex flex-col max-xl:flex-row gap-[20px] items-center justify-center mx-auto'>
             {Object.keys(videoLinks).map((year) => (
               <div
@@ -35,7 +35,7 @@ const About_VideoSection = () => {
             ))}
           </div>
         </div>
-        <div className='bg-black rounded-3xl flex justify-center items-center mt-20'>
+        <div className='bg-black rounded-3xl flex justify-center items-center mt-20 max-sm:mt-0'>
           <div className=" p-10 rounded-3xl border-yellow-400 border-2 aspect-[16/9] w-full max-md:w-[80%] max-sm:w-[50%] text-center flex items-center justify-center"
               style={{
                 animation: "shine 2s infinite linear" ,
