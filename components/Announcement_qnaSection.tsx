@@ -1,4 +1,26 @@
+import localFont from "next/font/local";
 import React, { useState, useEffect } from "react";
+
+const aboutNPfont = localFont({
+    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf',
+    display: 'swap',
+})
+
+const aboutNPfont2 = localFont({
+    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf',
+    display: 'swap',
+})
+
+const aboutNPfont3 = localFont({
+    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-BoldItalic.ttf',
+    display: 'swap',
+})
+
+const aboutNPfont4 = localFont({
+    src: '../public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf',
+    display: 'swap',
+})
+
 
 // Define types for props
 type QuestionItem = {
@@ -37,7 +59,7 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
 
   return (
     <div className="container mx-auto p-8 text-center">
-      <h2 className="text-2xl font-bold text-white mb-10">
+      <h2 className={`text-2xl  text-black mb-10 ${aboutNPfont2.className}`}>
         How can we help you?
       </h2>
       <Searchbar onSearchChange={handleSearchChange} />
@@ -52,10 +74,10 @@ const FAQ: React.FC<FAQProps> = ({ data }) => {
 
 const Searchbar: React.FC<SearchbarProps> = ({ onSearchChange }) => {
   return (
-    <form className="flex items-center w-full md:w-1/2 mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+    <form className="flex items-center w-full md:w-1/2 mx-auto bg-black rounded-lg shadow-md overflow-hidden">
       <div className="p-4">
         <svg
-          className="w-6 h-6 text-black"
+          className="w-6 h-6 text-white"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -64,7 +86,7 @@ const Searchbar: React.FC<SearchbarProps> = ({ onSearchChange }) => {
         </svg>
       </div>
       <input
-        className="flex-grow py-3 px-4 text-center  text-black placeholder-black focus:outline-none"
+        className={`flex-grow py-3 px-4 text-center  text-white placeholder-white focus:outline-none bg-black ${aboutNPfont4.className}`}
         type="text"
         placeholder="Describe your issue"
         onChange={onSearchChange}
@@ -81,12 +103,12 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="w-full md:w-1/2 mx-auto border-b border-gray-200 py-6">
+    <div className="w-full md:w-1/2 mx-auto border-b border-black py-6">
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleActive}>
-        <h3 className="text-lg font-medium text-white">{question}</h3>
+        <h3 className={`text-lg font-medium text-black ${aboutNPfont3.className}`}>{question}</h3>
         <button className="focus:outline-none">
           <svg
-            className={`w-5 h-5 text-white transition-transform ${
+            className={`w-5 h-5 text-black transition-transform ${
               isActive ? "rotate-180" : ""
             }`}
             xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +119,7 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
           </svg>
         </button>
       </div>
-      {isActive && <p className="text-sm text-white mt-2">{answer}</p>}
+      {isActive && <p className={`text-sm text-black mt-2 ${aboutNPfont4.className}`}>{answer}</p>}
     </div>
   );
 };

@@ -1318,3 +1318,38 @@ export const AboutPrevGuestData = [
       src: "/assets/about/prevguest/g7.JPG",
     },
 ];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// List of announcements
+export const announcements = [
+  {
+      title: 'More than 500 million copies of the Harry Potter books sold',
+      description: 'Twenty years ago, readers around the world first discovered the magical story of Harry Potter, created by J.K. Rowling. We can now reveal that, since that moment, half a billion Harry Potter books have now been sold.',
+      day: 'Tuesday',
+      date: '14 September, 2023',
+      time: '09:00 AM'
+  },
+  {
+      title: 'New AI breakthrough announced',
+      description: 'Researchers have made a major breakthrough in artificial intelligence, paving the way for advanced applications in healthcare, robotics, and more.',
+      day: 'Wednesday',
+      date: '15 November, 2023',
+      time: '12:00 PM'
+  },
+  {
+      title: 'Exodia Tech Conference 2025',
+      description: 'Join us for the most exciting tech conference of the year, featuring keynote speeches, panel discussions, and workshops.',
+      day: 'Friday',
+      date: '17 January, 2025',
+      time: '10:30 AM'
+  },
+  {
+      title: 'Launch of Iron Man Suit Prototype',
+      description: 'An innovative team has unveiled the first prototype of a fully functional Iron Man suit, marking a milestone in technology and engineering.',
+      day: 'Sunday',
+      date: '19 March, 2025',
+      time: '02:00 PM'
+  }
+]

@@ -30,19 +30,15 @@ const page = () => {
 
         
 
-        <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        {/* <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
             items={announcementFaq}
             direction="right"
             speed="slow"
             className='py-[5rem] my-10'
           />
-        </div>
-        <div className="bg-black">
-          <div className="container mx-auto p-6 min-h-screen flex flex-col">
-            <FAQ data={faqquestions} />
-          </div>
-        </div>
+        </div> */}
+
       </div>
       <Footer />
     </>
