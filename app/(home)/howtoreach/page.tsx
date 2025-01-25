@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Train, Bus, MapPin, Navigation } from 'lucide-react';
 import { TabsDemo } from '@/components/DisplayTabs';
