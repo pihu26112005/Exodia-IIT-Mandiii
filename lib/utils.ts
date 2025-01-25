@@ -1333,7 +1333,7 @@ export const announcements = [
   },
   {
       title: 'New AI breakthrough announced',
-      description: 'Researchers have made a major breakthrough in artificial intelligence, paving the way for advanced applications in healthcare, robotics, and more.',
+      description: 'Researchers have made a major breakthrough in artificial intelligence, paving the way for advanced applications in healthcare, robotics, and more. in artificial intelligence, paving the way for advanced applications in healthcare, robotics, and more',
       day: 'Wednesday',
       date: '15 November, 2023',
       time: '12:00 PM',
