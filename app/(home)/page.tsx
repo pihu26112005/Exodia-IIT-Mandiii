@@ -82,7 +82,7 @@ const HomePage = () => {
 
         <div className="flex justify-center items-center z-[900] cursor-pointer">
          <Link href={'/gallery'}>
-         <div className="p-4 border-2 rounded-2xl bg-yellow-300 text-black text-[1rem] hover:bg-yellow-500 hover:text-white"
+         <div className="p-4 border-2 rounded-3xl bg-yellow-300 text-black text-[1rem] hover:bg-yellow-500 hover:text-white"
                 style={{
                 animation: "shine 2s infinite linear" ,
                 boxShadow: "0 0 10px 2px white",

@@ -89,7 +89,7 @@ const Page: React.FC = () => {
       <div className='h-screen bg-black'>
 
       <Image src={scroll} alt='harry image' className='absolute object-fill w-full mx-auto h-full   max-sm:object-center' />
-        <div className='relative text-center font-harryPotter pt-20 max-sm:pt-12 max-lg:pt-12 text-6xl text-black font-semibold max-sm:text-black max-lg:text-5xl max-sm:text-3xl bgProp'>
+        <div className='relative text-center font-harryPotter pt-[13rem] max-sm:pt-[12rem] max-lg:pt-[12rem] text-6xl text-black font-semibold max-sm:text-black max-lg:text-5xl max-sm:text-3xl bgProp'>
           TIMELINE
         </div>
         <div className='relative font-harryPotter font-bold flex justify-center mt-10 gap-40 text-4xl max-lg:text-3xl text-black max-lg:gap-20 max-sm:gap-10 max-sm:text-xl'>

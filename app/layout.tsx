@@ -16,6 +16,11 @@ const myFont = localFont({ // DEPLOYMENT FIX
   display: 'swap',
 })
 
+const myNewFont = localFont({ // DEPLOYMENT FIX
+  src: '../public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf',
+  display: 'swap',
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,7 +35,7 @@ export default function RootLayout({
         {children}
         </div> */}
         <ClientLoader>
-          <div   className={myFont.className}>
+          <div   className={myNewFont.className}>
             <CustomCursor />
             {children}
           </div>
