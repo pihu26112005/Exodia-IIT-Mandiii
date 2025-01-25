@@ -11,6 +11,8 @@ import Footer from '@/components/Footer';
 import About_VideoSection from '@/components/About_VideoSection';
 import About_JoinSection from '@/components/About_JoinSection';
 import About_PrevGuest from '@/components/About_PrevGuest';
+import localFont from 'next/font/local';
+
 
 const App: React.FC = () => {
   return (

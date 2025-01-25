@@ -12,7 +12,7 @@ const About_PrevGuest = () => {
      
       return (
         <div className="w-full h-full py-20">
-          <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-[5rem] text-yellow-300">
+          <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-[5rem] max-sm:text-[2.8rem] text-gold">
             Previous Guests
           </h2>
           <Carousel items={cards} />

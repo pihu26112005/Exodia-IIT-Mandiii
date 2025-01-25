@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { aboutNPfont4 } from "@/lib/font.utils";
 
 export const TextGenerateEffect = ({
   words,
@@ -37,7 +38,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="harry-text-black text-[3rem] max-sm:text-[1rem] opacity-0"
+              className=" text-[20px] max-sm:text-[8px] opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -53,7 +54,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" harry-text-black text-[3rem] max-sm:text-[1rem]  leading-snug tracking-wide">
+        <div className={` text-[20px] text-black max-sm:text-[8px]  leading-snug tracking-wide ${aboutNPfont4.className}`}>
           {renderWords()}
         </div>
       </div>

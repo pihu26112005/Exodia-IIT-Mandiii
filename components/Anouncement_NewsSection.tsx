@@ -3,26 +3,27 @@ import React from 'react'
 import FAQ from './Announcement_qnaSection'
 import { announcements, faqquestions } from '@/lib/utils'
 import Image from 'next/image'
+import { aboutNPfont, aboutNPfont2, aboutNPfont3, aboutNPfont4 } from '@/lib/font.utils'
 
-const aboutNPfont = localFont({
-    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf',
-    display: 'swap',
-})
+// const aboutNPfont = localFont({
+//     src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf',
+//     display: 'swap',
+// })
 
-const aboutNPfont2 = localFont({
-    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf',
-    display: 'swap',
-})
+// const aboutNPfont2 = localFont({
+//     src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-Regular.ttf',
+//     display: 'swap',
+// })
 
-const aboutNPfont3 = localFont({
-    src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-BoldItalic.ttf',
-    display: 'swap',
-})
+// const aboutNPfont3 = localFont({
+//     src: '../public/fonts/Playfair_Display_SC/PlayfairDisplaySC-BoldItalic.ttf',
+//     display: 'swap',
+// })
 
-const aboutNPfont4 = localFont({
-    src: '../public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf',
-    display: 'swap',
-})
+// const aboutNPfont4 = localFont({
+//     src: '../public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf',
+//     display: 'swap',
+// })
 
 
 
