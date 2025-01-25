@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,6 +19,16 @@ function App() {
     "/assets/how-to-reach/htr-4.JPG",
     "/assets/how-to-reach/htr-5.JPG",
   ];
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest(".route-container")) {
+        setSelectedRoute(null);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
 
   const container = {
     hidden: { opacity: 0 },
@@ -65,11 +75,12 @@ function App() {
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Air Route */}
+          <div>
           <motion.div
             variants={item}
             whileHover={{ scale: 1.02 }}
-            className="bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer"
-            onClick={() => setSelectedRoute('air')}
+            className="route-container bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer h-auto"
+            onClick={() => setSelectedRoute(selectedRoute === 'air' ? null : 'air')}
           >
             <div className="flex items-center gap-3 mb-4">
               <motion.div
@@ -86,7 +97,7 @@ function App() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="space-y-4 overflow-hidden"
+                  className="space-y-4 overflow-hidden text-left"
                 >
                   <p className="text-white/90">Nearest airports:</p>
                   <ul className="list-disc list-inside space-y-2 text-white/80">
@@ -99,13 +110,15 @@ function App() {
               )}
             </AnimatePresence>
           </motion.div>
+          </div>
 
           {/* Rail Route */}
+          <div>
           <motion.div
             variants={item}
             whileHover={{ scale: 1.02 }}
-            className="bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer"
-            onClick={() => setSelectedRoute('rail')}
+            className="route-container bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer h-auto"
+            onClick={() => setSelectedRoute(selectedRoute === 'rail' ? null : 'rail')}
           >
             <div className="flex items-center gap-3 mb-4">
               <motion.div
@@ -122,7 +135,7 @@ function App() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="space-y-4 overflow-hidden"
+                  className="space-y-4 overflow-hidden text-left"
                 >
                   <p className="text-white/90">Nearest railway stations:</p>
                   <ul className="list-disc list-inside space-y-2 text-white/80">
@@ -135,13 +148,15 @@ function App() {
               )}
             </AnimatePresence>
           </motion.div>
+          </div>
 
           {/* Road Route */}
+          <div>
           <motion.div
             variants={item}
             whileHover={{ scale: 1.02 }}
-            className="bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer"
-            onClick={() => setSelectedRoute('road')}
+            className="route-container bg-yellow-950/30 p-6 rounded-lg border border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer h-auto"
+            onClick={() => setSelectedRoute(selectedRoute === 'road' ? null : 'road')}
           >
             <div className="flex items-center gap-3 mb-4">
               <motion.div
@@ -158,7 +173,7 @@ function App() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="space-y-4 overflow-hidden"
+                  className="space-y-4 overflow-hidden text-left"
                 >
                   <p className="text-white/90">Major bus routes:</p>
                   <ul className="list-disc list-inside space-y-2 text-white/80">
@@ -171,6 +186,7 @@ function App() {
               )}
             </AnimatePresence>
           </motion.div>
+          </div>
         </div>
 
         {/* Detailed Instructions */}
