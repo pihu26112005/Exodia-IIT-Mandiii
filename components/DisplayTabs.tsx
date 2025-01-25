@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Tabs } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { Tabs } from "./ui/Tabs";
 
 export function TabsDemo() {
   const tabs = [
