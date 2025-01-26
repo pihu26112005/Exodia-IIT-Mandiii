@@ -19,12 +19,15 @@ import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
 import CustomCursor from "@/components/CustomCursor";
 import About_VideoSection from "@/components/About_VideoSection";
+import { Anouncement_DialogSection } from "@/components/Anouncement_DialogSection";
 
 
 
 const HomePage = () => {
   return (
     <>
+
+      <Anouncement_DialogSection open={true} close={() => {}} />
       <div className="m-0 p-0 overflow-x-hidden">
 
         {/* <CustomCursor />  */}
