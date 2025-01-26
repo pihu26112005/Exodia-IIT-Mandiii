@@ -17,7 +17,7 @@ const myFont = localFont({ // DEPLOYMENT FIX
 })
 
 const myNewFont = localFont({ // DEPLOYMENT FIX
-  src: '../public/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf',
+  src: '../public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf',
   display: 'swap',
 })
 
