@@ -5,6 +5,7 @@ import { ImagesSlider } from "./ui/images-slider";
 import { AboutSociallinks } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { aboutNPfont } from "@/lib/font.utils";
 
 export function Home_JoinSection() {
   const images = [
@@ -30,14 +31,14 @@ export function Home_JoinSection() {
         className="z-50 flex flex-col justify-center items-center"
       >
         <div className="flex flex-col w-[50%] h-full mb-[5rem] max-sm:mb-[3rem] items-center justify-center absolute right-0 ">
-          <div className="flex gap-5 max-sm:gap-[8px] ">
-            <motion.p className="max-sm:m-0 harry-text-white font-bold max-sm:text-[0.7rem] max-xl:text-[2.5rem] max-md:text-[2rem] text-[5rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          <div className= {`flex gap-5 max-sm:gap-[8px] ${aboutNPfont.className}`}>
+            <motion.p className="max-sm:m-0 font-bold max-sm:text-[0.5rem] max-xl:text-[2rem] max-md:text-[1.5rem] max-2xl:text-[2.5rem] text-[3rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
               Join the
             </motion.p>
-            <motion.p className="max-sm:m-0 harry-text font-bold max-sm:text-[0.7rem] max-xl:text-[2.5rem] max-md:text-[2rem] text-[5rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+            <motion.p className="max-sm:m-0 text-gold font-bold max-sm:text-[0.5rem] max-xl:text-[2rem] max-md:text-[1.5rem] max-2xl:text-[2.5rem]  text-[3rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
               Exodia
             </motion.p>
-            <motion.p className="max-sm:m-0 harry-text-white font-bold max-sm:text-[0.7rem] max-xl:text-[2.5rem] max-md:text-[2rem] text-[5rem]  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+            <motion.p className="max-sm:m-0 font-bold max-sm:text-[0.5rem] max-xl:text-[2rem] max-md:text-[1.5rem] text-[3rem] max-2xl:text-[2.5rem]   text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
               Community
             </motion.p>
           </div>

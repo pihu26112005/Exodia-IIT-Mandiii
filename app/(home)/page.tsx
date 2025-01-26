@@ -19,12 +19,16 @@ import Image from "next/image";
 import CarouselComponent from "@/components/CarouselComponent";
 import CustomCursor from "@/components/CustomCursor";
 import About_VideoSection from "@/components/About_VideoSection";
+import { Anouncement_DialogSection } from "@/components/Anouncement_DialogSection";
+import { aboutNPfont } from "@/lib/font.utils";
 
 
 
 const HomePage = () => {
   return (
     <>
+
+      <Anouncement_DialogSection open={true} close={() => {}} />
       <div className="m-0 p-0 overflow-x-hidden">
 
         {/* <CustomCursor />  */}
@@ -71,7 +75,7 @@ const HomePage = () => {
 
         <div id="gallery" className=" h-[100vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[6rem] max-sm:gap-[3.5rem] relative z-[900]">
           {/* <Image src="/assets/schedule_assets/bg_mid_light.png" alt="bg" width={100} height={100} className='absolute object-cover- w-full mx-auto h-[150%]' /> */}
-          <p className="text-gold text-[5rem] ">Gallery</p>
+          <p className={`text-gold text-[5rem] ${aboutNPfont.className}`}>Gallery</p>
           <div className="flex  justify-center items-center w-full h-[45%] ">
             {/* <Home_GallerySection /> */}
             <CarouselComponent />

@@ -15,6 +15,7 @@ import { navItems, ScheduleEventList } from '@/lib/utils';
 import Footer from '@/components/Footer';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import scroll from "../../../public/assets/sch_assets/scroll.jpg"
+import { aboutNPfont } from '@/lib/font.utils';
 
 // import video from "../../../public/assets/sch_assets/"
 
@@ -89,7 +90,7 @@ const Page: React.FC = () => {
       <div className='h-screen bg-black'>
 
       <Image src={scroll} alt='harry image' className='absolute object-fill w-full mx-auto h-full   max-sm:object-center' />
-        <div className='relative text-center font-harryPotter pt-[13rem] max-sm:pt-[12rem] max-lg:pt-[12rem] text-6xl text-black font-semibold max-sm:text-black max-lg:text-5xl max-sm:text-3xl bgProp'>
+        <div className={` ${aboutNPfont.className} relative text-center font-harryPotter pt-[13rem] max-sm:pt-[12rem] max-lg:pt-[12rem] text-6xl text-black font-semibold max-sm:text-black max-lg:text-5xl max-sm:text-3xl bgProp`}>
           TIMELINE
         </div>
         <div className='relative font-harryPotter font-bold flex justify-center mt-10 gap-40 text-4xl max-lg:text-3xl text-black max-lg:gap-20 max-sm:gap-10 max-sm:text-xl'>
@@ -142,7 +143,7 @@ const Page: React.FC = () => {
       </div> : null} */}
 
       <div className="max-w-full mx-0 px-0 max-sm:hidden">
-        <div className='p-4 flex justify-center items-center text-[4rem] mt-8'>TimeLine of All Events</div>
+        <div className={`p-4 flex justify-center items-center text-[4rem] mt-8 ${aboutNPfont.className}`}>TimeLine of All Events</div>
       <HoverEffect items={ScheduleEventList} />
       </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Event_Card";
 import { cardData } from "@/lib/utils";
+import { aboutNPfont, aboutNPfont2 } from "@/lib/font.utils";
 
 
 
@@ -10,7 +11,7 @@ function AllCards() {
     {cardData.map((dayData, index) => (
       <div key={index} className=" space-y-4 flex flex-col justify-center items-center gap-4">
         {/* Day Title */}
-        <h2 className="text-[3rem]  " style={{color:"gold"}}>{dayData.day}</h2>
+        <h2 className={`text-[3rem] ${aboutNPfont.className}`} style={{color:"gold"}}>{dayData.day}</h2>
   
         {/* Card Container */}
         <div className="flex flex-wrap gap-8 w-full justify-center items-center">
