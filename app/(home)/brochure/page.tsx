@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { aboutNPfont } from '@/lib/font.utils';
 
 const WizardCarousel = () => {
   // Sample images
@@ -65,17 +66,18 @@ const WizardCarousel = () => {
 
       <FloatingNav namex="P" className="max-md:hidden" />
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
+      <div className={`mt-[10rem] text-gold text-[5rem] ${aboutNPfont.className}`}>Brouchre</div>
       <div className="min-h-screen bg-black py-12 px-4 mt-5 max-sm:mt-2">
         <div className="text-4xl text-white text-center p-10 "> Page "{currentIndex + 1}" of "{images.length}"</div>
         <div className="max-w-4xl mx-auto">
           {/* Main Image Container */}
-          <div className="relative aspect-[16/9] mb-8  overflow-hidden bg-black shadow-xl rounded-3xl">
+          <div className="relative aspect-[16/9] mb-8  overflow-hidden bg-black shadow-xl rounded-3xl border-2 border-gold animate-buttonshine">
             <div
               className={`border-2 rounded-3xl border-black absolute inset-0 transition-transform duration-500 ease-in-out ${isAnimating
-                  ? direction === 'right'
-                    ? '-translate-x-full'
-                    : 'translate-x-full'
-                  : 'translate-x-0'
+                ? direction === 'right'
+                  ? '-translate-x-full'
+                  : 'translate-x-full'
+                : 'translate-x-0'
                 }`}
             >
               <img
@@ -108,8 +110,8 @@ const WizardCarousel = () => {
                   key={idx}
                   onClick={() => handleThumbnailClick(idx)}
                   className={`flex-shrink-0 transition-all duration-300 ${idx === currentIndex
-                      ? 'ring-2 ring-amber-500 scale-105 rounded-xl'
-                      : 'opacity-60 hover:opacity-100 rounded-xl'
+                    ? 'ring-2 ring-amber-500 scale-105 rounded-xl'
+                    : 'opacity-60 hover:opacity-100 rounded-xl'
                     }`}
                 >
                   <img
