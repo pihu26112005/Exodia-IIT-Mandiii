@@ -264,26 +264,6 @@ function App() {
                       </motion.div>
                     ))}
                   </div>
-                  <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-                    <div className="flex  items-center justify-center">
-
-                    </div>
-                    <div className="flex items-center justify-center">
-
-                    </div>
-                    <div className="flex items-center justify-center">
-
-                    </div>
-                    <div className="flex  items-center justify-center">
-
-                    </div>
-                    <div className="flex items-center justify-center">
-
-                    </div>
-                    <div className="flex items-center justify-center">
-
-                    </div>
-                  </div>
                 </ModalContent>
                 <ModalFooter className="gap-4">
                   <CoolMode>

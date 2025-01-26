@@ -17,6 +17,7 @@ import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/lib/utils";
 import { aboutNPfont } from "@/lib/font.utils";
+import { CoolMode } from "@/components/ui/cool-mode";
 
 const page = () => {
   const [open, setOpen] = useState(false);
@@ -28,9 +29,9 @@ const page = () => {
   }
 
   const images = [
+    "/assets/exodia-gallery-images/DSC06940.JPG",
     "/assets/exodia-gallery-images/DSC_0372.JPG",
     "/assets/exodia-gallery-images/DSC_0373.JPG",
-    "/assets/exodia-gallery-images/DSC06940.JPG",
     "/assets/exodia-gallery-images/DSC07046.JPG",
     "/assets/exodia-gallery-images/DSC07220.JPG",
     "/assets/exodia-gallery-images/DSC07242.JPG",
@@ -114,11 +115,15 @@ const page = () => {
               </div>
             </ModalContent>
             <ModalFooter className="gap-4">
+            <CoolMode>
+            <Link href="https://www.instagram.com/exodia.iitmandi/" target="_blank">
               <button className="px-2 py-1 bg-gray-200 text-black dark:bg-white dark:border-black dark:text-black border border-gray-300 rounded-md text-sm w-auto">
-                <Link href="https://www.instagram.com/exodia.iitmandi/" target="_blank">
+                
                   @exodia.iitmandi
-                </Link>
+                
               </button>
+            </Link>
+            </CoolMode>
             </ModalFooter>
           </ModalBody>
         </Modal>
