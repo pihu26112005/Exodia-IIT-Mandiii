@@ -1,3 +1,4 @@
+import { aboutNPfont, aboutNPfont2, aboutNPfont3, aboutNPfont4 } from '@/lib/font.utils';
 import { videoLinks } from '@/lib/utils'
 import React, { useState } from 'react'
 
@@ -15,7 +16,7 @@ const About_VideoSection = () => {
 
       <div className='flex max-xl:flex-col w-[80%] mx-auto items-center justify-center gap-[5rem] mt-[5rem] mb-[5rem] max-sm:mb-[5rem]'>
         <div className='max-xl:flex max-xl:flex-col max-xl:items-center'>
-          <div className='text-gold text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-sm:text-[3.5rem] max-sm:mb-[1rem]'>Flash Backs</div>
+          <div className={`text-gold text-[3rem] max-xl:text-[2.5rem] max-lg:text-[2rem] max-sm:text-[2.5rem] max-sm:mb-[1rem] ${aboutNPfont.className}`}>Flash Backs</div>
           <div className='w-[60%] flex flex-col max-xl:flex-row gap-[20px] items-center justify-center mx-auto'>
             {Object.keys(videoLinks).map((year) => (
               <div
