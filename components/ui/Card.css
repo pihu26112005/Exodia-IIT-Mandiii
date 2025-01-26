@@ -101,22 +101,24 @@
 }
 
 .title {
-    font-size: 18px; /* Reduced font size for better fitting */
+    padding-top:50px ;
+    font-size: 28px; /* Reduced font size for better fitting */
     margin-bottom: 5px;
+
     color: rgb(255, 230, 39);
     font-weight: bold; /* Bold for the title */
     text-transform: uppercase;
 }
 
 .short-description {
-    font-size: 14px;
+    font-size: 19px;
     margin-bottom: 5px;
     color: #c6c26f;
 }
 
 .location,
 .price {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 5px;
     color: #dcdcdc;
 }

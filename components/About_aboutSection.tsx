@@ -11,7 +11,7 @@ const About_aboutSection = () => {
         About Exodia
       </div>
 
-      <div className='h-[80%] w-[90%] flex justify-center items-center p-5 bg-white border-2 border-yellow-300 rounded-2xl'
+      <div className='h-[80%] w-[90%] flex justify-center items-center p-5 bg-white border-2 animate-buttonshine border-yellow-300 rounded-3xl'
         style={{ backgroundImage: 'url(/assets/about/abgxgx.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
         <div className='w-[90%] p-5 flex justify-center items-center text-center'>
