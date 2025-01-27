@@ -14,7 +14,7 @@ const About_aboutSection = () => {
       <div className='h-[80%] w-[90%] flex justify-center items-center p-5 bg-white border-2 animate-buttonshine border-yellow-300 rounded-3xl'
         style={{ backgroundImage: 'url(/assets/about/abgxgx.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
-        <div className='w-[90%] p-5 flex justify-center items-center text-center'>
+        <div className='w-[90%] max-sm:w-[100%] p-5 max-sm:p-0 flex justify-center items-center text-center'>
         <TextGenerateEffect words={words} />
         </div>
       </div>

@@ -162,7 +162,7 @@ const page = () => {
     }
 
     return (
-        <div className="p-6">
+        <div className="p-6 flex flex-col justify-center items-center">
             <div className="flex items-center justify-between">
                 <div className="flex flex-col gap-y-2">
                     <h1 className="text-2xl font-medium">
@@ -170,7 +170,7 @@ const page = () => {
                     </h1>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+            <div className="flex justify-center items-center gap-6 mt-16 mb-16">
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
                         <div>
@@ -211,7 +211,7 @@ const page = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center justify-center gap-x-2">
                             <Button disabled={!isValid || isSubmitting} type="submit">
                                 Submit
                             </Button>

@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
             <SheetClose asChild>
               <div className="">
                 {navItems.map((item, i) => (
-                  <div key={i} className="text-white text-2xl pt-2 transition">
+                  <div key={i} className="text-white text-2xl pt-2 ">
                     <Link href={item.link}>
                       {item.name}
                     </Link>
