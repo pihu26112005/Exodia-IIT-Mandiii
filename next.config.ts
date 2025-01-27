@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'utfs.io',
+      },
+    ]
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg)$/i,
