@@ -282,7 +282,7 @@ export const videoLinks: Record<number,string> = {
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+// ye sare event ki list hai day wise
 
 export const cardData = [
   {
@@ -388,7 +388,7 @@ export const cardData = [
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+// ye sare event ki list hai 
 export const eventcards = [
   {
     imageUrl:
@@ -1355,3 +1355,50 @@ export const announcements = [
       image: '/assets/anouncement/nppic/2.jpg'
   }
 ]
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// List of Events for crousal 
+// const images: Image[] = [
+//   {
+//     src: "https://images6.alphacoders.com/304/304604.jpg",
+//     title: "Magical Fireworks at Exodia 2024",
+//     description: "A stunning view of magical fireworks illuminating the misty night sky at Exodia 2024.",
+//   },
+//   {
+//     src: "https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/48264/article_full%403x.jpg",
+//     title: "Exodia Skyline",
+//     description: "The mesmerizing skyline of IIT Mandi, bathed in a magical glow during Exodia 2024.",
+//   },
+//   {
+//     src: "http://spellshelp.com/upload/medialibrary/e0b/e0b3bd034aaea1136c9de5f97a364d9d.jpg",
+//     title: "Magical Campus of IIT Mandi",
+//     description: "A captivating view of the IIT Mandi campus surrounded by mystical fog, evoking the spirit of Exodia 2024.",
+//   },
+//   {
+//     src: "https://www.theaureview.com/wp-content/uploads/2020/02/Stranger-Things-is-Coming-to-HHN-2018-1-2048x1173.jpg",
+//     title: "Exodia Festivities",
+//     description: "An electrifying atmosphere at Exodia 2024, filled with enchanting performances and magical moments.",
+//   },
+//   {
+//     src: "https://images.ctfassets.net/6pezt69ih962/1DyAhWIAnmyzgNjMR8sGdu/8c67663590d07cf31beeee934ed1a9b6/Ticketing_1920x1200.jpg",
+//     title: "Exodia's Magical Motorfest",
+//     description: "A thrilling display of motor performances, set against the mystical backdrop of Exodia 2024's magical theme.",
+//   },
+//   {
+//     src: "https://wallup.net/wp-content/uploads/2018/09/26/685291-fantasy-mage-wizard-sorcerer-art-artwork-magic-magician.jpg",
+//     title: "Magical Sunset at Exodia",
+//     description: "A magical sunset casting an otherworldly glow over the Exodia 2024 campus, immersing the festival in mystery.",
+//   },
+//   {
+//     src: "https://multiplayer.net-cdn.it/thumbs/images/2022/03/18/hogwarts-legacy-artwork-_33_jpg_1600x900_crop_q85.jpg",
+//     title: "Magical Beach Party",
+//     description: "A magical beach party under the moonlight, where the essence of Exodia 2024 comes alive.",
+//   },
+//   {
+//     src: "https://wallpaperaccess.com/full/1430394.jpg",
+//     title: "Magical Mountain Adventure",
+//     description: "A mystical mountain adventure through enchanted landscapes, symbolizing the spirit of Exodia 2024.",
+//   },
+// ];

@@ -16,6 +16,8 @@ import { navItems } from "@/lib/utils";
 import Image from "next/image";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { aboutNPfont } from "@/lib/font.utils";
+import EventCrousel2 from "@/components/EventCrousel2";
+import { CarouselComponentPihu } from "@/components/Event_CarouselPihu";
 
 
 const words = [
@@ -76,12 +78,14 @@ const Page = () => {
 
         <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
           <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-            <div className={`mt-[2rem] max-sm:mt-[4rem] ${aboutNPfont.className} text-gold text-[10rem] max-2xl:text-[8rem] max-xl:text-[7rem] max-lg:text-[6rem] max-md:text-[5rem] max-sm:text-[4rem]`}>
+            <div className={`mt-[2rem] mb-[6rem] max-sm:mt-[4rem] ${aboutNPfont.className} text-gold text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
               Events
             </div>
-            <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60">
+            {/* <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60"> */}
               {/* <SwiperComponent /> */}  {/* DEPLOYMENT FIX */}
-            </div>
+              {/* <EventCrousel2 /> */} 
+            {/* </div> */}
+              <CarouselComponentPihu />
           </div>
 
           <div className="w-full h-[20vh] flex justify-center items-end">
