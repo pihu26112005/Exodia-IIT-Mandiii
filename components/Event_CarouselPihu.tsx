@@ -17,7 +17,7 @@ const PihuCard: React.FC<CardProps> = ({ title, imageUrl }) => (
       alt={title}
       className="h-[80%] w-full object-cover rounded-3xl mb-4"
     />
-    <h2 className="text-[2rem] font-bold text-black">{title}</h2>
+    <h2 className="text-[2rem] max-sm:text-[1rem] font-bold text-black">{title}</h2>
   </div>
 );
 

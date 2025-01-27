@@ -88,7 +88,7 @@ const Page = () => {
               <CarouselComponentPihu />
           </div>
 
-          <div className="w-full h-[20vh] flex justify-center items-end">
+          <div className="w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end">
             <TypewriterEffect words={words} />
           </div>
 
