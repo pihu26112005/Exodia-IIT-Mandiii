@@ -23,7 +23,7 @@
     - Divided Pages among team
     - Write all steps for volunteers to contribute, how to make pr , and how to link branch 
     - Final Updated Readme 
-21 dec(Player)-
+21 dec(Player)-  
     -Found some animations and design for the website that we can take reference from:
      https://www.behance.net/gallery/164743507/harry-potter-website-design
 
