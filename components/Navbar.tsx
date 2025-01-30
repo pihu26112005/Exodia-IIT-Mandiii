@@ -3,6 +3,7 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHe
 import { navItems } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { aboutNPfont } from "@/lib/font.utils";
 
 const Navbar: React.FC = () => {
 
@@ -132,18 +133,18 @@ const Navbar: React.FC = () => {
           <SheetTrigger asChild className="flex justify-center items-center mb-5 max-sm:mb-4 max-sm:rounded-xl">
             {/* <Button variant="outline">Open</Button> */}
             <button
-              className="text-white bg-yellow-300  text-2xl md:hidden max-sm:p-2"
+              className="text-white bg-yellow-300  text-2xl md:hidden max-sm:px-2"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
               <p className="invert p-0 m-0 text-white">☰</p>
             </button>
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent className="h-full">
             <SheetClose asChild>
-              <div className="">
+              <div className="h-[100vh]">
                 {navItems.map((item, i) => (
-                  <div key={i} className="text-white text-2xl pt-2 ">
+                  <div key={i} className={`text-white text-2xl pt-2 ${aboutNPfont.className} `}>
                     <Link href={item.link}>
                       {item.name}
                     </Link>
