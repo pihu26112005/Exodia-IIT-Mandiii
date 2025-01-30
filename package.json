@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.10.2",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-dialog": "^1.1.5",
     "@radix-ui/react-label": "^2.1.1",
@@ -22,7 +21,6 @@
     "@types/three": "^0.171.0",
     "@uploadthing/react": "^7.1.5",
     "class-variance-authority": "^0.7.1",
-    "clerk": "^0.8.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.0.0-alpha.2",
     "fs": "^0.0.1-security",
