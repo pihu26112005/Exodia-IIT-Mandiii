@@ -3,7 +3,7 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import ClientLoader from "@/components/ClientLoader";
 import localFont from 'next/font/local'
-import { ClerkProvider } from "@clerk/nextjs";
+// import { ClerkProvider } from "@clerk/nextjs";
 
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
     <html lang="en">
       <body className="dark">
         {/* // DEPLOYMENT FIX */}
@@ -44,6 +44,6 @@ export default function RootLayout({
         </ClientLoader>
       </body>
     </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }
