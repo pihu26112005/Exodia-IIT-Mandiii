@@ -52,7 +52,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-bold sm:hidden", className)}>
       <div className="mt-4">
         <div className={` text-[20px] text-black max-sm:text-[8px]  leading-snug tracking-wide ${aboutNPfont4.className}`}>
           {renderWords()}

@@ -6,6 +6,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
+
+/* In globals.css */
+/* html, body {
+  cursor: none; /* Hides the default cursor */
+/* } */ 
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b; /* Track color (dark gray) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700; /* Thumb color (light gray) */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* Darker on hover */
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .events{
   height: 140vh;
   background-color: #01000c;
@@ -15,14 +43,7 @@ body {
   align-items: center;
   scale: 1.5;
   overflow-x: hidden;
-  
 }
-
-/* In globals.css */
-/* html, body {
-  cursor: none; /* Hides the default cursor */
-/* } */ 
-
 
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */

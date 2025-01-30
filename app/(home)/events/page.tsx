@@ -92,7 +92,7 @@ const Page = () => {
             <TypewriterEffect words={words} />
           </div>
 
-          <div className="w-full">
+          <div className="w-full" id="maineventbody">
             {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
             <div className="text-white text-4xl md:text-6xl text-center mt-[5rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
               style={{ color: "gold", fontFamily: "B2" }}>
@@ -103,7 +103,9 @@ const Page = () => {
             </div>
           </div>
           <div className="w-full h-[50vh] flex justify-center items-center">
+            <Link href="#maineventbody">
             <TypewriterEffect words={words} />
+            </Link>
           </div>
         </div>
 
