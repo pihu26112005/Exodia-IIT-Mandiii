@@ -4,6 +4,7 @@ import React from "react";
 import "./ui/Home_Events.css";
 import Home_EventsSlide from "./Home_EventsSlide";
 import { eventcards } from "@/lib/utils";
+import { CarouselComponentPihu } from "./Event_CarouselPihu";
 
 const Home_EventsSection = () => {
 
@@ -34,14 +35,15 @@ const Home_EventsSection = () => {
           </div>
         </div>
       </div>
-      <Home_EventsSlide />
-      <hr
+      <CarouselComponentPihu />
+      {/* <Home_EventsSlide /> */}
+      {/* <hr
         style={{
           height: "2px",
           backgroundColor: "gold",
           border: "2px white",
           marginTop:"-10px"
-        }}/>
+        }}/> */}
     </div>
     </>
   );

@@ -29,7 +29,7 @@ type CarouselProps = {
 const MAX_VISIBILITY = 3;
 
 const Carousel: React.FC<CarouselProps> = ({ children }) => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(3);
   const count = React.Children.count(children);
 
   return (
