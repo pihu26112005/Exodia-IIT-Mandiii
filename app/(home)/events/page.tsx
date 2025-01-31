@@ -18,6 +18,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { aboutNPfont } from "@/lib/font.utils";
 import EventCrousel2 from "@/components/EventCrousel2";
 import { CarouselComponentPihu } from "@/components/Event_CarouselPihu";
+import Expandable from "@/components/animata/carousel/expandable";
 
 
 const words = [
@@ -76,7 +77,7 @@ const Page = () => {
 
         <FloatingNav namex="P" className="max-md:hidden" />
 
-        <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
+        <div className="m-0 p-0 w-full flex flex-col items-center justify-center flex-grow mb-[-800px] sm:mb-0">
           <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
             <div className={`mt-[2rem] mb-[6rem] max-sm:mt-[4rem] ${aboutNPfont.className} text-gold text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
               Events
@@ -85,7 +86,9 @@ const Page = () => {
               {/* <SwiperComponent /> */}  {/* DEPLOYMENT FIX */}
               {/* <EventCrousel2 /> */} 
             {/* </div> */}
-              <CarouselComponentPihu />
+            
+              <Expandable/>
+      
           </div>
 
           <div className="w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end">

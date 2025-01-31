@@ -8,6 +8,7 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default withUt ({
+	
 	darkMode: ["class"],
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +17,10 @@ export default withUt ({
 	],
 	theme: {
 		extend: {
+
+			transitionTimingFunction: {
+				"minor-spring": "cubic-bezier(0.18,0.89,0.82,1.04)",
+			  },
 			darkMode: 'class',
 			backgroundImage: {
 				'custom-gradient': 'linear-gradient(to bottom, #171720, #171730, #171738)'
@@ -69,10 +74,32 @@ export default withUt ({
 				second: "moveInCircle 20s reverse infinite",
 				third: "moveInCircle 40s linear infinite",
 				fourth: "moveHorizontal 40s ease infinite",
+				"marquee-horizontal": "marquee-x var(--duration) infinite linear",
+        "marquee-vertical": "marquee-y var(--duration) linear infinite",
 				fifth: "moveInCircle 20s ease infinite",
 				buttonshine: 'shine 2s infinite linear',
 			},
 			keyframes: {
+				"marquee-x": {
+					from: { transform: "translateX(0)" },
+					to: { transform: "translateX(calc(-100% - var(--gap)))" },
+				  },
+				  "marquee-y": {
+					from: { transform: "translateY(0)" },
+					to: { transform: "translateY(calc(-100% - var(--gap)))" },
+				  },
+				"reveal-up": {
+					"0%": { opacity: "0", transform: "translateY(80%)" },
+					"100%": { opacity: "1", transform: "translateY(0)" },
+				  },
+				  "reveal-down": {
+					"0%": { opacity: "0", transform: "translateY(-80%)" },
+					"100%": { opacity: "1", transform: "translateY(0)" },
+				  },
+					"content-blur": {
+					"0%": { filter: "blur(0.3rem)" },
+					"100%": { filter: "blur(0)" },
+				  },
 				shine: {
 					'0%': { boxShadow: '0 0 10px 2px white' },
 					'50%': { boxShadow: '0 0 14px 2.2px white' },
