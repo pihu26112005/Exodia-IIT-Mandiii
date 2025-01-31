@@ -9,36 +9,36 @@ import ScrollingTestimonials from "./animata/container/scrolling-testimonials";
 
 const Home_EventsSection = () => {
   const testimonialsData = [
-    {
-      image: 'https://images6.alphacoders.com/304/304604.jpg',
-      name: 'Events of exodia',
-      description: 'John is a wonderful person with a lot of experience.',
-    },
-    {
-      image: 'https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/48264/article_full%403x.jpg',
-      name: 'Exodia 2025',
-      description: 'Jane brings valuable insights to any project she works on.',
-    },
-    {
-      image: 'http://spellshelp.com/upload/medialibrary/e0b/e0b3bd034aaea1136c9de5f97a364d9d.jpg',
-      name: 'Events of exodia',
-      description: 'John is a wonderful person with a lot of experience.',
-    },
-    {
-      image: 'https://images.ctfassets.net/6pezt69ih962/1DyAhWIAnmyzgNjMR8sGdu/8c67663590d07cf31beeee934ed1a9b6/Ticketing_1920x1200.jpg',
-      name: 'Exodia 2025',
-      description: 'Jane brings valuable insights to any project she works on.',
-    },
-    {
-      image: 'https://wallup.net/wp-content/uploads/2018/09/26/685291-fantasy-mage-wizard-sorcerer-art-artwork-magic-magician.jpg',
-      name: 'Events of exodia',
-      description: 'John is a wonderful person with a lot of experience.',
-    },
-    {
-      image: 'https://wallpaperaccess.com/full/1430394.jpg',
-      name: 'Exodia 2025',
-      description: 'Jane brings valuable insights to any project she works on.',
-    },
+      {
+        image: 'https://images6.alphacoders.com/304/304604.jpg',
+        name: 'ProNight',
+        description: 'John is a wonderful person with a lot of experience.',
+      },
+      {
+        image: 'https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/48264/article_full%403x.jpg',
+        name: 'Competition',
+        description: 'Jane brings valuable insights to any project she works on.',
+      },
+      {
+        image: 'http://spellshelp.com/upload/medialibrary/e0b/e0b3bd034aaea1136c9de5f97a364d9d.jpg',
+        name: 'Music',
+        description: 'John is a wonderful person with a lot of experience.',
+      },
+      {
+        image: 'https://images.ctfassets.net/6pezt69ih962/1DyAhWIAnmyzgNjMR8sGdu/8c67663590d07cf31beeee934ed1a9b6/Ticketing_1920x1200.jpg',
+        name: 'Drama',
+        description: 'Jane brings valuable insights to any project she works on.',
+      },
+      {
+        image: 'https://wallup.net/wp-content/uploads/2018/09/26/685291-fantasy-mage-wizard-sorcerer-art-artwork-magic-magician.jpg',
+        name: 'Dance',
+        description: 'John is a wonderful person with a lot of experience.',
+      },
+      {
+        image: 'https://wallpaperaccess.com/full/1430394.jpg',
+        name: 'TechTalk',
+        description: 'Jane brings valuable insights to any project she works on.',
+      },
     
   ];
   return (
