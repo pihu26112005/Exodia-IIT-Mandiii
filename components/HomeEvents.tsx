@@ -15,7 +15,7 @@ export function HomeEvents() {
               <ArrowButton text='more events' />
             </Link><br /><br /><br /><br /><br /> */}
           <div className="mb-7 mt-5">
-            <Link href="/3d" className='p-4 rounded-3xl border-2 border-black bg-gold text-black text-[1.5rem] max-sm:text-[1rem] max-sm:p-3 animate-buttonshine'>
+            <Link href="/events" className='p-4 rounded-3xl border-2 border-black bg-gold text-black text-[1.5rem] max-sm:text-[1rem] max-sm:p-3 animate-buttonshine'>
               More Events
             </Link>
           </div>
