@@ -115,6 +115,7 @@ import img7 from "../public/assets/home-gallery-images/7.JPG";
 import img8 from "../public/assets/home-gallery-images/8.JPG";
 import img9 from "../public/assets/home-gallery-images/9.JPG";
 import img10 from "../public/assets/home-gallery-images/10.JPG";
+import Link from "next/link";
 
 const CarouselComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -199,6 +200,8 @@ const CarouselComponent = () => {
           })}
 
         </div>
+
+       
       </div>
 
       {/* Navigation Dots */}

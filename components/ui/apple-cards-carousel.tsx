@@ -84,7 +84,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   const isMobile = () => {
-    return window && window.innerWidth < 768;
+    return typeof window!= undefined &&  window && window.innerWidth < 768;
   };
 
   return (
@@ -180,8 +180,10 @@ export const Card = ({
       document.body.style.overflow = "auto";
     }
 
-    window.addEventListener("keydown", onKeyDown);
+    if(typeof window !== 'undefined') {
+      window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
+    }
   }, [open]);
 
   useOutsideClick(containerRef, () => handleClose());

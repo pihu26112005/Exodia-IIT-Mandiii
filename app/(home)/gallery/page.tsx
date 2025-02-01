@@ -55,11 +55,12 @@ const page = () => {
   ];
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
+    
     src: images[index],
-    description: window.innerWidth > 1140 ? "Press ESC to exit\nUse arrow keys to navigate" : "",
+    description: typeof window != undefined && window.innerWidth > 1140 ? "Press ESC to exit\nUse arrow keys to navigate" : "",
   }));
 
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
 
   const onClick = (index: number) => openLightbox(index);
 

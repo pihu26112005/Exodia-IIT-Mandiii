@@ -55,7 +55,7 @@ function App() {
       <FloatingNav namex="P" className="max-md:hidden" />
 
 
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen  text-white">
         {/* Hero Section with 3D Train */}
         <div className="relative h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/assets/iitmandi/1.jpg')] bg-cover bg-center">

@@ -46,7 +46,6 @@ const List = ({ item, className, index, activeItem, ...props }: ImageProps) => {
 const allItems = [
     { "image": "https://multiplayer.net-cdn.it/thumbs/images/2022/03/18/hogwarts-legacy-artwork-_33_jpg_1600x900_crop_q85.jpg", "title": "Exodia" },
     { "image": "https://images.unsplash.com/photo-1718027808460-7069cf0ca9ae?q=80&w=1000", "title": "ProNights" },
-    { "image": "http://spellshelp.com/upload/medialibrary/e0b/e0b3bd034aaea1136c9de5f97a364d9d.jpg", "title": "E-Sports" },
     { "image": "https://wallup.net/wp-content/uploads/2018/09/26/685291-fantasy-mage-wizard-sorcerer-art-artwork-magic-magician.jpg", "title": "Hackathon" },
     { "image": "https://images6.alphacoders.com/304/304604.jpg", "title": "Gaming Arena" },
     { "image": "https://images.unsplash.com/photo-1584968173934-bc0b588eb806?q=80&w=1000", "title": "LAN Party" },
@@ -62,19 +61,21 @@ export default function Expandable({ list = allItems, autoPlay = true, className
   const [visibleItems, setVisibleItems] = useState(9);
 
   useEffect(() => {
-    const updateVisibleItems = () => {
-      if (window.innerWidth >= 1024) {
-        setVisibleItems(9); // Laptop
-      } else if (window.innerWidth >= 768) {
-        setVisibleItems(6); // Tablet
-      } else {
-        setVisibleItems(3); // Mobile
-      }
-    };
-
-    updateVisibleItems();
-    window.addEventListener("resize", updateVisibleItems);
-    return () => window.removeEventListener("resize", updateVisibleItems);
+    if(typeof window !== 'undefined') {
+      const updateVisibleItems = () => {
+        if (window.innerWidth >= 1024) {
+          setVisibleItems(9); // Laptop
+        } else if (window.innerWidth >= 768) {
+          setVisibleItems(6); // Tablet
+        } else {
+          setVisibleItems(3); // Mobile
+        }
+      };
+  
+      updateVisibleItems();
+      window.addEventListener("resize", updateVisibleItems);
+      return () => window.removeEventListener("resize", updateVisibleItems);
+    }
   }, []);
 
   useEffect(() => {

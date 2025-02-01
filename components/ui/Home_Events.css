@@ -2,29 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  transform: rotate(-12deg);
+  /* min-height: 100vh; */
+  transform: rotate(0deg);
   position: relative;
 }
 
 .Mkd {
-  margin-top: -0px;
+  margin-top: 0px;
 }
 
 .box34 {
   position: relative;
-  width: 150px;
-  height: 100px;
   transform-style: preserve-3d;
   /* animation: animate 20s linear infinite; */
 }
 
 .animate {
-  width: 135px;
-  color: rgb(255, 0, 255);
-  height: 92px;
+  width: 60px;
+  height: 40px;
   transform-style: preserve-3d;
   animation: animate 20s linear infinite;
+  position: relative;
+  margin: 70px 10px;
 }
 
 .animate:hover {
@@ -42,13 +41,11 @@
 
 .center-text {
   position: absolute;
-  top: -120%;
+  top: 0%;
   left: -200%;
-  font-size: 16rem;
-  font-weight: bold;
   color: gold;
   z-index: 10;
-  transform: rotate(12deg) !important;
+  transform: rotate(0deg) ;
 }
 
 .animate span {
@@ -59,7 +56,7 @@
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 36deg)) translateZ(450px);
+  transform: rotateY(calc(var(--i) * 36deg)) translateZ(270px);
   -webkit-box-reflect: below 2px linear-gradient(transparent, transparent);
 }
 

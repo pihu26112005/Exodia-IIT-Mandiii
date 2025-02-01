@@ -50,8 +50,10 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         const absOffset = Math.abs(offset); // Absolute distance
 
         const translateX = (() => {
+         if(typeof window !== 'undefined'){
           if (window.innerWidth < 640) return offset * 2; // Small screens
           if (window.innerWidth < 768) return offset * 5; // Medium screens
+         }
           return offset * 8; // Default (large screens)
         })();
 

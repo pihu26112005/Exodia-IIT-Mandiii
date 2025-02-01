@@ -126,7 +126,7 @@ const applyParticleEffect = (
       p.speedUp = Math.min(p.size, p.speedUp - 1);
       p.spinVal = p.spinVal + p.spinSpeed;
 
-      if (
+      if ( typeof window !== 'undefined' &&
         p.top >=
         Math.max(window.innerHeight, document.body.clientHeight) + p.size
       ) {
@@ -169,7 +169,7 @@ const applyParticleEffect = (
 
   loop();
 
-  const isTouchInteraction = "ontouchstart" in window;
+  const isTouchInteraction = "ontouchstart" in window && typeof window !== 'undefined';
 
   const tap = isTouchInteraction ? "touchstart" : "mousedown";
   const tapEnd = isTouchInteraction ? "touchend" : "mouseup";

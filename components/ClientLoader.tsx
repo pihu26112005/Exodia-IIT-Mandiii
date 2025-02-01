@@ -17,9 +17,11 @@ const ClientLoader: React.FC<Props> = ({ children }) => {
         if (document.readyState === "complete") {
             handleLoad();
         } else {
+        if(typeof window !== 'undefined'){
             window.addEventListener("load", handleLoad);
             return () => window.removeEventListener("load", handleLoad);
         }
+    }
     }, []);
 
     return loading ? <Loader /> : <>{children}</>;

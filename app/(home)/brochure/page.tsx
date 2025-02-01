@@ -67,7 +67,7 @@ const WizardCarousel = () => {
       <FloatingNav namex="P" className="max-md:hidden" />
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
       <div className={`mt-[10rem] text-gold text-[5rem] ${aboutNPfont.className}`}>Brouchre</div>
-      <div className="min-h-screen bg-black py-12 px-4 mt-5 max-sm:mt-2">
+      <div className="min-h-screen  py-12 px-4 mt-5 max-sm:mt-2">
         <div className="text-4xl text-white text-center p-10 "> Page "{currentIndex + 1}" of "{images.length}"</div>
         <div className="max-w-4xl mx-auto">
           {/* Main Image Container */}

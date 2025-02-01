@@ -6,6 +6,8 @@ import Home_EventsSlide from "./Home_EventsSlide";
 import { eventcards } from "@/lib/utils";
 import { CarouselComponentPihu } from "./Event_CarouselPihu";
 import ScrollingTestimonials from "./animata/container/scrolling-testimonials";
+import { aboutNPfont } from "@/lib/font.utils";
+import HomeEventCrousalPihu2 from "./HomeEventCrousalPihu2";
 
 const Home_EventsSection = () => {
   const testimonialsData = [
@@ -42,16 +44,11 @@ const Home_EventsSection = () => {
     
   ];
   return (
-    <>
+    <>  
     <div className="Mkd">
       <div className="gallery-container" style={{scale:"0.8"}}>
         <div className="box34">
-          <div className="center-text" style={{
-            backgroundImage: "linear-gradient(to right, gold, gold",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            fontFamily: "H3",
-          }}>
+          <div className={`center-text text-[7rem] text-gold ${aboutNPfont.className}`} >
             Events
           </div>
           <div className="animate">
@@ -68,17 +65,11 @@ const Home_EventsSection = () => {
           </div>
         </div>
       </div>
-      <div style={{ transform: 'rotate(5deg)' ,marginTop:"-100px"}}>
-      <ScrollingTestimonials data={testimonialsData} />
+      <div className="mt-0">
+      {/* <ScrollingTestimonials data={testimonialsData} /> */}
+      {/* <CarouselComponentPihu /> */}
+      {/* <HomeEventCrousalPihu2 /> */}
       </div>
-      {/* <Home_EventsSlide /> */}
-      {/* <hr
-        style={{
-          height: "2px",
-          backgroundColor: "gold",
-          border: "2px white",
-          marginTop:"-10px"
-        }}/> */}
     </div>
     </>
   );
