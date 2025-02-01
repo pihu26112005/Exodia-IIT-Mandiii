@@ -59,8 +59,6 @@ const pageVariants = {
 };
 
 const Page = () => {
-  const imageUrl =
-    "https://www.ministryofvillas.com/wp-content/uploads/2017/12/phuket-kamala-villa-lomchoy-sunset.jpg";
 
   // // Reset scroll position to left when the page loads
   // useEffect(() => {

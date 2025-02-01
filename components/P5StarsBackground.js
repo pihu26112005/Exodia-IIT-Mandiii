@@ -16,7 +16,7 @@ const P5StarsBackground = () => {
       const GOLDEN_COLOR = [255, 255, 255]; // Golden color for glow
       const HOVER_RADIUS = 180; // Max distance for glowing effect
       const STAR_SIZE = 1; // Smaller star size for mobile
-      const MAX_GLOW_SIZE = !isMobile ? 15 : 6; // Max size when glowing
+      const MAX_GLOW_SIZE = !isMobile ? 9 : 6; // Max size when glowing
 
       let stars = [];
 

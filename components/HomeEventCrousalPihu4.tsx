@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { eventcards } from "@/lib/utils";
 
 
 
@@ -10,63 +11,7 @@ const HomeEventCrousalPihu4 = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   // Images Array
-  const images = [
-    {
-        image: "/assets/HomeEvent/1.jpg",
-        name: "ProNight",
-        description: "John is a wonderful person with a lot of experience.",
-    },
-    {
-        image: "/assets/HomeEvent/1.jpg",
-        name: "ProNight",
-        description: "John is a wonderful person with a lot of experience.",
-    },
-    {
-        image: "/assets/HomeEvent/2.jpg",
-        name: "Competition",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-    {
-        image: "/assets/HomeEvent/3.jpg",
-        name: "Drama",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-    {
-        image: "/assets/HomeEvent/4.jpg",
-        name: "Dance",
-        description: "John is a wonderful person with a lot of experience.",
-    },
-    {
-        image: "/assets/HomeEvent/5.jpg",
-        name: "TechTalk",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-    {
-        image: "/assets/HomeEvent/1.jpg",
-        name: "ProNight",
-        description: "John is a wonderful person with a lot of experience.",
-    },
-    {
-        image: "/assets/HomeEvent/2.jpg",
-        name: "Competition",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-    {
-        image: "/assets/HomeEvent/3.jpg",
-        name: "Drama",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-    {
-        image: "/assets/HomeEvent/4.jpg",
-        name: "Dance",
-        description: "John is a wonderful person with a lot of experience.",
-    },
-    {
-        image: "/assets/HomeEvent/5.jpg",
-        name: "TechTalk",
-        description: "Jane brings valuable insights to any project she works on.",
-    },
-  ]
+
   // Track window width for dynamic carousel adjustments
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -84,10 +29,10 @@ const HomeEventCrousalPihu4 = () => {
   // Auto-scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % eventcards.length);
     }, 3000); // 3 seconds per slide
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [eventcards.length]);
 
   const handleSlideChange = (index:number) => {
     setCurrentSlide(index);
@@ -103,23 +48,23 @@ const HomeEventCrousalPihu4 = () => {
         <div
           className="absolute w-full h-full transform-gpu transition-transform duration-500"
           style={{
-            transform: `rotateX(${windowWidth < 640 ? "0deg" : "-5deg"}) rotateY(${currentSlide * -(360 / images.length)}deg)`,
+            transform: `rotateX(${windowWidth < 640 ? "0deg" : "-5deg"}) rotateY(${currentSlide * -(360 / eventcards.length)}deg)`,
             transformStyle: "preserve-3d",
           }}
         >
-          {images.map((image, index) => {
+          {eventcards.map((image, index) => {
             const isCurrent = currentSlide === index;
-            const isNext = currentSlide === (index + 1) % images.length;
-            const isBefore = currentSlide === (index - 1) % images.length;
-            const isAfterNext = currentSlide === (index + 2) % images.length;
-            const isBeforeLast = currentSlide === (index - 2) % images.length;
+            const isNext = currentSlide === (index + 1) % eventcards.length;
+            const isBefore = currentSlide === (index - 1) % eventcards.length;
+            const isAfterNext = currentSlide === (index + 2) % eventcards.length;
+            const isBeforeLast = currentSlide === (index - 2) % eventcards.length;
 
             return (
               <div
                 key={index}
                 className="absolute w-full h-full border-2 border-gold rounded-3xl"
                 style={{
-                  transform: `rotateY(${(index * 360) / images.length}deg) translateZ(${windowWidth < 640 ? "600px" : "900px"
+                  transform: `rotateY(${(index * 360) / eventcards.length}deg) translateZ(${windowWidth < 640 ? "600px" : "900px"
                     })`,
                   opacity: isCurrent || isNext || isBefore ? 1 : (isAfterNext || isBeforeLast ? 0.7 : 0),
                   filter: isCurrent || isNext || isBefore ? "none" : (isAfterNext || isBeforeLast ? "brightness(0.5)" : "blur(2px)"),
@@ -129,7 +74,7 @@ const HomeEventCrousalPihu4 = () => {
                 {/* Optimized Image */}
                 <Image
                   className="rounded-3xl"
-                  src={image.image}
+                  src={image.imageUrl}
                   alt={`Slide ${index + 1}`}
                   fill
                   quality={100}

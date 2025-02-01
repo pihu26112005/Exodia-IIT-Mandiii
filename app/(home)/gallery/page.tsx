@@ -8,14 +8,14 @@ import { Fullscreen, Zoom, Thumbnails, Captions } from "yet-another-react-lightb
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import LoadMore from "@/components/LoadMore";
-import { ImageRenderer } from "@/components/ImageRenderer";
+// import { ImageRenderer } from "@/components/ImageRenderer";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { navItems } from "@/lib/utils";
+// import { navItems } from "@/lib/utils";
 import { aboutNPfont } from "@/lib/font.utils";
 import { CoolMode } from "@/components/ui/cool-mode";
 
