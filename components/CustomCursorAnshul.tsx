@@ -7,9 +7,9 @@ const CustomCursorAnshul = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isMoving, setIsMoving] = useState(false);
   const pointsRef = useRef<{ x: number; y: number }[]>([]);
-  const requestRef = useRef<number>();
-  const previousTimeRef = useRef<number>();
-  const movingTimeoutRef = useRef<NodeJS.Timeout>();
+  const requestRef = useRef<number | null>(null);
+  const previousTimeRef = useRef<number | undefined>(undefined);
+  const movingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
