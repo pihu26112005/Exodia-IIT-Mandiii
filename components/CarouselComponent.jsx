@@ -105,17 +105,16 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 // Static imports for optimization
-import img1 from "../public/assets/home-gallery-images/1.JPG";
-import img2 from "../public/assets/home-gallery-images/2.JPG";
-import img3 from "../public/assets/home-gallery-images/3.JPG";
-import img4 from "../public/assets/home-gallery-images/4.JPG";
-import img5 from "../public/assets/home-gallery-images/5.JPG";
-import img6 from "../public/assets/home-gallery-images/6.JPG";
-import img7 from "../public/assets/home-gallery-images/7.JPG";
-import img8 from "../public/assets/home-gallery-images/8.JPG";
-import img9 from "../public/assets/home-gallery-images/9.JPG";
-import img10 from "../public/assets/home-gallery-images/10.JPG";
-import Link from "next/link";
+import img1 from "../public/assets/exodia-gallery-images/DSC07046.jpg";
+import img2 from "../public/assets/exodia-gallery-images/DSC07046.jpg";
+import img3 from "../public/assets/exodia-gallery-images/DSC07220.jpg";
+import img4 from "../public/assets/exodia-gallery-images/DSC07242.jpg";
+import img5 from "../public/assets/exodia-gallery-images/DSC07253.jpg";
+import img6 from "../public/assets/exodia-gallery-images/DSC07260.jpg";
+import img7 from "../public/assets/exodia-gallery-images/DSC07268.jpg";
+import img8 from "../public/assets/exodia-gallery-images/DSC07270.jpg";
+import img9 from "../public/assets/exodia-gallery-images/DSC07275.jpg";
+import img10 from "../public/assets/exodia-gallery-images/DSC08347.jpg";
 
 const CarouselComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
