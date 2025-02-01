@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState, memo, useCallback } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
+import { aboutNPfont, aboutNPfont4 } from "@/lib/font.utils";
 
 export const TextRevealCard = ({
   text,
@@ -68,13 +69,13 @@ export const TextRevealCard = ({
       onTouchMove={touchMoveHandler}
       ref={cardRef}
       className={cn(
-        "border  w-[80rem] rounded-lg p-8 relative overflow-hidden",
+        "  w-full h-[30rem] rounded-lg p-8 relative overflow-hidden max-sm:hidden",
         className
       )}
     >
       {children}
 
-      <div className="relative flex w-full">
+      <div className="relative flex w-full h-full">
         <motion.div
           style={{ width: "100%", height: "100%" }}
           animate={
@@ -90,7 +91,7 @@ export const TextRevealCard = ({
         >
           <p
             style={{ textShadow: "4px 4px 15px rgba(0,0,0,0.5)" }}
-            className="text-base sm:text-[2rem] py-2 text-black  leading-snug"
+            className={`text-[20px] text-black max-sm:text-[8px]  leading-snug tracking-wide ${aboutNPfont4.className}`}
           >
             {revealText}
           </p>
@@ -102,7 +103,7 @@ export const TextRevealCard = ({
             opacity: widthPercentage > 0 ? 1 : 0,
           }}
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
+          className="h-40 w-[8px]  absolute z-50 will-change-transform"
         ></motion.div>
 
         <div className="[mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">

@@ -12,7 +12,7 @@ const About_PrevGuest = () => {
       ));
      
       return (
-        <div className="w-full h-full py-20">
+        <div className="w-full h-full py-2 pb-10">
           <h2 className={`max-w-7xl pl-4 mx-auto text-[3rem] md:text-[3rem] max-sm:text-[2.5rem] text-gold ${aboutNPfont.className}`}>
             Previous Guests
           </h2>

@@ -12,7 +12,7 @@ type SpomsorsCardProps = {
 const Spomsors_Card = ({ name, image }: SpomsorsCardProps) => {
     return (
         <CardContainer className="inter-var border-2 border-yellow-200 rounded-3xl hover:animate-buttonshine max-sm:p-0">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-[20rem] h-auto rounded-3xl p-6 border  ">
+            <CardBody className=" relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  dark:border-white/[0.2] border-black/[0.1] w-[20rem] h-auto rounded-3xl p-6 border  ">
                 <CardItem translateZ="100" className="w-full mt-4 mb-4 max-sm:mt-2 max-sm:mb-2">
                     <Image
                         src={image}

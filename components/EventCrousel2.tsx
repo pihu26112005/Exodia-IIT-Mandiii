@@ -8,11 +8,14 @@ function EventCrousel2() {
     
 
     const interval = setInterval(() => {
+     if(typeof window != undefined)
+     {
       const scrollPosition = window.scrollY; // Store the current scroll position
       currentIndex = (currentIndex + 1) % spans.length; // Cycle through the span IDs
       window.location.hash = spans[currentIndex]; // Update the hash to the next span
       window.scrollTo(0, scrollPosition); // Update the hash to the next span
-    }, 4000); // Change every 2 seconds
+     }
+    }, 2000); // Change every 2 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
