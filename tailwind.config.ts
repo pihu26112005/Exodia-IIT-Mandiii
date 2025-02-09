@@ -75,11 +75,21 @@ export default withUt ({
 				third: "moveInCircle 40s linear infinite",
 				fourth: "moveHorizontal 40s ease infinite",
 				"marquee-horizontal": "marquee-x var(--duration) infinite linear",
-        "marquee-vertical": "marquee-y var(--duration) linear infinite",
+        		"marquee-vertical": "marquee-y var(--duration) linear infinite",
 				fifth: "moveInCircle 20s ease infinite",
 				buttonshine: 'shine 2s infinite linear',
+				"parallax-bg": "parallax 10s linear infinite",
+        		"parallax-bike": "bike 5s linear infinite",
 			},
 			keyframes: {
+				parallax: {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(-100%)" },
+				  },
+				  bike: {
+					"0%": { transform: "translateX(100vw)" },
+					"100%": { transform: "translateX(-100%)" },
+				  },
 				"marquee-x": {
 					from: { transform: "translateX(0)" },
 					to: { transform: "translateX(calc(-100% - var(--gap)))" },

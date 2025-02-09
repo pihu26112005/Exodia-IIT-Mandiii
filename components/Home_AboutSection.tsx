@@ -4,7 +4,7 @@ import { BackgroundGradient } from './ui/background-gradient'
 
 const Home_AboutSection = () => {
   return (
-    <ContainerScroll titleComponent={<></>}>
+    // <ContainerScroll titleComponent={<></>}>
     <BackgroundGradient
       className="relative rounded-[22px] bg-white dark:bg-zinc-900 w-[80vw] h-[80vh] "
       backgroundImage="/assets/background/background6.webp"
@@ -25,7 +25,7 @@ const Home_AboutSection = () => {
         </div>
       </div>
     </BackgroundGradient>
-  </ContainerScroll>
+  // </ContainerScroll>
   )
 }
 

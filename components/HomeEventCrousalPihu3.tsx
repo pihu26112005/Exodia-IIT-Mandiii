@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { aboutNPfont } from '@/lib/font.utils';
-import {  eventcards } from '@/lib/utils';
+import { eventcards } from '@/lib/utils';
 
 interface Slide {
     image: string;
@@ -24,9 +24,9 @@ export default function HomeEventCrousalPihu3() {
     };
 
     return (
-        <div className="relative w-[70%] max-sm:w-[100%] h-screen max-sm:h-[100%] overflow-hidden flex items-center justify-center max-sm:hidden">
+        <div className="relative w-[60%] max-sm:w-[100%] h-screen max-sm:h-[100%] overflow-hidden flex items-center justify-center max-sm:">
             {/* Slides Container */}
-            <div className="relative w-[80%] max-sm:w-full h-full flex transition-transform duration-500 ease-in-out"
+            <div className="relative w-[90%] max-sm:w-[90%] h-full flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {eventcards.map((slide, index) => (
                     <div
@@ -34,17 +34,17 @@ export default function HomeEventCrousalPihu3() {
                         className="w-full h-full absolute inset-0 flex items-center justify-center "
                         style={{ left: `${index * 100}%` }}
                     >
-                        <div className="relative max-w-[80%] max-h-[80%] max-sm:h-full aspect-video">
+                        <div className="relative w-full h-full max-w-[80%] max-h-[100%] max-sm:h-full aspect-video overflow-hidden">
                             <Image
                                 src={slide.imageUrl}
                                 alt={slide.title}
-                                height={500}
-                                width={800}
-                                className="object-cover  shadow-xl border-2 border-gold rounded-3xl "
+                                layout="fill"
+                                objectFit="cover"
+                                className="shadow-xl border-2 border-gold rounded-3xl"
                             />
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
-                                <h2 className={`text-white text-[3rem] max-sm:text-[1rem] ${aboutNPfont.className}`}>{slide.title}</h2>
-                                <p className={`text-white text-[1rem] ${aboutNPfont.className}`}>{slide.description}</p>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h2 className={`text-gold  text-[3rem] max-sm:text-[1rem] ${aboutNPfont.className}`}>{slide.title}</h2>
+                                <p className={`text-gold  text-[1rem] ${aboutNPfont.className}`}>{slide.description}</p>
                             </div>
                         </div>
                     </div>
@@ -55,13 +55,13 @@ export default function HomeEventCrousalPihu3() {
             {/* Navigation Buttons */}
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 px-3 py-2 bg-black/50 border border-white text-white  rounded-full hover:bg-black/70 transition-colors"
+                className="absolute left-4 top-1/2 max-sm:top-[40%] -translate-y-1/2 z-20 px-3 py-2 max-sm:px-2 max-sm:py-1 bg-black/50 border border-white text-white  rounded-full hover:bg-black/70 transition-colors"
             >
                 &lt;
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 px-3 py-2 bg-black/50 border border-white text-white  rounded-full hover:bg-black/70 transition-colors"
+                className="absolute right-4 top-1/2 max-sm:top-[40%] -translate-y-1/2 z-20 px-3 py-2 max-sm:px-2 max-sm:py-1 bg-black/50 border border-white text-white  rounded-full hover:bg-black/70 transition-colors"
             >
                 &gt;
             </button>

@@ -23,3 +23,10 @@ export const aboutNPfont4 = localFont({
     src: '../public/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf',
     display: 'swap',
 })
+
+
+// broucher me 
+export const aboutNPfont11 = localFont({
+    src: '../public/fonts/moglan/Moglan_DEMO.ttf',
+    display: 'swap',
+})
