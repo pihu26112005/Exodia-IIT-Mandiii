@@ -78,15 +78,15 @@ const HomePage = () => {
     offset: ['start end', 'end start']
   });
   const { height } = dimension;
-  const y = useTransform(scrollYProgress1, [0, 1], [0, 1000 * 2]);
-  const y2 = useTransform(scrollYProgress1, [0, 1], [0, 1000 * 3.3]);
-  const y3 = useTransform(scrollYProgress1, [0, 1], [0, 1000 * 1.25]);
-  const y4 = useTransform(scrollYProgress1, [0, 1], [0, 1000 * 3]);
-  // const isMobile = window.innerWidth < 768;
-  // const y = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.7 : 2)]);
-  // const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.5 : 3.3)]);
-  // const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.7 : 1.25)]);
-  // const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.5 : 3)]);
+  // const y = useTransform(scrollYProgress1, [0, 1], [0, height * 2]);
+  // const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * 3.3]);
+  // const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * 1.25]);
+  // const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * 3]);
+  const isMobile = window.innerWidth < 768;
+  const y = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.5 : 2)]);
+  const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3.3)]);
+  const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.5 : 1.25)]);
+  const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3)]);
 
 
   // lenis
