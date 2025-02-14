@@ -1,7 +1,7 @@
 "use client";
 
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import React, { use, useEffect, useState } from "react";
+import React, { use, useCallback, useEffect, useState } from "react";
 import { FooterSocialMediaDock } from "@/components/Home_FooterSocialMediaDock";
 import Home_AboutSection from "@/components/Home_AboutSection";
 import Home_GallerySection from "@/components/Home_GallerySection";
@@ -79,23 +79,54 @@ const HomePage = () => {
   const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * 3.3]);
   const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * 3]);
-  useEffect(() => {
-    const lenis = new Lenis();
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    const resize = () => {
-      setDimension({ width: window.innerWidth, height: window.innerHeight });
-    };
-    window.addEventListener("resize", resize);
-    requestAnimationFrame(raf);
-    resize();
 
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+// lenis
+
+const lenisRef = useRef<Lenis | null>(null);
+
+const resizeHandler = useCallback(() => {
+  setDimension({ width: window.innerWidth, height: window.innerHeight });
+}, []);
+
+useEffect(() => {
+  // Initialize Lenis only once
+  if (!lenisRef.current) {
+    lenisRef.current = new Lenis();
+  }
+
+  const lenis = lenisRef.current;
+
+  // Animation loop
+  const raf = (time: number) => {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  };
+
+  requestAnimationFrame(raf);
+  window.addEventListener("resize", resizeHandler);
+  resizeHandler(); // Initialize dimensions on mount
+
+  return () => {
+    window.removeEventListener("resize", resizeHandler);
+  };
+}, [resizeHandler]);
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   const raf = (time: number) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
+  //   const resize = () => {
+  //     setDimension({ width: window.innerWidth, height: window.innerHeight });
+  //   };
+  //   window.addEventListener("resize", resize);
+  //   requestAnimationFrame(raf);
+  //   resize();
+
+  //   return () => {
+  //     window.removeEventListener("resize", resize);
+  //   };
+  // }, []);
 
   // for text apearing on scroll 
   const element = useRef<HTMLParagraphElement>(null);
