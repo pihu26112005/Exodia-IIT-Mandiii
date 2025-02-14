@@ -1203,7 +1203,7 @@ const Column: React.FC<ColumnProps> = ({ images, y }) => {
     <motion.div className="homeverticalParallaxColumn relative flex flex-col gap-[2vw] max- w-1/4  h-full " style={{ y }}>
       {images.map((src, i) => (
         <div key={i} className="relative w-full h-full rounded-[1vw] overflow-hidden">
-          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover border border-gold rounded-[1vw]" />
+          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover  rounded-[1vw]" />
         </div>
       ))}
     </motion.div>
