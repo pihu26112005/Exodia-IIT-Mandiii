@@ -2,7 +2,7 @@ import React from 'react'
 import { CardBody, CardContainer, CardItem } from './ui/3d-card'
 import Image from 'next/image'
 import Link from 'next/link'
-import { aboutNPfont, aboutNPfont4 } from '@/lib/font.utils'
+import { aboutNPfont, aboutNPfont11, aboutNPfont4 } from '@/lib/font.utils'
 
 type SpomsorsCardProps = {
     name: string;
@@ -24,7 +24,7 @@ const Spomsors_Card = ({ name, image }: SpomsorsCardProps) => {
                 </CardItem>
                 <CardItem
                     translateZ="50"
-                    className={`text-xl text-center flex justify-center items-center font-bold text-neutral-600 dark:text-white ${aboutNPfont.className}`}
+                    className={`text-xl text-center flex justify-center items-center font-bold text-neutral-600 dark:text-white ${aboutNPfont11.className}`}
                 >
                     BansalClass
                 </CardItem>

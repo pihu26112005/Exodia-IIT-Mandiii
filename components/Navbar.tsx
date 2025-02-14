@@ -3,7 +3,7 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHe
 import { navItems } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-import { aboutNPfont } from "@/lib/font.utils";
+import { aboutNPfont, aboutNPfont11 } from "@/lib/font.utils";
 
 const Navbar: React.FC = () => {
 
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
     >
       <div className="flex justify-between items-center px-6 md:px-10">
         {/* Logo */}
-        <a href="/" className="text-white font-semibold harry-text text-[3rem]">
+        <a href="/" className={` font-semibold text-[3rem] text-gold ${aboutNPfont11.className}`}>
           Exodia
         </a>
 
@@ -133,11 +133,11 @@ const Navbar: React.FC = () => {
           <SheetTrigger asChild className="flex justify-center items-center mb-5 max-sm:mb-4 max-sm:rounded-xl">
             {/* <Button variant="outline">Open</Button> */}
             <button
-              className="text-white bg-yellow-300  text-2xl md:hidden max-sm:px-2"
+              className="text-white  text-2xl md:hidden max-sm:px-2"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
-              <p className="invert p-0 m-0 text-white">☰</p>
+              <p className=" p-0 m-0 text-gold">☰</p>
             </button>
           </SheetTrigger>
           <SheetContent className="h-full">

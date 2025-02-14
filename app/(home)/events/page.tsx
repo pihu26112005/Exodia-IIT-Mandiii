@@ -15,7 +15,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 // import { navItems } from "@/lib/utils";
 // import Image from "next/image";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { aboutNPfont } from "@/lib/font.utils";
+import { aboutNPfont, aboutNPfont11 } from "@/lib/font.utils";
 // import EventCrousel2 from "@/components/EventCrousel2";
 // import { CarouselComponentPihu } from "@/components/Event_CarouselPihu";
 // import Expandable from "@/components/animata/carousel/expandable";
@@ -78,7 +78,7 @@ const Page = () => {
 
         <div className="m-0 p-0 w-full flex flex-col items-center justify-center flex-grow mb-[-800px] sm:mb-0">
           <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-            <div className={`mt-[6rem]  max-sm:mt-[4rem] ${aboutNPfont.className} text-gold text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
+            <div className={`mt-[8rem]  max-sm:mt-[4rem] ${aboutNPfont11.className} text-gold text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
               Events
             </div>
             {/* <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60"> */}
@@ -91,7 +91,7 @@ const Page = () => {
       
           </div>
 
-          <div className="w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end">
+          <div className={`w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end ${aboutNPfont11.className}`}>
             <TypewriterEffect words={words} />
           </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { aboutNPfont } from '@/lib/font.utils';
+import { aboutNPfont, aboutNPfont11 } from '@/lib/font.utils';
 import { eventcards } from '@/lib/utils';
 
 interface Slide {
@@ -26,7 +26,7 @@ export default function HomeEventCrousalPihu3() {
     return (
         <div className="relative w-[60%] max-sm:w-[100%] h-screen max-sm:h-[100%] overflow-hidden flex items-center justify-center max-sm:">
             {/* Slides Container */}
-            <div className="relative w-[90%] max-sm:w-[90%] h-full flex transition-transform duration-500 ease-in-out"
+            <div className="relative w-[90%] max-sm:w-[90%] h-[80%] flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {eventcards.map((slide, index) => (
                     <div
@@ -43,8 +43,8 @@ export default function HomeEventCrousalPihu3() {
                                 className="shadow-xl border-2 border-gold rounded-3xl"
                             />
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                <h2 className={`text-gold  text-[3rem] max-sm:text-[1rem] ${aboutNPfont.className}`}>{slide.title}</h2>
-                                <p className={`text-gold  text-[1rem] ${aboutNPfont.className}`}>{slide.description}</p>
+                                <h2 className={`text-gold  text-[3rem] max-sm:text-[1rem] ${aboutNPfont11.className}`}>{slide.title}</h2>
+                                <p className={`text-gold  text-[1rem] ${aboutNPfont11.className}`}>{slide.description}</p>
                             </div>
                         </div>
                     </div>
