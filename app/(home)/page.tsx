@@ -88,45 +88,45 @@ const resizeHandler = useCallback(() => {
   setDimension({ width: window.innerWidth, height: window.innerHeight });
 }, []);
 
-useEffect(() => {
-  // Initialize Lenis only once
-  if (!lenisRef.current) {
-    lenisRef.current = new Lenis();
-  }
+// useEffect(() => {
+//   // Initialize Lenis only once
+//   if (!lenisRef.current) {
+//     lenisRef.current = new Lenis();
+//   }
 
-  const lenis = lenisRef.current;
+//   const lenis = lenisRef.current;
 
-  // Animation loop
-  const raf = (time: number) => {
-    lenis.raf(time);
+//   // Animation loop
+//   const raf = (time: number) => {
+//     lenis.raf(time);
+//     requestAnimationFrame(raf);
+//   };
+
+//   requestAnimationFrame(raf);
+//   window.addEventListener("resize", resizeHandler);
+//   resizeHandler(); // Initialize dimensions on mount
+
+//   return () => {
+//     window.removeEventListener("resize", resizeHandler);
+//   };
+// }, [resizeHandler]);
+  useEffect(() => {
+    const lenis = new Lenis();
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    const resize = () => {
+      setDimension({ width: window.innerWidth, height: window.innerHeight });
+    };
+    window.addEventListener("resize", resize);
     requestAnimationFrame(raf);
-  };
+    resize();
 
-  requestAnimationFrame(raf);
-  window.addEventListener("resize", resizeHandler);
-  resizeHandler(); // Initialize dimensions on mount
-
-  return () => {
-    window.removeEventListener("resize", resizeHandler);
-  };
-}, [resizeHandler]);
-  // useEffect(() => {
-  //   const lenis = new Lenis();
-  //   const raf = (time: number) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   };
-  //   const resize = () => {
-  //     setDimension({ width: window.innerWidth, height: window.innerHeight });
-  //   };
-  //   window.addEventListener("resize", resize);
-  //   requestAnimationFrame(raf);
-  //   resize();
-
-  //   return () => {
-  //     window.removeEventListener("resize", resize);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
 
   // for text apearing on scroll 
   const element = useRef<HTMLParagraphElement>(null);
