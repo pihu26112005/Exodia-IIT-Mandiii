@@ -55,6 +55,9 @@ interface CardProps {
 
 const HomePage = () => {
 
+  if (typeof window !== 'undefined')
+    window.scrollTo(0, 0);
+  
   // date 
   const futureDate = new Date("2025-03-01T00:00:00").getTime(); // Change to your target date
 
@@ -75,41 +78,47 @@ const HomePage = () => {
     offset: ['start end', 'end start']
   });
   const { height } = dimension;
-  const y = useTransform(scrollYProgress1, [0, 1], [0, height * 2]);
-  const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * 3.3]);
-  const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * 1.25]);
-  const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * 3]);
+  // const y = useTransform(scrollYProgress1, [0, 1], [0, height * 2]);
+  // const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * 3.3]);
+  // const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * 1.25]);
+  // const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * 3]);
+  const isMobile = window.innerWidth < 768;
+  const y = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.5 : 2)]);
+  const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 2.5 : 3.3)]);
+  const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1 : 1.25)]);
+  const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 2 : 3)]);
 
-// lenis
 
-const lenisRef = useRef<Lenis | null>(null);
+  // lenis
 
-const resizeHandler = useCallback(() => {
-  setDimension({ width: window.innerWidth, height: window.innerHeight });
-}, []);
+  // const lenisRef = useRef<Lenis | null>(null);
 
-// useEffect(() => {
-//   // Initialize Lenis only once
-//   if (!lenisRef.current) {
-//     lenisRef.current = new Lenis();
-//   }
+  // const resizeHandler = useCallback(() => {
+  //   setDimension({ width: window.innerWidth, height: window.innerHeight });
+  // }, []);
 
-//   const lenis = lenisRef.current;
+  // useEffect(() => {
+  //   // Initialize Lenis only once
+  //   if (!lenisRef.current) {
+  //     lenisRef.current = new Lenis();
+  //   }
 
-//   // Animation loop
-//   const raf = (time: number) => {
-//     lenis.raf(time);
-//     requestAnimationFrame(raf);
-//   };
+  //   const lenis = lenisRef.current;
 
-//   requestAnimationFrame(raf);
-//   window.addEventListener("resize", resizeHandler);
-//   resizeHandler(); // Initialize dimensions on mount
+  //   // Animation loop
+  //   const raf = (time: number) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
 
-//   return () => {
-//     window.removeEventListener("resize", resizeHandler);
-//   };
-// }, [resizeHandler]);
+  //   requestAnimationFrame(raf);
+  //   window.addEventListener("resize", resizeHandler);
+  //   resizeHandler(); // Initialize dimensions on mount
+
+  //   return () => {
+  //     window.removeEventListener("resize", resizeHandler);
+  //   };
+  // }, [resizeHandler]);
   useEffect(() => {
     const lenis = new Lenis();
     const raf = (time: number) => {
