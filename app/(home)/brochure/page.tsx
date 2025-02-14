@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { aboutNPfont } from '@/lib/font.utils';
+import { aboutNPfont11 } from '@/lib/font.utils';
 
 const WizardCarousel = () => {
   // Sample images
@@ -66,8 +66,8 @@ const WizardCarousel = () => {
 
       <FloatingNav namex="P" className="max-md:hidden" />
       {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-      <div className={`mt-[10rem] text-gold text-[5rem] ${aboutNPfont.className}`}>Brouchre</div>
-      <div className="min-h-screen  py-12 px-4 mt-5 max-sm:mt-2">
+      <div className={`mt-[9rem] text-gold text-[6rem] ${aboutNPfont11.className}`}>Brouchre</div>
+      <div className={`min-h-screen  py-12 px-4 mt-0 max-sm:mt-2 ${aboutNPfont11.className}`}>
         <div className="text-4xl text-white text-center p-10 "> Page "{currentIndex + 1}" of "{images.length}"</div>
         <div className="max-w-4xl mx-auto">
           {/* Main Image Container */}

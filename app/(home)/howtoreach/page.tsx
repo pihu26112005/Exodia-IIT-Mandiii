@@ -10,6 +10,7 @@ import { CoolMode } from '@/components/ui/cool-mode';
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import Footer from '@/components/Footer';
+import { aboutNPfont11 } from '@/lib/font.utils';
 
 function App() {
   const [selectedRoute, setSelectedRoute] = React.useState<string | null>(null);
@@ -55,7 +56,7 @@ function App() {
       <FloatingNav namex="P" className="max-md:hidden" />
 
 
-      <div className="min-h-screen  text-white">
+      <div className={`min-h-screen  text-white ${aboutNPfont11.className}`}>
         {/* Hero Section with 3D Train */}
         <div className="relative h-[60vh] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/assets/iitmandi/1.jpg')] bg-cover bg-center">

@@ -177,6 +177,62 @@ const HomePage = () => {
 
 
   {/* crads stacked animation  */ }
+
+  const homemaincardstackedcontainer = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: scrollYProgress9 } = useScroll({
+    target: homemaincardstackedcontainer,
+    offset: ['start start', 'end end']
+  });
+  const homeprojects = [
+    {
+      eventType: "Photography",
+      color: "#663399",
+      events: [
+        {
+          name: "Matthias Leidinger",
+          imageUrl: "/assets/homethird/rock.jpg",
+          description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent.",
+        },
+        {
+          name: "Clément Chapillon",
+          imageUrl: "/assets/homethird/tree.jpg",
+          description: "French photographer Clément Chapillon explores the intersection of reality and imagination in his latest project.",
+        },
+        {
+          name: "Zissou",
+          imageUrl: "/assets/homethird/water.jpg",
+          description: "Zissou captures the essence of Bali, blending sacred and mundane moments into captivating photographic narratives.",
+        },
+      ],
+    },
+    {
+      eventType: "Art Exhibitions",
+      color: "#5c2e8a",
+      events: [
+        {
+          name: "Van Gogh's Legacy",
+          imageUrl: "/assets/homethird/rock.jpg",
+          description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+        },
+        {
+          name: "Futuristic Visions",
+          imageUrl: "/assets/homethird/tree.jpg",
+          description: "A dive into the future of art through digital media and experimental techniques.",
+        },
+        {
+          name: "Abstract Realms",
+          imageUrl: "/assets/homethird/water.jpg",
+          description: "An exploration of abstract art and its impact on human perception.",
+        },
+        {
+          name: "AI in 2025",
+          imageUrl: "/assets/homethird/rock.jpg",
+          description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+        },
+      ],
+    },
+  ];
+
   const maincardstackedcontainer = useRef<HTMLDivElement>(null);
   const { scrollYProgress: scrollYProgress5 } = useScroll({
     target: maincardstackedcontainer,
@@ -483,7 +539,7 @@ const HomePage = () => {
     <>
 
       {/* <Anouncement_DialogSection open={true} close={() => { }} /> */}
-      <div ref={targetRef} className="m-0 p-0 bg-black">
+      <div ref={targetRef} className="m-0 p-0 ">
         {/* <VideoScroll videoSrc="/assets/background/castle.mp4" /> */}
 
         {/* <CustomCursor />  */}
@@ -500,12 +556,62 @@ const HomePage = () => {
         {/* <Home_MainSection /> */}
         {/* 1 */}
         {/* page ke upar page transition  */}
-        <div ref={PageKeUparTransitionMain} className="relative h-[300vh]">
+        <div ref={PageKeUparTransitionMain} className="relative h-[300vh] max-sm:hidden">
           <Section1 scrollYProgress={scrollYProgress7} />
           <div className="relative ">
             <Section2 scrollYProgress={scrollYProgress7} element2={element2} characters={characters} scrollYProgress3={scrollYProgress3} />
             <Section3 scrollYProgress={scrollYProgress7} element2={element22} characters={characters} scrollYProgress3={scrollYProgress32} />
           </div>
+        </div>
+
+        <div ref={homemaincardstackedcontainer} className="relative sm:hidden">
+          <div className="h-[100vh]">
+            EXODIA
+          </div>
+          {
+            homeprojects.map((project, i) => {
+              const targetscale = 1 - ((homeprojects.length - i) * 0.05);
+              // const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
+              const scale = useTransform(scrollYProgress9, [i / homeprojects.length, 1], [1, targetscale]);
+              return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh]">
+                <motion.div style={{ backgroundColor: project.color, scale, top: `calc(-0vh + ${i * 30}px)` }}
+                  className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top">
+                  <div className="flex flex-col mt-4  gap-12 h-full text-[#cba135]">
+                    <div>
+                      <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem]`}>{project.eventType}</p>
+                    </div>
+
+                    <div
+                      className={`grid gap-10 max-sm:gap-0 w-full h-full`}
+                      style={{
+                        gridTemplateColumns: `repeat(${project.events.length}, minmax(0, 1fr))`,
+                      }}
+                    >
+                      {project.events.map((event, index) => (
+                        <div key={index} className="  h-full rounded-2xl flex flex-col items-center">
+                          <div className=" relative rounded-2xl w-[80%] h-[80%] overflow-hidden ">
+                            <motion.div
+                              className=" rounded-2xl w-full h-full"
+                              style={{
+                                // scale: imagescale,
+
+                              }}
+                            >
+                              <Image src={event.imageUrl} className="border-2 border-gold rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
+                            </motion.div>
+                          </div>
+
+                          <div className="relative mt-2 text-center ">
+                            <p className={`text-[2rem] max-sm:text-[0.8rem] ${aboutNPfont11.className}`}>{event.name}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            })
+          }
         </div>
 
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
@@ -634,10 +740,10 @@ const HomePage = () => {
                               className=" rounded-2xl w-full h-full"
                               style={{
                                 // scale: imagescale,
-                                
+
                               }}
                             >
-                              <Image src={event.imageUrl} className="border-2 border-gold rounded-2xl" alt="Event Image" layout="fill"  objectFit="cover" />
+                              <Image src={event.imageUrl} className="border-2 border-gold rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
                             </motion.div>
                           </div>
 
@@ -655,15 +761,14 @@ const HomePage = () => {
             })
           }
         </div>
-        <div className="h-screen max-sm:h-auto bg-black ">
+        {/* <div className="h-screen max-sm:h-auto bg-black ">
           <div id="events" className="my-auto bg-black h-[80vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[3rem] max-sm:gap-[0rem] relative z-[900]">
             <p className={`text-gold text-[7rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Events</p>
             <div className="flex  flex-col justify-center items-center w-full h-[70%] ">
               <HomeEventCrousalPihu3 />
-              {/* <HomeEventCrousalPihu4 /> */}
             </div>
           </div>
-        </div>
+        </div> */}
         {/* 4 */}
 
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
@@ -714,7 +819,7 @@ const HomePage = () => {
               pictures.map(({ src, scale }, i) => {
                 return <motion.div key={i} style={{ scale }} className=" absolute max-sm:top-[6rem] flex justify-center items-center w-full h-full">
                   <div className={`relative ${getImageContainerStyles(i)}`}>
-                    <Image src={src} alt="image" fill className="object-cover border-2 border-gold" />
+                    <Image src={src} alt="image" fill className="object-cover border rounded-2xl border-gold" />
                   </div>
                 </motion.div>
               })
@@ -931,7 +1036,7 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
   const scale = useTransform(scrollYProgress, [0, 2 / 3], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 2 / 3], [0, -5])
   return (
-    <motion.div style={{ scale, rotate, backgroundImage: "url('/assets/background/mnbg.png')" }} className="sticky top-0 h-screen bg-[radial-gradient(circle,_rgba(128,0,128,1)_0%,_rgba(0,0,0,1)_100%)] text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
+    <motion.div style={{ scale, rotate }} className="sticky top-0 h-screen bg-[#663399] text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
       {/* <p>Scroll Perspective</p>
       <div className="flex gap-4">
         <p>Section</p>
@@ -972,7 +1077,7 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [0, 1 / 3 + 0.15, 1], [5, 0, -5]);
 
   return (
-    <motion.div style={{ scale, rotate, backgroundImage: "url('/assets/background/s2.png')" }} className="sticky top-0 h-screen bg-orange-300 bg-cover bg-no-repeat flex items-center justify-center">
+    <motion.div style={{ scale, rotate }} className="sticky top-0 h-screen bg-[#52297a] bg-cover bg-no-repeat flex items-center justify-center">
       <div className=" flex flex-col justify-center items-center gap-[3rem] mb-[7rem]">
         <p className={`text-gold text-[5rem] ${aboutNPfont11.className}`}>About Exodia</p>
         <p ref={element2} style={{ whiteSpace: "pre-wrap" }}
@@ -1019,7 +1124,7 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [1 / 3 + 0.15, 1], [-5, 0]);
 
   return (
-    <motion.div style={{ scale, rotate, backgroundImage: "url('/assets/background/s3.png')" }} className="relative top-0 h-screen bg-green-500 bg-cover bg-no-repeat text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
+    <motion.div style={{ scale, rotate }} className="relative top-0 h-screen bg-[#3d1f5c] bg-cover bg-no-repeat text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
       <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900] ">
         <p className={`text-gold text-[5rem] ${aboutNPfont11.className}`}>Theme</p>
         <p ref={element2} style={{ whiteSpace: "pre-wrap" }}
@@ -1067,7 +1172,7 @@ const Column: React.FC<ColumnProps> = ({ images, y }) => {
     <motion.div className="homeverticalParallaxColumn relative flex flex-col gap-[2vw] max- w-1/4  h-full " style={{ y }}>
       {images.map((src, i) => (
         <div key={i} className="relative w-full h-full rounded-[1vw] overflow-hidden">
-          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover border-2 border-gold rounded-[1vw]" />
+          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover border border-gold rounded-[1vw]" />
         </div>
       ))}
     </motion.div>
