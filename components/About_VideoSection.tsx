@@ -1,4 +1,4 @@
-import { aboutNPfont, aboutNPfont2, aboutNPfont3, aboutNPfont4 } from '@/lib/font.utils';
+import { aboutNPfont, aboutNPfont11, aboutNPfont2, aboutNPfont3, aboutNPfont4 } from '@/lib/font.utils';
 import { videoLinks } from '@/lib/utils'
 import React, { useState } from 'react'
 
@@ -14,9 +14,9 @@ const About_VideoSection = () => {
     <>
       {/* a horizontal line  */}
 
-      <div className='flex max-xl:flex-col w-[80%] mx-auto items-center justify-center gap-[5rem] max-sm:gap-[1.5rem] mt-[5rem] max-sm:mt-0 mb-[5rem] max-sm:mb-[1rem]'>
+      <div className='overflow-x-hidden bg-black flex max-xl:flex-col w-[100%] mx-auto items-center justify-center gap-[5rem] max-sm:gap-[1.5rem] mt-[0rem] max-sm:mt-0 mb-[0rem] max-sm:mb-[1rem] pt-[5rem] pb-[5rem]'>
         <div className='max-xl:flex max-xl:flex-col max-xl:items-center'>
-          <div className={`text-gold text-[3rem] max-xl:text-[2.5rem] max-lg:text-[2rem] max-sm:text-[2.5rem] max-sm:mb-[1rem] ${aboutNPfont.className}`}>Flash Backs</div>
+          <div className={`text-gold text-[4rem] max-xl:text-[2.5rem] max-lg:text-[2rem] max-sm:text-[2.5rem] max-sm:mb-[1rem] ${aboutNPfont11.className}`}>Flash Backs</div>
           <div className='w-[60%] flex flex-col max-xl:flex-row gap-[20px] items-center justify-center mx-auto'>
             {Object.keys(videoLinks).map((year) => (
               <div
@@ -36,12 +36,13 @@ const About_VideoSection = () => {
             ))}
           </div>
         </div>
-        <div className='bg-black rounded-3xl flex justify-center items-center mt-20 max-sm:mt-0'>
+        <div className='bg-black rounded-3xl flex justify-center items-center mt-20 max-sm:mt-0 p-0'>
           <div className=" p-10 rounded-3xl border-yellow-400 border-2 aspect-[16/9] w-full max-md:w-[80%] max-sm:w-[50%] text-center flex items-center justify-center"
               style={{
                 animation: "shine 2s infinite linear" ,
                 boxShadow: "0 0 10px 2px white",
-              }}>
+              }}
+              >
             <iframe
               width="560"
               height="315"
