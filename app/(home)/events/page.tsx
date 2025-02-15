@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 // import SwiperComponent from "@/components/Event_EventsSwiper";  // DEPLOYMENT FIX
 // import { Vortex } from "@/components/ui/vortex";
@@ -21,6 +21,7 @@ import { aboutNPfont, aboutNPfont11 } from "@/lib/font.utils";
 // import Expandable from "@/components/animata/carousel/expandable";
 import HomeEventCrousalPihu3 from "@/components/HomeEventCrousalPihu3";
 
+import Lenis from '@studio-freight/lenis';
 
 const words = [
   {
@@ -67,6 +68,24 @@ const Page = () => {
   //     window.scrollTo(0, 0);
   //   }
   // }, []);
+  const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  useEffect(() => {
+      const lenis = new Lenis();
+      const raf = (time: number) => {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      };
+      const resize = () => {
+        setDimension({ width: window.innerWidth, height: window.innerHeight });
+      };
+      window.addEventListener("resize", resize);
+      requestAnimationFrame(raf);
+      resize();
+  
+      return () => {
+        window.removeEventListener("resize", resize);
+      };
+    }, []);
 
   return (
 

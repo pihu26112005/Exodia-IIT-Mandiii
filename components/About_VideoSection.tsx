@@ -14,7 +14,7 @@ const About_VideoSection = () => {
     <>
       {/* a horizontal line  */}
 
-      <div className='overflow-x-hidden bg-black flex max-xl:flex-col w-[100%] mx-auto items-center justify-center gap-[5rem] max-sm:gap-[1.5rem] mt-[0rem] max-sm:mt-0 mb-[0rem] max-sm:mb-[1rem] pt-[5rem] pb-[5rem]'>
+      <div className='overflow-x-hidden  flex max-xl:flex-col w-[100%] mx-auto items-center justify-center gap-[5rem] max-sm:gap-[1.5rem] mt-[0rem] max-sm:mt-0 mb-[0rem] max-sm:mb-[1rem] pt-[5rem] pb-[5rem]'>
         <div className='max-xl:flex max-xl:flex-col max-xl:items-center'>
           <div className={`text-gold text-[4rem] max-xl:text-[2.5rem] max-lg:text-[2rem] max-sm:text-[2.5rem] max-sm:mb-[1rem] ${aboutNPfont11.className}`}>Flash Backs</div>
           <div className='w-[60%] flex flex-col max-xl:flex-row gap-[20px] items-center justify-center mx-auto'>
