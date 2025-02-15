@@ -731,15 +731,15 @@ const HomePage = () => {
         {/* crads stacked animation  */}
         {/* <div className="h-screen"></div> */}
         {/* 4 */}
-        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh] bg-black relative">
+        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh]  relative">
           {
             projects.map((project, i) => {
               const targetscale = 1 - ((projects.length - i) * 0.05);
               const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
               const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
-              return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh]">
+              return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
                 <motion.div style={{ backgroundColor: project.color, scale, top: `calc(-0vh + ${i * 15}px)` }}
-                  className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top">
+                  className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top border-[1.7px] border-gold">
 
                   {/* <div className="flex flex-col md:flex-row mt-12 gap-12 h-full">
                     <div className="w-full md:w-2/5 relative top-10">
@@ -801,8 +801,8 @@ const HomePage = () => {
             })
           }
         </div>
-        {/* <div className="h-screen max-sm:h-auto bg-black ">
-          <div id="events" className="my-auto bg-black h-[80vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[3rem] max-sm:gap-[0rem] relative z-[900]">
+        {/* <div className="h-screen max-sm:h-auto  ">
+          <div id="events" className="my-auto  h-[80vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[3rem] max-sm:gap-[0rem] relative z-[900]">
             <p className={`text-gold text-[7rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Events</p>
             <div className="flex  flex-col justify-center items-center w-full h-[70%] ">
               <HomeEventCrousalPihu3 />
@@ -828,7 +828,7 @@ const HomePage = () => {
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
         {/* <HomeEvents /> */}
-        {/* <div id="events" className=" bg-black h-[80vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[3rem] max-sm:gap-[3.5rem] relative z-[900]">
+        {/* <div id="events" className="  h-[80vh] max-sm:h-[60vh] flex justify-center items-center flex-col gap-[3rem] max-sm:gap-[3.5rem] relative z-[900]">
           <p className={`text-gold text-[5rem] max-sm:text-[3rem] ${aboutNPfont.className}`}>Events</p>
           <div className="flex  flex-col justify-center items-center w-full h-[70%] ">
             <HomeEventCrousalPihu3 />
@@ -853,7 +853,7 @@ const HomePage = () => {
         {/* scaled image on scroll  */}
         {/* <div className="h-screen bg-yellow-300"></div> */}
         {/* 5 */}
-        <div ref={imagescontainer} className="h-[300vh] bg-black relative">
+        <div ref={imagescontainer} className="h-[300vh]  relative">
           <div className="bg-black  sticky overflow-hidden top-0  h-[100vh]">
             {
               pictures.map(({ src, scale }, i) => {
@@ -952,8 +952,8 @@ const HomePage = () => {
         </div> */}
         {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
         {/* 6 */}
-        <div className="bg-black mt-20" style={{ rotate: "3deg" }}>
-          <div className="sticky top-0 flex items-center  bg-black overflow-hidden">
+        <div className=" mt-20" style={{ rotate: "3deg" }}>
+          <div className="sticky top-0 flex items-center   overflow-hidden">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
                 return <Card imgsrc={imgsrc} i={i} />;
@@ -964,8 +964,8 @@ const HomePage = () => {
 
         <About_VideoSection />
 
-        <div className="bg-black  mb-40" style={{ rotate: "-3deg" }}>
-          <div className="sticky top-0 flex items-center bg-black overflow-hidden">
+        <div className=" mb-40" style={{ rotate: "-3deg" }}>
+          <div className="sticky top-0 flex items-center overflow-hidden">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
                 return <Card imgsrc={imgsrc} i={i} />;
@@ -1209,10 +1209,10 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
 
 const Column: React.FC<ColumnProps> = ({ images, y }) => {
   return (
-    <motion.div className="homeverticalParallaxColumn relative flex flex-col gap-[2vw] max- w-1/4  h-full " style={{ y }}>
+    <motion.div className="homeverticalParallaxColumn relative flex flex-col gap-[2vw] max- w-1/4  h-full  " style={{ y }}>
       {images.map((src, i) => (
-        <div key={i} className="relative w-full h-full rounded-[1vw] overflow-hidden">
-          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover  rounded-[1vw]" />
+        <div key={i} className="relative w-full h-full rounded-[1vw] overflow-hidden border-[1.7px] border-gold">
+          <Image src={`/assets/exodia-gallery-images/${src}`} alt="image" fill className="object-cover  rounded-[1vw] " />
         </div>
       ))}
     </motion.div>
