@@ -762,7 +762,7 @@ const HomePage = () => {
                       </motion.div>
                     </div>
                   </div> */}
-                  <div className="flex flex-col mt-4  gap-12 h-full text-[#cba135]">
+                  <div className="flex flex-col mt-4  gap-12 h-full text-[#FFD700]">
                     <div>
                       <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem]`}>{project.eventType}</p>
                     </div>
@@ -1020,6 +1020,8 @@ const HomePage = () => {
         <div ref={textZoomToVideocontainer} className="relative h-[300vh] bg-white">
           <div
             ref={textZoomToVideostickyMask}
+
+            
             className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
             style={{
               WebkitMaskImage: "url('/assets/homefifth/EXODIA.svg')",
@@ -1112,6 +1114,7 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
     </motion.div>
   )
 }
+
 const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: { scrollYProgress: any, element2: React.RefObject<HTMLParagraphElement | null>, characters: string[][], scrollYProgress3: any }) => {
   const scale = useTransform(scrollYProgress, [0, 1 / 3 + 0.15, 1], [0.8, 1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1 / 3 + 0.15, 1], [5, 0, -5]);
@@ -1119,17 +1122,17 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   return (
     <motion.div 
       style={{ 
-        backgroundImage: "url('/assets/homefirst/YouTube.jpg')",
+        backgroundImage: "url('/assets/homefirst/Ut-2.png')",
         scale,
         rotate
       }} 
-      className="sticky top-0 h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
+      className="sticky top-0 h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center backdrop-blur-md"
     >
       <div className=" flex flex-col justify-center items-center gap-[3rem] mb-[7rem]">
         <p className={`text-[#FFD700] text-[5rem] ${aboutNPfont11.className}`}>About Exodia</p>
         <p ref={element2} 
           style={{ whiteSpace: "pre-wrap" }}
-          className={`text-[30px] max-sm:text-[5px] max-w-[1290px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-white`}
+          className={`text-[30px] max-sm:text-[5px] max-w-[1290px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-[#FFD700]`}
         >
           {
             characters.map((line, i) => {
@@ -1146,7 +1149,7 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
                     const opacity3 = useTransform(scrollYProgress3, [wordStart, wordEnd], [0, 1]);
 
                     return (
-                      <span key={j} className="relative inline-block mx-[5px]">
+                      <span key={j} className="relative inline-block mx-[5px] text-white">
                         {/* Background faded word */}
                         <span className="opacity-[0.1]">{word}</span>
                         {/* Animated appearing word */}
@@ -1173,11 +1176,23 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [1 / 3 + 0.15, 1], [-5, 0]);
 
   return (
-    <motion.div style={{ scale, rotate }} className="relative top-0 h-screen bg-[#3d1f5c] bg-cover bg-no-repeat text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
-      <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900] ">
-        <p className={`text-gold text-[5rem] ${aboutNPfont11.className}`}>Theme</p>
-        <p ref={element2} style={{ whiteSpace: "pre-wrap" }}
-          className={`text-[30px] max-sm:text-[5px] max-w-[1280px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className}`}>
+    <motion.div 
+      style={{ scale, rotate }} 
+      className="relative top-0 h-screen bg-[#3d1f5c] bg-cover bg-no-repeat text-[3.5vw] flex flex-col items-center justify-center text-[#FFD700] pb-[10vh]"
+    >
+      <div 
+        className="absolute inset-0 bg-cover bg-no-repeat bg-center"
+        style={{
+          backgroundImage: "url('/assets/homefirst/gjyg.png')",
+          filter: "blur(4px)",
+        }}
+      />
+      <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900]">
+        <p className={`text-[#FFD700] text-[5rem] ${aboutNPfont11.className}`}>Theme</p>
+        <p ref={element2} 
+          style={{ whiteSpace: "pre-wrap" }}
+          className={`text-[30px] max-sm:text-[5px] max-w-[1280px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-[#FFD700]`}
+        >
           {
             characters.map((line, i) => {
               const lineStart = i / characters.length;
@@ -1193,7 +1208,7 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
                     const opacity3 = useTransform(scrollYProgress3, [wordStart, wordEnd], [0, 1]);
 
                     return (
-                      <span key={j} className="relative inline-block mx-[5px]">
+                      <span key={j} className="relative inline-block mx-[5px] text-white">
                         {/* Low-opacity background word */}
                         <span className="opacity-[0.1]">{word}</span>
                         {/* Animated appearing word */}
