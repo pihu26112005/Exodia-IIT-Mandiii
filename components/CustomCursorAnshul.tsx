@@ -1,105 +1,154 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const CustomCursorAnshul = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isMoving, setIsMoving] = useState(false);
   const pointsRef = useRef<{ x: number; y: number }[]>([]);
-  const requestRef = useRef<number | null>(null);
-  const previousTimeRef = useRef<number | undefined>(undefined);
-  const movingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const mouseRef = useRef({ x: 0, y: 0 });
+  const timeRef = useRef(0);
 
   useEffect(() => {
+    // Hide cursor globally
+    document.documentElement.style.cursor = 'none';
+    document.body.style.cursor = 'none';
+    
+    // Add cursor: none to all clickable elements
+    const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea');
+    elements.forEach(el => {
+      (el as HTMLElement).style.cursor = 'none';
+    });
+
     const canvas = canvasRef.current;
-    const cursor = cursorRef.current;
-    if (!canvas || !cursor) return;
+    if (!canvas) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d')!;
+    let animationId: number;
 
-    const ctx = canvas.getContext("2d")!;
+    const config = {
+      shaderPoints: 16,
+      curvePoints: 80,
+      curveLerp: 0.5,
+      radius1: 5,
+      radius2: 30,
+      velocityTreshold: 10,
+      sleepRadiusX: 100,
+      sleepRadiusY: 100,
+      sleepTimeCoefX: 0.0025,
+      sleepTimeCoefY: 0.0025
+    };
+
+    // Initialize points at mouse position
+    const initPoints = () => {
+      pointsRef.current = Array(config.curvePoints).fill(null).map(() => ({
+        x: mouseRef.current.x,
+        y: mouseRef.current.y
+      }));
+    };
 
     const handleMouseMove = (e: MouseEvent) => {
-      if (cursor) {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
+      mouseRef.current = { x: e.clientX, y: e.clientY };
+      // Initialize points if not already done
+      if (pointsRef.current.length === 0) {
+        initPoints();
       }
-
-      pointsRef.current.push({ x: e.clientX, y: e.clientY });
-      if (pointsRef.current.length > 25) {
-        pointsRef.current.shift();
-      }
-
-      setIsMoving(true);
-      if (movingTimeoutRef.current) {
-        clearTimeout(movingTimeoutRef.current);
-      }
-      movingTimeoutRef.current = setTimeout(() => {
-        setIsMoving(false);
-      }, 200);
     };
-
-    const animate = (time: number) => {
-      if (previousTimeRef.current !== undefined) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        if (pointsRef.current.length > 1) {
-          ctx.beginPath();
-          ctx.moveTo(pointsRef.current[0].x, pointsRef.current[0].y);
-          
-          for (let i = 1; i < pointsRef.current.length; i++) {
-            const point = pointsRef.current[i];
-            const prevPoint = pointsRef.current[i - 1];
-            
-            const xc = (prevPoint.x + point.x) / 2;
-            const yc = (prevPoint.y + point.y) / 2;
-            
-            ctx.quadraticCurveTo(prevPoint.x, prevPoint.y, xc, yc);
-          }
-          
-          ctx.strokeStyle = '#FFD700';
-          ctx.lineWidth = 3;
-          ctx.lineCap = 'round';
-          ctx.lineJoin = 'round';
-          ctx.stroke();
-        }
-
-        if (!isMoving && pointsRef.current.length > 0) {
-          pointsRef.current = pointsRef.current.slice(1);
-        }
-      }
-
-      previousTimeRef.current = time;
-      requestRef.current = requestAnimationFrame(animate);
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    requestRef.current = requestAnimationFrame(animate);
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('resize', handleResize);
-      if (requestRef.current) {
-        cancelAnimationFrame(requestRef.current);
-      }
-      if (movingTimeoutRef.current) {
-        clearTimeout(movingTimeoutRef.current);
+    const updatePoints = () => {
+      timeRef.current += 1;
+      
+      // Update first point with mouse position plus sleep effect
+      const sleepX = Math.sin(timeRef.current * config.sleepTimeCoefX) * config.sleepRadiusX;
+      const sleepY = Math.cos(timeRef.current * config.sleepTimeCoefY) * config.sleepRadiusY;
+      
+      pointsRef.current[0] = {
+        x: mouseRef.current.x + sleepX,
+        y: mouseRef.current.y + sleepY
+      };
+
+      // Update rest of points with lerp
+      for (let i = 1; i < pointsRef.current.length; i++) {
+        const point = pointsRef.current[i];
+        const prevPoint = pointsRef.current[i - 1];
+        
+        point.x += (prevPoint.x - point.x) * config.curveLerp;
+        point.y += (prevPoint.y - point.y) * config.curveLerp;
       }
     };
-  }, [isMoving]);
 
-  useEffect(() => {
-    document.body.style.cursor = 'none';
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (pointsRef.current.length === 0) return;
+
+      // Calculate velocity
+      const velocity = Math.hypot(
+        pointsRef.current[0].x - pointsRef.current[1].x,
+        pointsRef.current[0].y - pointsRef.current[1].y
+      );
+      
+      // Determine radius based on velocity
+      const radius = velocity > config.velocityTreshold ? config.radius2 : config.radius1;
+
+      // Draw the curve with multiple passes for neon effect
+      const drawCurve = (width: number, alpha: number) => {
+        ctx.beginPath();
+        ctx.moveTo(pointsRef.current[0].x, pointsRef.current[0].y);
+        
+        for (let i = 1; i < pointsRef.current.length - 1; i++) {
+          const xc = (pointsRef.current[i].x + pointsRef.current[i + 1].x) / 2;
+          const yc = (pointsRef.current[i].y + pointsRef.current[i + 1].y) / 2;
+          ctx.quadraticCurveTo(pointsRef.current[i].x, pointsRef.current[i].y, xc, yc);
+        }
+
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = width;
+        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+        ctx.shadowBlur = 20;
+        ctx.shadowColor = '#ffd700';
+        ctx.stroke();
+      };
+
+      // Outer glow
+      drawCurve(radius * 2, 0.1);
+      // Middle glow
+      drawCurve(radius * 1.5, 0.2);
+      // Inner glow
+      drawCurve(radius, 0.5);
+      // Core
+      drawCurve(radius * 0.5, 1);
+    };
+
+    const animate = () => {
+      updatePoints();
+      draw();
+      animationId = requestAnimationFrame(animate);
+    };
+
+    // Initialize
+    handleResize();
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
+    initPoints();
+    animate();
+
+    // Cleanup
     return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
+      // Restore cursor
+      document.documentElement.style.cursor = 'auto';
       document.body.style.cursor = 'auto';
+      elements.forEach(el => {
+        (el as HTMLElement).style.removeProperty('cursor');
+      });
     };
   }, []);
 
@@ -107,26 +156,11 @@ const CustomCursorAnshul = () => {
     <>
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 pointer-events-none z-[9999]"
-      />
-      <div
-        ref={cursorRef}
-        className="custom-cursor"
+        className="fixed inset-0 w-full h-full pointer-events-none z-[9999]"
       />
       <style jsx global>{`
-        .custom-cursor {
-          width: 8px;
-          height: 8px;
-          background: #FFD700;
-          border-radius: 50%;
-          position: fixed;
-          pointer-events: none;
-          z-index: 10000;
-          transform: translate(-50%, -50%);
-          transition: width 0.2s, height 0.2s;
-          mix-blend-mode: screen;
-          filter: blur(0.5px);
-          box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+        * {
+          cursor: none !important;
         }
       `}</style>
     </>
