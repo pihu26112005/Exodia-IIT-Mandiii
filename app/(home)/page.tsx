@@ -150,7 +150,7 @@ const HomePage = () => {
     target: element2,
     offset: ['start 0.7', 'start 0.35']
   })
-  const characters1 = "The valley echoes with magical chants when the moon and stars paint the black canvas white. Where mystique captivates the mind of all those who seek, such is the magic of Exodia’s twilight. ".split(" ");
+  const characters1 = "The valley echoes with magical chants when the moon and stars paint the black canvas white. Where mystique captivates the mind of all those who seek, such is the magic of Exodia's twilight. ".split(" ");
   const characters2 = "Let The Magic Begin! ".split(" ");
   const characters3 = "The biggest college fest in the Himalayas is back to enchant the world with its vibrant mystique. The three-day-long fest guarantees a magical experience brimming with events that ignite zeal, craft, and empyreal artistry and will emblaze the starry night in its arcane brilliance.".split(" ");
   const characters4 = "So, pick your wands, mount your brooms, and meet us at Hogwarts in the hills — IIT Mandi !!!. ".split(" ");
@@ -288,14 +288,14 @@ const HomePage = () => {
   //   },
   //   {
   //     title: "Clément Chapillon",
-  //     description: "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+  //     description: "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes"—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for 'The tawny rocks').",
   //     src: "tree.jpg",
   //     link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
   //     color: "#977F6D"
   //   },
   //   {
   //     title: "Zissou",
-  //     description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
+  //     description: "Though he views photography as a medium for storytelling, Zissou's images don't insist on a narrative. Both crisp and ethereal, they're encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
   //     src: "water.jpg",
   //     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
   //     color: "#C2491D"
@@ -304,7 +304,7 @@ const HomePage = () => {
   const projects = [
     {
       eventType: "Photography",
-      color: "#663399",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Matthias Leidinger",
@@ -325,7 +325,7 @@ const HomePage = () => {
     },
     {
       eventType: "Art Exhibitions",
-      color: "#5c2e8a",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Van Gogh's Legacy",
@@ -351,7 +351,7 @@ const HomePage = () => {
     },
     {
       eventType: "Technology Conferences",
-      color: "#52297a",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "AI in 2025",
@@ -372,7 +372,7 @@ const HomePage = () => {
     },
     {
       eventType: "Photography",
-      color: "#47246b",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Matthias Leidinger",
@@ -393,7 +393,7 @@ const HomePage = () => {
     },
     {
       eventType: "Art Exhibitions",
-      color: "#3d1f5c",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Van Gogh's Legacy",
@@ -419,7 +419,7 @@ const HomePage = () => {
     },
     {
       eventType: "Technology Conferences",
-      color: "#331a4d",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "AI in 2025",
@@ -440,7 +440,7 @@ const HomePage = () => {
     },
     {
       eventType: "Art Exhibitions",
-      color: "#29143d",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Van Gogh's Legacy",
@@ -466,7 +466,7 @@ const HomePage = () => {
     },
     {
       eventType: "Art Exhibitions",
-      color: "#1f0f2e",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Van Gogh's Legacy",
@@ -492,7 +492,7 @@ const HomePage = () => {
     },
     {
       eventType: "Technology Conferences",
-      color: "#140a1f",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "AI in 2025",
@@ -614,7 +614,7 @@ const HomePage = () => {
               // const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
               const scale = useTransform(scrollYProgress9, [i / homeprojects.length, 1], [1, targetscale]);
               return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh]">
-                <motion.div style={{ backgroundColor: project.color, scale, top: `calc(-0vh + ${i * 30}px)` }}
+                <motion.div style={{ backgroundImage: project.color, backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 30}px)` }}
                   className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top">
                   <div className="flex flex-col mt-4  gap-12 h-full text-[#cba135]">
                     <div>
@@ -738,7 +738,7 @@ const HomePage = () => {
               const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
               const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
               return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
-                <motion.div style={{ backgroundColor: project.color, scale, top: `calc(-0vh + ${i * 15}px)` }}
+                <motion.div style={{ backgroundImage: project.color, backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
                   className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top border-[1.7px] border-gold">
 
                   {/* <div className="flex flex-col md:flex-row mt-12 gap-12 h-full">
@@ -1118,11 +1118,20 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [0, 1 / 3 + 0.15, 1], [5, 0, -5]);
 
   return (
-    <motion.div style={{ scale, rotate }} className="sticky top-0 h-screen bg-[#52297a] bg-cover bg-no-repeat flex items-center justify-center">
+    <motion.div 
+      style={{ 
+        backgroundImage: "url('/assets/homefirst/YouTube.jpg')",
+        scale,
+        rotate
+      }} 
+      className="sticky top-0 h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center"
+    >
       <div className=" flex flex-col justify-center items-center gap-[3rem] mb-[7rem]">
-        <p className={`text-gold text-[5rem] ${aboutNPfont11.className}`}>About Exodia</p>
-        <p ref={element2} style={{ whiteSpace: "pre-wrap" }}
-          className={`text-[30px] max-sm:text-[5px] max-w-[1290px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className}`}>
+        <p className={`text-[#FFD700] text-[5rem] ${aboutNPfont11.className}`}>About Exodia</p>
+        <p ref={element2} 
+          style={{ whiteSpace: "pre-wrap" }}
+          className={`text-[30px] max-sm:text-[5px] max-w-[1290px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-white`}
+        >
           {
             characters.map((line, i) => {
               const lineStart = i / characters.length;
