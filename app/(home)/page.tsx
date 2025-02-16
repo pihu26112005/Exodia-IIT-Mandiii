@@ -507,9 +507,9 @@ const HomePage = () => {
 
         <div ref={homemaincardstackedcontainer} className="relative sm:hidden">
           <div className="h-[100vh]">
-          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
+          {/* <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
             <img src="./Exodia.png" alt="" />
-          </div>
+          </div> */}
           </div>
           {
             homeprojects.map((project, i) => {
@@ -602,7 +602,7 @@ const HomePage = () => {
                     </div>
                   </div> */}
                   <div className="flex flex-col mt-4  gap-12 h-full text-[#FFD700]">
-                    
+
                     <div>
                       <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem]`}>{project.eventType}</p>
                     </div>
@@ -687,7 +687,7 @@ const HomePage = () => {
           <div
             ref={textZoomToVideostickyMask}
 
-            
+
             className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
             style={{
               WebkitMaskImage: "url('/assets/homefifth/EXODIA.svg')",
@@ -764,17 +764,17 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [0, 1 / 3 + 0.15, 1], [5, 0, -5]);
 
   return (
-    <motion.div 
-      style={{ 
+    <motion.div
+      style={{
         backgroundImage: "url('pk.jpeg')",
         scale,
         rotate
-      }} 
+      }}
       className="sticky top-0 h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center backdrop-blur-md"
     >
       <div className=" flex flex-col justify-center items-center gap-[3rem] mb-[7rem]">
         <p className={`text-[#FFD700] text-[5rem] ${aboutNPfont11.className}`}>About Exodia</p>
-        <p ref={element2} 
+        <p ref={element2}
           style={{ whiteSpace: "pre-wrap" }}
           className={`text-[30px] max-sm:text-[5px] max-w-[1290px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-[#FFD700]`}
         >
@@ -820,11 +820,11 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   const rotate = useTransform(scrollYProgress, [1 / 3 + 0.15, 1], [-5, 0]);
 
   return (
-    <motion.div 
-      style={{ scale, rotate }} 
+    <motion.div
+      style={{ scale, rotate }}
       className="relative top-0 h-screen bg-[#3d1f5c] bg-cover bg-no-repeat text-[3.5vw] flex flex-col items-center justify-center text-[#FFD700] pb-[10vh]"
     >
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-no-repeat bg-center"
         style={{
           backgroundImage: "url('/assets/homefirst/gjyg.png')",
@@ -833,7 +833,7 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
       />
       <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900]">
         <p className={`text-[#FFD700] text-[5rem] ${aboutNPfont11.className}`}>Theme</p>
-        <p ref={element2} 
+        <p ref={element2}
           style={{ whiteSpace: "pre-wrap" }}
           className={`text-[30px] max-sm:text-[5px] max-w-[1280px] p-[40px] flex flex-wrap justify-center gap-[1rem] leading-none ${aboutNPfont4.className} text-[#FFD700]`}
         >
