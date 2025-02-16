@@ -162,7 +162,7 @@ const HomePage = () => {
   const homeprojects = [
     {
       eventType: "Photography",
-      color: "#663399",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Matthias Leidinger",
@@ -183,7 +183,7 @@ const HomePage = () => {
     },
     {
       eventType: "Art Exhibitions",
-      color: "#5c2e8a",
+      color: "url('/assets/homefirst/download.jpeg')",
       events: [
         {
           name: "Van Gogh's Legacy",
@@ -507,7 +507,9 @@ const HomePage = () => {
 
         <div ref={homemaincardstackedcontainer} className="relative sm:hidden">
           <div className="h-[100vh]">
-            EXODIA
+          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
+            <img src="./Exodia.png" alt="" />
+          </div>
           </div>
           {
             homeprojects.map((project, i) => {
@@ -743,7 +745,7 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 3, repeat: Infinity }}>
-          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0">
+          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 ">
             <img src="./Exodia.png" alt="" />
           </div>
         </motion.div>
@@ -764,7 +766,7 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   return (
     <motion.div 
       style={{ 
-        backgroundImage: "url('/assets/homefirst/Ut-2.png')",
+        backgroundImage: "url('pk.jpeg')",
         scale,
         rotate
       }} 
