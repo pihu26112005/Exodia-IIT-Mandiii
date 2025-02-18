@@ -766,7 +766,7 @@ const Section2 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
   return (
     <motion.div
       style={{
-        backgroundImage: "url('pk.jpeg')",
+        backgroundImage: "url('/pk2.png')",
         scale,
         rotate
       }}
@@ -827,7 +827,7 @@ const Section3 = ({ scrollYProgress, element2, characters, scrollYProgress3 }: {
       <div
         className="absolute inset-0 bg-cover bg-no-repeat bg-center"
         style={{
-          backgroundImage: "url('/assets/homefirst/gjyg.png')",
+          backgroundImage: "url('/pk2.png')",
           filter: "blur(4px)",
         }}
       />
