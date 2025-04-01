@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
     >
       <div className="flex justify-between items-center px-6 md:px-10">
         {/* Logo */}
-        <a href="/" className={` font-semibold text-[3rem] text-gold ${aboutNPfont11.className}`}>
+        <a href="/" className={` font-semibold text-[3rem] text-white ${aboutNPfont11.className}`}>
           Exodia
         </a>
 
@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
-              <p className=" p-0 m-0 text-gold">☰</p>
+              <p className=" p-0 m-0 text-white">☰</p>
             </button>
           </SheetTrigger>
           <SheetContent className="h-full">

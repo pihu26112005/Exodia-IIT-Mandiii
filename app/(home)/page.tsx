@@ -219,12 +219,12 @@ const HomePage = () => {
 
 
         {/* 3 ccc*/}
-        <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
+        {/* <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
           <Column images={[VERimages[0], VERimages[1], VERimages[2], VERimages[11], VERimages[1]]} y={y} />
           <Column images={[VERimages[3], VERimages[4], VERimages[5], VERimages[3], VERimages[4]]} y={y2} />
-          <Column images={[VERimages[6], VERimages[7], VERimages[8], VERimages[9], VERimages[10]]} y={y3} />
+          <Column images={[VERimages[6], VERimages[7], VERimages[8], VERimages[9], VERimages[10]]} y={y3} /> */}
           {/* <Column images={[VERimages[9], VERimages[10], VERimages[11], VERimages[9], VERimages[10], VERimages[11]]} y={y4} /> */}
-        </div>
+        {/* </div> */}
 
         {/* crads stacked animation  */}
         {/* 4 */}
