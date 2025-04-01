@@ -108,34 +108,34 @@ export  const Sociallinks = [
   {
     title: "Whatsapp",
     icon: "/icons/socialmedia/whatsapp.png",
-    href: "#",
+    href: "8797003838",
   },
 
   {
     title: "Instagram",
     icon: "/icons/socialmedia/insta.png",
-    href: "#",
+    href: "https://www.instagram.com/exodia.iitmandi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
     title: "Twitter",
     icon:"/icons/socialmedia/twitter.png",
-    href: "#",
+    href: "https://x.com/exodia_iitmandi",
   },
   {
     title: "Youtube",
     icon: "/icons/socialmedia/youtube.png",
-    href: "#",
+    href: "www.youtube.com/@ExodiaIITMandi",
   },
 
   {
     title: "LinkedIn",
     icon: "/icons/socialmedia/linkedin.png",
-    href: "#",
+    href: "https://www.linkedin.com/company/exodia-iit-mandi/",
   },
   {
     title: "Facebook",
     icon: "/icons/socialmedia/facebook.png",
-    href: "#",
+    href: "https://www.facebook.com/Exodia.IITMandi",
   },
 ];
 
@@ -1882,3 +1882,48 @@ export const VERimages = [
   "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Xf41RshWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8VqbjfD4TaWOgMFRoCkJPN2dSYzuqDA9f47ci", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg87RXf5OeVgzrG1oD8Ky4Iwvx0LatSiTFCZ2Bh", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hfWTnsgiPInSsWU8AM03Hk6OVjE5NlYFoqrg", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nzPw094KFvlWGTIAJSubDhEoNp9XPaV5xw4j", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8tI4Vqp3eeKLVcTXI7MJNPQraCYZ5iGjoEO9H",
   "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg877RNt8VgzrG1oD8Ky4Iwvx0LatSiTFCZ2BhA", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8wZ0pJUkN93fDJcmlrWoxYu8LRnVCHUMXgaki", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Nu2ALWATBnmKsCY0o1ENRbLkZXIgjp3rfh6V", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XXqyIghWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg80jj3l2O6nPm1We5dZyOsKhfk4grHcBuEtjiq", "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg877RNt8VgzrG1oD8Ky4Iwvx0LatSiTFCZ2BhA"
 ];
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// characters 
+
+
+export const characters1 = `The biggest college fest in the Himalayas is back to enchant the`;
+export const characters2 = `world with its vibrant mystique. The three-day-long fest`;
+export const characters3 = `guarantees a magical experience brimming with events that ignite`;
+export const characters4 = `zeal, craft, and empyreal artistry and will emblaze the starry night`;
+export const characters5 = `in its arcane brilliance.`;
+export const characters1s = `The biggest college fest in the Himalayas is`
+export const characters2s = `to enchant the world with its vibrant mystique.`
+export const characters3s = `The three-day-long fest guarantees a magical`
+export const characters4s = `experience brimming with events that ignite zeal,`
+export const characters5s =` craft, and empyreal artistry and will emblaze`
+export const characters6s = `the starry night in its arcane brilliance.`
+
+export const characters6 = `IIT Mandi, cradled in the Himalayas, blends wisdom with nature's serenity.`;
+export const characters7 = `A place where innovation meets tranquility, shaping visions of tomorrow.`;
+export const characters8 = `With rivers whispering knowledge, it fosters brilliance in every mind.`;
+export const characters9 = `An abode of research, creativity, and dreams soaring beyond the peaks.`;
+export const characters10 = `Where intellect and nature converge, crafting a legacy of excellence.`;
+
+export const characters11 = `Exodia is the annual techno-cultural fest of Indian Institute of Technology Mandi. It is a three`;
+export const characters12 = `day-long event held every year. The first edition was held in 2012 and since then it has grown `;
+export const characters13 = `to be one of the largest student-run college fests of the Himalayas. It is one of the biggest`;
+export const characters14 = `events of the Himalayan region and attracts crowds from throughout northern India.`;
+export const characters15 = `The fest is a blend of technical and cultural events, workshops, competitions, and performances`;
+export const characters16 = `The fest also tries to promote the Himalayan region and showcase its culture and beauty by `;
+export const characters17 = `orchestrating some of its events for the same.`;
+export const characters11s = `Exodia is the annual techno-cultural fest of Indian`
+export const characters12s = `Institute of Technology Mandi. It is a three day-long`
+export const characters13s = `event held every year. The first edition was held in`
+export const characters14s = `2012 and since then it has grown to be one of the`
+export const characters15s = `largest student-run college fests of the Himalayas.`
+export const characters16s = `It is one of the biggest events of the Himalayan region `
+export const characters17s = `and attracts crowds from throughout northern India.`
+export const characters18s = `The fest is a blend of cultural events, workshops,`
+export const characters19s = `competitions, and performances. The fest also tries to`
+export const characters20s = `promote the Himalayan region and showcase its culture`
+export const characters21s = `and beauty by orchestrating its events for the same.`
+ 

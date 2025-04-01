@@ -2,7 +2,9 @@ import { aboutNPfont11 } from "@/lib/font.utils";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const CountdownTimer = ({ targetDate }:any) => {
+const CountdownTimer = () => {
+  const targetDate = new Date("April 18, 2025 00:00:00").getTime(); // Set target date
+
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
     const difference = targetDate - now;
@@ -27,14 +29,13 @@ const CountdownTimer = ({ targetDate }:any) => {
     }, 1000);
 
     return () => clearInterval(timer); // Cleanup on unmount
-  }, [targetDate]);
+  }, []);
 
   return (
-    <div className={`text-[7rem] max-sm:text-[3rem] pb-[10rem] max-sm:pb-[2rem] text-center  text-purple-900 p-4  ${aboutNPfont11.className}`}>
+    <div className={`text-[4rem] max-sm:text-[1.4rem]  text-center  text-purple-900  ${aboutNPfont11.className}`}>
       {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s left
     </div>
   );
 };
 
 export default CountdownTimer;
- 

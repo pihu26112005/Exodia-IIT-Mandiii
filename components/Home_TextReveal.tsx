@@ -7,9 +7,10 @@ import { aboutNPfont11 } from '@/lib/font.utils';
 
 interface TextRevealProps {
   text: string;
+  className?: string;
 }
 
-const TextReveal: React.FC<TextRevealProps> = ({ text }) => {
+const TextReveal: React.FC<TextRevealProps> = ({ text, className = '' }) => {
   const words = text.split(' ');
 
   const animation = {
@@ -23,8 +24,8 @@ const TextReveal: React.FC<TextRevealProps> = ({ text }) => {
   const { ref, inView } = useInView({ threshold: 0.75, triggerOnce: true });
 
   return (
-    <div ref={ref} className={`overflow-hidden text-4xl max-sm:text-sm font-bold text-center ${aboutNPfont11.className}`}>
-      <div className="flex flex-wrap justify-center items-center gap-2 text-center">
+    <div ref={ref} className={`overflow-hidden font-bold text-center ${aboutNPfont11.className} ${className}`}>
+      <div className="flex flex-wrap justify-center items-center gap-2">
         {words.map((word, index) => (
           <motion.span key={index} custom={index} variants={animation} initial="initial" animate={inView ? 'enter' : ''} className="inline-block">
             {word}

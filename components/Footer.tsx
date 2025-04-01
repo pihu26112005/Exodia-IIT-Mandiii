@@ -18,7 +18,7 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-3">Participate</h3>
           <ul className="space-y-2">
             <li><a href="/events" className="hover:text-purple-400">Events Portal</a></li>
-            <li><a href="/ExodiaInstagramLink" className="hover:text-purple-400">Join The Community</a></li>
+            <li><a href="https://www.instagram.com/exodia.iitmandi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="hover:text-purple-400">Join The Community</a></li>
             <li><a href="/brochure" className="hover:text-purple-400">Brochure</a></li>
           </ul>
         </div>

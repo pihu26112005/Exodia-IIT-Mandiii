@@ -17,10 +17,11 @@ import Column from "@/components/Home_Home_Column";
 import Section3 from "@/components/Home_Home_Section3";
 import Section2 from "@/components/Home_Home_Section2";
 import Section1 from "@/components/Home_Home_Section1";
-import { horiscrollimage, projects, VERimages } from "@/lib/utils";
+import { characters1, characters10, characters11, characters11s, characters12, characters12s, characters13, characters13s, characters14, characters14s, characters15, characters15s, characters16, characters16s, characters17, characters17s, characters18s, characters19s, characters1s, characters2, characters20s, characters21s, characters2s, characters3, characters3s, characters4, characters4s, characters5, characters5s, characters6, characters6s, characters7, characters8, characters9, horiscrollimage, projects, VERimages } from "@/lib/utils";
 import Section11 from "@/components/Home_Home_Section11";
 import TextReveal from "@/components/Home_TextReveal";
 import CardStacked from "@/components/Home_CardStack";
+import JoinExodiaForm from "@/components/JoinExodiaForm";
 
 
 
@@ -59,20 +60,6 @@ const HomePage = () => {
       window.removeEventListener("resize", resize);
     };
   }, []);
-
- 
-  const characters1 = `The biggest college fest in the Himalayas is back to enchant the`;
-  const characters2 = `world with its vibrant mystique. The three-day-long fest`;
-  const characters3 = `guarantees a magical experience brimming with events that ignite`;
-  const characters4 = `zeal, craft, and empyreal artistry and will emblaze the starry night`;
-  const characters5 = `in its arcane brilliance.`;
-  const characters6 = `IIT Mandi, cradled in the Himalayas, blends wisdom with nature's serenity.`;  
-  const characters7 = `A place where innovation meets tranquility, shaping visions of tomorrow.`;  
-  const characters8 = `With rivers whispering knowledge, it fosters brilliance in every mind.`;  
-  const characters9 = `An abode of research, creativity, and dreams soaring beyond the peaks.`;  
-  const characters10 = `Where intellect and nature converge, crafting a legacy of excellence.`;  
-  
-
 
   // for scaled image on scroll
   const imagescontainer = useRef<HTMLDivElement>(null);
@@ -219,28 +206,35 @@ const HomePage = () => {
 
 
         {/* 3 ccc*/}
-        {/* <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
+        <div ref={gallery} className="max-sm:hidden homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
           <Column images={[VERimages[0], VERimages[1], VERimages[2], VERimages[11], VERimages[1]]} y={y} />
           <Column images={[VERimages[3], VERimages[4], VERimages[5], VERimages[3], VERimages[4]]} y={y2} />
-          <Column images={[VERimages[6], VERimages[7], VERimages[8], VERimages[9], VERimages[10]]} y={y3} /> */}
+          <Column images={[VERimages[6], VERimages[7], VERimages[8], VERimages[9], VERimages[10]]} y={y3} />
           {/* <Column images={[VERimages[9], VERimages[10], VERimages[11], VERimages[9], VERimages[10], VERimages[11]]} y={y4} /> */}
-        {/* </div> */}
+        </div>
 
         {/* crads stacked animation  */}
         {/* 4 */}
         <CardStacked scrollYProgress={scrollYProgress} />
 
         {/* 11 */}
-        <div className="flex flex-col justify-center items-center gap-5 h-[50vh] max-sm:w-[80%] mx-auto ">
-          <TextReveal text={characters1} />
-          <TextReveal text={characters2} />
-          <TextReveal text={characters3} />
-          <TextReveal text={characters4} />
-          <TextReveal text={characters5} />
+        <div className="flex flex-col justify-center items-center gap-5 max-sm:gap-3 h-[50vh] max-sm:h-[40vh] max-sm:w-[90%] mx-auto ">
+          <TextReveal className="text-4xl max-sm:text-sm max-sm:hidden" text={characters1} />
+          <TextReveal className="text-4xl max-sm:text-sm max-sm:hidden" text={characters2} />
+          <TextReveal className="text-4xl max-sm:text-sm max-sm:hidden" text={characters3} />
+          <TextReveal className="text-4xl max-sm:text-sm max-sm:hidden" text={characters4} />
+          <TextReveal className="text-4xl max-sm:text-sm max-sm:hidden" text={characters5} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters1s} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters2s} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters3s} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters4s} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters5s} />
+          <TextReveal className="text-4xl max-sm:text-sm sm:hidden" text={characters6s} />
+
         </div>
 
         {/* 5 */}
-        <div ref={imagescontainer} className="h-[300vh]  relative">
+        <div ref={imagescontainer} className="h-[300vh]  relative mb-3">
           <div className="  sticky overflow-hidden top-0  h-[100vh]">
             {
               pictures.map(({ src, scale }, i) => {
@@ -249,14 +243,68 @@ const HomePage = () => {
                     <Image src={src} alt="image" fill className="object-cover  rounded-2xl border-2 border-white/[0.2]" />
                   </div>
                 </motion.div>
-              })
-            }
+              })}
+          </div>
+        </div>
+
+        {/* 5-new-aboutEXODIA */}
+        <div className="relative h-[100vh] max-sm:h-[75vh]  mx-auto flex flex-col justify-center items-center"
+        //  style={{ clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 86%)" }} 
+        >
+          <div className="absolute inset-0 h-[100vh] max-sm:h-[75vh] bg-white  w-full glass blur-xl max-sm:blur-md" ></div>
+          <div className="flex flex-col gap-10">
+            <div className="flex max-sm:flex-col justify-center items-center gap-40">
+              <div className="relative flex flex-col justify-center items-start  gap-6 max-sm:gap-2 text-black py-16 mx-10 max-sm:mx-5 max-sm:py-6">
+                <div className={`text-6xl max-sm:text-3xl font-bold text-center ${aboutNPfont11.className}`}>
+                  About Exodia'25
+                </div>
+                <div className="flex flex-col justify-center items-start gap-2 ">
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters11} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters12} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters13} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters14} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters15} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters16} />
+                  <TextReveal className="text-xl max-sm:text-xs max-sm:hidden" text={characters17} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters11s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters12s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters13s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters14s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters15s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters16s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters17s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters18s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters19s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters20s} />
+                  <TextReveal className="text-xl max-sm:text-xs sm:hidden" text={characters21s} />
+                </div>
+              </div>
+              <div className=" max-sm:hidden relative w-[25vw] h-[25vh] max-sm:w-[80vw] max-sm:h-[30vh] flex justify-center items-center">
+                <Image
+                  src="/e.png"
+                  alt="image"
+                  width={100}
+                  height={100}
+                  className="absolute max-sm:top-[1rem] flex justify-center items-center w-full h-full"
+                />
+              </div>
+            </div>
+            <div className={`relative text-6xl max-sm:text-3xl font-bold text-center text-black ${aboutNPfont11.className}`}>
+              <Link href="/join">
+                <button
+                  className="border-2 home-card-text-outline text-white hover:bg-white hover:text-black transition-all duration-300 font-medium px-10 py-2 rounded-full "
+                  data-cursor-hover
+                >
+                  Join Exodia
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* 6 */}
-        <div className=" mt-20" style={{ rotate: "3deg" }}>
-          <div className="sticky top-0 flex items-center   overflow-hidden">
+        <div className=" mt-20 max-sm:mt-8 rotate-[3deg] max-sm:rotate-0" >
+          <div className="sticky top-0 flex items-center overflow-hidden ">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
                 return <Card key={i} imgsrc={imgsrc} i={i} />;
@@ -267,7 +315,7 @@ const HomePage = () => {
 
         <About_VideoSection />
 
-        <div className=" mb-40" style={{ rotate: "-3deg" }}>
+        <div className=" max-sm:mb-2" style={{ rotate: "-3deg" }}>
           <div className="sticky top-0 flex items-center overflow-hidden">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
@@ -278,7 +326,7 @@ const HomePage = () => {
         </div>
         {/* 6 */}
         {/* 9 */}
-        <div ref={textZoomToVideocontainer} className="relative h-[300vh] bg-white">
+        <div ref={textZoomToVideocontainer} className="relative h-[300vh] bg-white [clip-path:polygon(0_4%,100%_0%,100%_100%,0%_100%)] max-sm:[clip-path:polygon(0_1%,100%_0%,100%_100%,0%_100%)]" >
           <div
             ref={textZoomToVideostickyMask}
             className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
@@ -286,25 +334,23 @@ const HomePage = () => {
               WebkitMaskImage: "url('/assets/homefifth/EXODIA.svg')",
               WebkitMaskPosition: "46% center",
               WebkitMaskRepeat: "no-repeat",
-              WebkitMaskSize: "50%",
-            }}
-          >
-            <video autoPlay muted loop className="h-full w-full object-cover">
+              WebkitMaskSize: "10%",
+            }} >
+            <video autoPlay muted loop className="h-screen w-full object-cover">
               <source src="/assets/homefifth/mdi.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
         <div className="bg-purple-900 h-screen text-white flex justify-center items-center">
           <div className="flex flex-col justify-center items-center gap-5 h-[50vh] max-sm:w-[80%] mx-auto ">
-            <TextReveal text={characters6} />
-            <TextReveal text={characters7} />
-            <TextReveal text={characters8} />
-            <TextReveal text={characters9} />
-            <TextReveal text={characters10} />
+            <TextReveal className="text-4xl max-sm:text-sm" text={characters6} />
+            <TextReveal className="text-4xl max-sm:text-sm" text={characters7} />
+            <TextReveal className="text-4xl max-sm:text-sm" text={characters8} />
+            <TextReveal className="text-4xl max-sm:text-sm" text={characters9} />
+            <TextReveal className="text-4xl max-sm:text-sm" text={characters10} />
           </div>
         </div>
         {/* 9 */}
-
 
       </div>
 
@@ -317,8 +363,38 @@ const HomePage = () => {
       >
         <div className='relative h-[calc(160vh+400px)] -top-[100vh]'>
           <div className='h-[calc(60vh+400px)] sticky top-[calc(100vh-400px-60vh)]'>
-            <div className="h-[60vh] max-sm:h-[75vh] bg-white flex justify-center items-end">
-              <CountdownTimer targetDate={futureDate} />
+            <div className="h-[60vh] max-sm:h-[75vh] bg-white flex justify-between items-center gap-20">
+              <div>
+                <Image
+                  src="/e.png"
+                  alt="image"
+                  width={300}
+                  height={300}
+                  className="max-sm:hidden max-sm:top-[1rem] flex justify-center items-center w-full h-full ml-24"
+                />
+              </div>
+              <div className={` mt-28 max-sm:mt-36 text-purple-900 ${aboutNPfont11.className} flex flex-col justify-center items-center gap-6`}>
+                <div className="flex flex-col justify-center items-center gap-0 max-sm:mt-20">
+                  <div className="text-[5rem] max-sm:text-6xl">
+                    Exodia'25
+                  </div>
+                  <div className="text-[2rem] max-sm:text-2xl">
+                    18-20 April 2025
+                  </div>
+                </div>
+                <div className="mt-10 max-sm:mt-20">
+                  <CountdownTimer />
+                </div>
+              </div>
+              <div>
+                <Image
+                  src="/e.png"
+                  alt="image"
+                  width={300}
+                  height={300}
+                  className="max-sm:hidden max-sm:top-[1rem] flex justify-center items-center w-full h-full mr-32"
+                />
+              </div>
             </div>
             <Footer />
           </div>
