@@ -7,6 +7,7 @@ import ClientLoader from "@/components/ClientLoader";
 import BackgroundBlobs from "@/components/BackgroundBlobs";
 
 import { ToasterProvider } from "@/providers/toast-provider";
+import FloatingBall from "@/components/Anouncement_ball";
 
 export const metadata: Metadata = {
   title: "Exodia '25 || IIT Mandi",
@@ -41,6 +42,7 @@ export default function RootLayout({
             <BackgroundBlobs />
             <ToasterProvider />
             {children}
+            <FloatingBall /> 
           </div>
         </ClientLoader>
       </body>
